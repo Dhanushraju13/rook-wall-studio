@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Production Details | ROOK WALL STUDIO</title>
+  <meta name="description" content="Detailed overview, trailer, cast and crew, behind-the-scenes gallery, and discussion for Rook Wall Studio productions.">
+
+  <!-- Google Fonts: Cinzel (Cinematic Serif) & Plus Jakarta Sans (Modern Clean UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 for High Fidelity Vector Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core & Page Specific Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/productions.css">
+  <link rel="stylesheet" href="../css/production-details.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       1. NAVIGATION BAR (STICKY)
+       ==================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      
+      <!-- LEFT: Logo & Brand Lockup -->
+      <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+        <div class="brand-icon" aria-hidden="true">
+          <i class="fa-solid fa-chess-rook"></i>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-text-main">ROOK WALL</span>
+          <span class="brand-text-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <!-- CENTER: Main Navigation Links (PRODUCTIONS highlighted as active) -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul id="navMenu" class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="productions.html" class="nav-link active" aria-current="page">PRODUCTIONS</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT: Notification, Theme Toggle & Login/Logout Action -->
+      <div class="nav-actions">
+        <!-- 🔔 Notification Toggle Button -->
+        <button type="button" id="notifBtn" class="icon-btn" aria-label="Toggle notifications" aria-expanded="false">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+          <span class="notif-badge" aria-hidden="true"></span>
+        </button>
+
+        <!-- Notification Flyout Panel -->
+        <div id="notificationPanel" class="notification-panel" role="region" aria-label="Studio Announcements">
+          <div class="notif-header">
+            <h4 class="notif-title">
+              <i class="fa-solid fa-bullhorn" style="color:var(--accent-bright);"></i>
+              NOTIFICATIONS
+            </h4>
+            <span style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase;">Live Feed</span>
+          </div>
+          <ul class="notif-list">
+            <li class="notif-item">
+              <i class="fa-solid fa-clapperboard notif-item-icon" aria-hidden="true"></i>
+              <span>🎬 New production announced: <strong>Project Phoenix</strong></span>
+            </li>
+            <li class="notif-item">
+              <i class="fa-solid fa-masks-theater notif-item-icon" aria-hidden="true"></i>
+              <span>🎭 Casting applications are open for 2026 slate</span>
+            </li>
+            <li class="notif-item">
+              <i class="fa-solid fa-film notif-item-icon" aria-hidden="true"></i>
+              <span>🎥 New trailer coming soon: <strong>The Horizon</strong></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 🌙 Theme Toggle Button -->
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Switch Theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+
+        <!-- Dynamic Auth Button (LOGIN / LOGOUT) -->
+        <a href="../login.html" id="navAuthBtn" class="nav-auth-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+          <span>LOGIN</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       2. CINEMATIC HERO SECTION
+       ==================================================================== -->
+  <section class="details-hero-section" id="productionHero">
+    <div class="details-hero-bg-wrap">
+      <div id="heroBg" class="details-hero-bg-img" role="img" aria-label="Production cinematic backdrop"></div>
+      <div class="details-hero-gradient"></div>
+      <div class="details-hero-grain"></div>
+    </div>
+
+    <div class="container details-hero-content">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-wrap anim-fade-in" aria-label="Breadcrumb">
+        <a href="../index.html" class="breadcrumb-link">HOME</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="productions.html" class="breadcrumb-link">PRODUCTIONS</a>
+        <span class="breadcrumb-separator">/</span>
+        <span id="breadcrumbCurrent" class="breadcrumb-current">PROJECT PHOENIX</span>
+      </nav>
+
+      <!-- Category & Year Pill Row -->
+      <div class="details-hero-meta-row anim-fade-in" style="animation-delay: 0.1s;">
+        <span id="heroCategory" class="details-meta-badge accent">FEATURE FILM</span>
+        <span class="details-meta-badge">&bull;</span>
+        <span id="heroYear" class="details-meta-badge">2026</span>
+      </div>
+
+      <!-- Production Title -->
+      <h1 id="heroTitle" class="details-hero-title anim-slide-up" style="animation-delay: 0.15s;">
+        PROJECT PHOENIX
+      </h1>
+
+      <!-- Genre -->
+      <div id="heroGenre" class="details-hero-genre anim-slide-up" style="animation-delay: 0.2s;">
+        DRAMA / THRILLER
+      </div>
+
+      <!-- Short Description -->
+      <p id="heroDesc" class="details-hero-desc anim-slide-up" style="animation-delay: 0.25s;">
+        &ldquo;A story of ambition, sacrifice and the people who rise when everything seems lost.&rdquo;
+      </p>
+
+      <!-- Hero Action Buttons -->
+      <div class="details-hero-actions anim-slide-up" style="animation-delay: 0.3s;">
+        <a href="#trailerSection" id="heroWatchTrailerBtn" class="btn btn-primary btn-hover-sweep">
+          <i class="fa-solid fa-play" aria-hidden="true"></i>
+          <span>WATCH TRAILER</span>
+        </a>
+
+        <button type="button" id="heroWishlistBtn" class="btn btn-outline btn-hover-sweep btn-wishlist" aria-label="Add to wishlist" aria-pressed="false">
+          <i class="fa-regular fa-heart" aria-hidden="true"></i>
+          <span class="wishlist-text">ADD TO WISHLIST</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ====================================================================
+         3. PRODUCTION INFORMATION SPECS GRID
+         ==================================================================== -->
+    <section class="prod-info-section" id="productionSpecs">
+      <div class="container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">Technical Metadata</span>
+          <h2 class="section-title">PRODUCTION INFORMATION</h2>
+          <p class="section-subtitle">Official studio specifications, creative leadership, and distribution metrics.</p>
+        </div>
+
+        <div class="specs-grid-container reveal-on-scroll">
+          
+          <!-- TITLE -->
+          <div class="spec-data-card">
+            <span class="spec-data-label">TITLE</span>
+            <div id="specTitle" class="spec-data-value">PROJECT PHOENIX</div>
+          </div>
+
+          <!-- DIRECTOR -->
+          <div class="spec-data-card">
+            <span class="spec-data-label">DIRECTOR</span>
+            <div id="specDirector" class="spec-data-value">Arjun Varma</div>
+          </div>
+
+          <!-- PRODUCER -->
+          <div class="spec-data-card">
+            <span class="spec-data-label">PRODUCER</span>
+            <div id="specProducer" class="spec-data-value">ROOK WALL STUDIO</div>
+          </div>
+
+          <!-- GENRE -->
+          <div class="spec-data-card">
+            <span class="spec-data-label">GENRE</span>
+            <div id="specGenre" class="spec-data-value">Drama / Thriller</div>
+          </div>
+
+          <!-- YEAR -->
+          <div class="spec-data-card">
+            <span class="spec-data-label">YEAR</span>
+            <div id="specYear" class="spec-data-value">2026</div>
+          </div>
+
+          <!-- RUNTIME -->
+          <div class="spec-data-card">
+            <span class="spec-data-label">RUNTIME</span>
+            <div id="specRuntime" class="spec-data-value">2h 08m</div>
+          </div>
+
+          <!-- LANGUAGE -->
+          <div class="spec-data-card">
+            <span class="spec-data-label">LANGUAGE</span>
+            <div id="specLanguage" class="spec-data-value">English</div>
+          </div>
+
+          <!-- RATING -->
+          <div class="spec-data-card">
+            <span class="spec-data-label">RATING</span>
+            <div id="specRating" class="spec-data-value rating">
+              <i class="fa-solid fa-star"></i> 4.8 / 5
+            </div>
+          </div>
+
+          <!-- STATUS -->
+          <div class="spec-data-card" style="grid-column: 1 / -1;">
+            <span class="spec-data-label">STATUS</span>
+            <div id="specStatus" class="spec-data-value status">
+              <i class="fa-solid fa-circle-check"></i> Released
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. SYNOPSIS, VISION & MISSION (SEMANTIC SECTIONS/ARTICLES)
+         ==================================================================== -->
+    <section class="synopsis-section" id="productionSynopsis">
+      <div class="container synopsis-layout">
+        
+        <!-- Main Synopsis Article -->
+        <article class="synopsis-article reveal-on-scroll">
+          <div class="section-pill">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <span>The Story</span>
+          </div>
+
+          <h2 class="section-title" style="text-align: left;">ABOUT THE PRODUCTION</h2>
+
+          <p id="synopsisText" class="synopsis-body-text">
+            Set against the neon-lit spires and industrial underbelly of a fractured metropolis, Project Phoenix follows an ambitious investigative architect who uncovers a systemic conspiracy threatening to erase the city's history. As corporate factions close in, she must choose between personal survival and exposing a truth that could either ignite a revolution or bury the city in ashes forever.
+          </p>
+        </article>
+
+        <!-- Vision & Mission Aside -->
+        <aside class="vm-cards-column reveal-on-scroll">
+          
+          <!-- Vision -->
+          <div class="vision-mission-box">
+            <div class="vm-box-header">
+              <div class="vm-box-icon" aria-hidden="true">
+                <i class="fa-solid fa-eye"></i>
+              </div>
+              <h3 class="vm-box-title">VISION</h3>
+            </div>
+            <p id="visionText" class="vm-box-desc">
+              &ldquo;To craft an uncompromising cinematic reflection on architectural power, human ambition, and the fragile line between progress and exploitation.&rdquo;
+            </p>
+          </div>
+
+          <!-- Mission -->
+          <div class="vision-mission-box">
+            <div class="vm-box-header">
+              <div class="vm-box-icon" aria-hidden="true">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+              <h3 class="vm-box-title">MISSION</h3>
+            </div>
+            <p id="missionText" class="vm-box-desc">
+              &ldquo;To merge high-concept practical cinematography with grounded psychological drama, demonstrating how individual choices ripple through complex urban ecosystems.&rdquo;
+            </p>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. CUSTOM HTML5 VIDEO PLAYER (TRAILER SECTION - VERY IMPORTANT)
+         ==================================================================== -->
+    <section class="trailer-section" id="trailerSection">
+      <div class="container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">Official Teaser</span>
+          <h2 class="section-title">TRAILER</h2>
+          <p class="section-subtitle">Experience the sights, tension, and auditory atmosphere in true cinematic high-definition.</p>
+        </div>
+
+        <!-- Custom Video Player Wrapper -->
+        <div class="video-player-container reveal-on-scroll" id="videoContainer" tabindex="0" aria-label="Custom cinematic video player">
+          
+          <!-- HTML5 Video Element -->
+          <video id="trailerVideo" class="custom-html5-video" preload="metadata" poster="../assets/images/productions-hero-bg.jpg">
+            <source src="../assets/videos/trailer.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Big Center Play Button Overlay -->
+          <button type="button" id="videoBigPlayBtn" class="video-big-play-btn" aria-label="Play Trailer">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <!-- Custom Control Bar -->
+          <div class="video-controls-bar" id="videoControlsBar">
+            
+            <!-- Progress Bar with Scrubbing -->
+            <div class="video-progress-wrap" id="videoProgressWrap" role="slider" aria-label="Video Progress Bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+              <div class="video-progress-bar" id="videoProgressBar">
+                <span class="video-progress-scrubber"></span>
+              </div>
+            </div>
+
+            <!-- Controls Row: Play/Pause, Volume, Time, Fullscreen -->
+            <div class="video-controls-row">
+              
+              <!-- Left: Play/Pause & Volume & Time -->
+              <div class="video-controls-left">
+                <!-- Play/Pause button -->
+                <button type="button" id="playPauseBtn" class="video-ctrl-btn" aria-label="Play video">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+
+                <!-- Volume control -->
+                <div class="volume-control-wrap">
+                  <button type="button" id="volumeBtn" class="video-ctrl-btn" aria-label="Mute volume">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </button>
+                  <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.05" value="0.8" aria-label="Volume Slider">
+                </div>
+
+                <!-- Current Time & Total Duration -->
+                <span class="video-time-display" id="videoTimeDisplay">00:00 / 00:00</span>
+              </div>
+
+              <!-- Right: Fullscreen -->
+              <div class="video-controls-right">
+                <button type="button" id="fullscreenBtn" class="video-ctrl-btn" aria-label="Toggle Fullscreen">
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. CAST & CREW SECTION
+         ==================================================================== -->
+    <section class="crew-section" id="productionCrew">
+      <div class="container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">Creative Team</span>
+          <h2 class="section-title">CAST &amp; CREW</h2>
+          <p class="section-subtitle">The visionary auteurs, cinematographers, and craftspeople behind the production.</p>
+        </div>
+
+        <div class="crew-grid">
+          
+          <!-- 1. Director: Arjun Varma -->
+          <article class="crew-card reveal-on-scroll">
+            <div class="crew-portrait-wrap">
+              <img src="../assets/images/crew/director.jpg" alt="Arjun Varma - Director" class="crew-portrait-img" loading="lazy">
+            </div>
+            <div class="crew-info-box">
+              <div class="crew-role">DIRECTOR</div>
+              <h3 class="crew-name">Arjun Varma</h3>
+            </div>
+          </article>
+
+          <!-- 2. Producer: Rook Wall Studio -->
+          <article class="crew-card reveal-on-scroll">
+            <div class="crew-portrait-wrap" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #101015 0%, #1a1a24 100%);">
+              <div style="font-size: 3.5rem; color: var(--accent-bright);">
+                <i class="fa-solid fa-chess-rook"></i>
+              </div>
+            </div>
+            <div class="crew-info-box">
+              <div class="crew-role">PRODUCER</div>
+              <h3 class="crew-name">Rook Wall Studio</h3>
+            </div>
+          </article>
+
+          <!-- 3. Cinematographer: Kiran Rao -->
+          <article class="crew-card reveal-on-scroll">
+            <div class="crew-portrait-wrap">
+              <img src="../assets/images/crew/cinematographer.jpg" alt="Kiran Rao - Cinematographer" class="crew-portrait-img" loading="lazy">
+            </div>
+            <div class="crew-info-box">
+              <div class="crew-role">CINEMATOGRAPHER</div>
+              <h3 class="crew-name">Kiran Rao</h3>
+            </div>
+          </article>
+
+          <!-- 4. Editor: Meera Das -->
+          <article class="crew-card reveal-on-scroll">
+            <div class="crew-portrait-wrap">
+              <img src="../assets/images/crew/editor.jpg" alt="Meera Das - Editor" class="crew-portrait-img" loading="lazy">
+            </div>
+            <div class="crew-info-box">
+              <div class="crew-role">EDITOR</div>
+              <h3 class="crew-name">Meera Das</h3>
+            </div>
+          </article>
+
+          <!-- 5. Production Designer: Rahul Dev -->
+          <article class="crew-card reveal-on-scroll">
+            <div class="crew-portrait-wrap">
+              <img src="../assets/images/crew/designer.jpg" alt="Rahul Dev - Production Designer" class="crew-portrait-img" loading="lazy">
+            </div>
+            <div class="crew-info-box">
+              <div class="crew-role">PRODUCTION DESIGNER</div>
+              <h3 class="crew-name">Rahul Dev</h3>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. BEHIND THE FRAMES (PRODUCTION GALLERY)
+         ==================================================================== -->
+    <section class="gallery-section" id="productionGallery">
+      <div class="container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">On-Set Archival</span>
+          <h2 class="section-title">BEHIND THE FRAMES</h2>
+          <p class="section-subtitle">Glimpses into camera rigs, atmospheric location scouting, and principal photography.</p>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <!-- Image 1 -->
+          <div class="gallery-item-card reveal-on-scroll" tabindex="0">
+            <img src="../assets/images/gallery/bts-1.jpg" alt="Behind the scenes 35mm camera rig" class="gallery-photo" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">ON SET // 01</span>
+              <h3 class="gallery-title">Anamorphic Prime Rig</h3>
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="gallery-item-card reveal-on-scroll" tabindex="0">
+            <img src="../assets/images/gallery/bts-2.jpg" alt="Auditorium lighting and projection staging" class="gallery-photo" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">LIGHTING // 02</span>
+              <h3 class="gallery-title">Volumetric Fog &amp; Beam</h3>
+            </div>
+          </div>
+
+          <!-- Image 3 -->
+          <div class="gallery-item-card reveal-on-scroll" tabindex="0">
+            <img src="../assets/images/gallery/bts-3.jpg" alt="Studio director monitor and playback" class="gallery-photo" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">DIRECTION // 03</span>
+              <h3 class="gallery-title">Video Village Playback</h3>
+            </div>
+          </div>
+
+          <!-- Image 4 -->
+          <div class="gallery-item-card reveal-on-scroll" tabindex="0">
+            <img src="../assets/images/gallery/bts-4.jpg" alt="Film reel and celluloid sprockets" class="gallery-photo" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">ARCHIVE // 04</span>
+              <h3 class="gallery-title">Celluloid Inspection</h3>
+            </div>
+          </div>
+
+          <!-- Image 5 -->
+          <div class="gallery-item-card reveal-on-scroll" tabindex="0">
+            <img src="../assets/images/gallery/bts-5.jpg" alt="Clapperboard take one" class="gallery-photo" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">TAKE // 05</span>
+              <h3 class="gallery-title">Synchronized Audio Slate</h3>
+            </div>
+          </div>
+
+          <!-- Image 6 -->
+          <div class="gallery-item-card reveal-on-scroll" tabindex="0">
+            <img src="../assets/images/gallery/bts-6.jpg" alt="Camera dolly tracking shot" class="gallery-photo" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">DOLLY // 06</span>
+              <h3 class="gallery-title">Precision Curved Track</h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. DISCUSSION & COMMENTS (EVENT DELEGATION & dblclick EDIT)
+         ==================================================================== -->
+    <section class="discussion-section" id="productionDiscussion">
+      <div class="container discussion-container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">Audience Voices</span>
+          <h2 class="section-title">DISCUSSION</h2>
+          <p class="section-subtitle">Engage with film enthusiasts, share interpretations, and double-click to edit your commentary.</p>
+        </div>
+
+        <!-- Comment Input Form -->
+        <div class="comment-form-wrap reveal-on-scroll">
+          <form id="commentForm" novalidate>
+            <label for="commentInput" class="comment-form-label">
+              <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+              Share your thoughts
+              <span id="commentCharCounter" class="comment-char-counter" aria-live="polite"></span>
+            </label>
+            <textarea 
+              id="commentInput" 
+              class="comment-input-area" 
+              placeholder="Share your thoughts about this production..." 
+              required
+              minlength="3"
+              maxlength="1000"
+              aria-label="Write a comment"
+              aria-describedby="commentInputError"
+            ></textarea>
+            <div id="commentInputError" class="comment-input-error" role="alert" aria-live="assertive"></div>
+            
+            <div class="comment-form-footer">
+              <span id="commentAuthorName" class="comment-author-badge">
+                <i class="fa-solid fa-user-pen"></i> Posting as: Viewer
+              </span>
+              <button type="submit" id="postCommentBtn" class="btn btn-primary btn-hover-sweep">
+                <span>POST COMMENT</span>
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Comments Container (USES EVENT DELEGATION FOR ALL CLICKS & DBLCLICK) -->
+        <div class="comments-list" id="commentsContainer" role="feed" aria-label="Viewer Comments">
+          <!-- Comments dynamically rendered by js/production-details.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         9. RELATED PRODUCTIONS (YOU MAY ALSO LIKE)
+         ==================================================================== -->
+    <section class="related-section" id="relatedSection">
+      <div class="container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">Explore Next</span>
+          <h2 class="section-title">YOU MAY ALSO LIKE</h2>
+          <p class="section-subtitle">Other evocative works from the ROOK WALL STUDIO slate.</p>
+        </div>
+
+        <div class="related-grid" id="relatedGrid">
+          <!-- Dynamically populated based on current production -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         10. CREATIVE CTA SECTION
+         ==================================================================== -->
+    <section class="cta-banner-section reveal-on-scroll" id="cta-collaborate">
+      <div class="cta-bg-image"></div>
+      <div class="cta-dark-overlay"></div>
+      
+      <div class="container cta-content">
+        <h2 class="cta-heading">HAVE A STORY TO TELL?</h2>
+        <p class="cta-text">&ldquo;Let's turn your idea into something worth watching.&rdquo;</p>
+        
+        <div class="cta-btn-group">
+          <a href="contact.html" class="btn btn-primary btn-hover-sweep">
+            <span>START A PROJECT</span>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </a>
+          <a href="careers.html" class="btn btn-outline btn-hover-sweep">
+            <span>JOIN OUR TEAM</span>
+            <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       11. MULTI-COLUMN FOOTER (MATCHING HOME & PRODUCTIONS)
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Column 1: Brand Info & Live Studio Status Clock -->
+        <div class="footer-col">
+          <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+            <div class="brand-icon" aria-hidden="true">
+              <i class="fa-solid fa-chess-rook"></i>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-text-main">ROOK WALL</span>
+              <span class="brand-text-sub">STUDIO</span>
+            </div>
+          </a>
+
+          <p class="footer-brand-bio">
+            &ldquo;WE CREATE STORIES.&rdquo;<br>
+            Stories That Stay Forever.
+          </p>
+
+          <!-- Studio Status Area: Live Date and Time updating every second -->
+          <div class="footer-clock-box">
+            <i class="fa-solid fa-broadcast-tower footer-clock-icon" aria-hidden="true"></i>
+            <div class="clock-text-wrap">
+              <span class="clock-label">STUDIO STATUS &bull; LIVE</span>
+              <div class="clock-display">
+                <span id="liveDate">05 SEP 2026</span> &bull; <span id="liveTime">00:00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="../index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="productions.html" class="footer-nav-link" style="color:var(--accent-bright);">Productions</a></li>
+            <li><a href="services.html" class="footer-nav-link">Services</a></li>
+            <li><a href="about.html" class="footer-nav-link">About</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Follow Us Social Media -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-instagram" style="width: 20px;"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-youtube" style="width: 20px;"></i> YouTube
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-linkedin-in" style="width: 20px;"></i> LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Student Information -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Student Information</h4>
+          <div class="student-info-card">
+            <div>
+              <span class="student-label">Designed &amp; Developed by:</span>
+              <div class="student-val">[STUDENT NAME]</div>
+            </div>
+            <div style="margin-top: 0.5rem;">
+              <span class="student-label">Register Number:</span>
+              <div class="student-val">[REGISTER NUMBER]</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 ROOK WALL STUDIO. All Rights Reserved.</div>
+        <div>Cinema In Motion &bull; Coimbatore, Tamil Nadu</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       12. FLOATING SCROLL-TO-TOP BUTTON
+       ==================================================================== -->
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- ====================================================================
+       13. TOAST NOTIFICATION CONTAINER
+       ==================================================================== -->
+  <div id="detailsToast" class="wishlist-toast" role="alert" aria-live="polite">
+    <i class="fa-solid fa-heart wishlist-toast-icon" aria-hidden="true"></i>
+    <span id="detailsToastText">Added to wishlist</span>
+  </div>
+
+  <!-- Vanilla JavaScript -->
+  <script src="../js/production-details.js"></script>
+</body>
+</html>

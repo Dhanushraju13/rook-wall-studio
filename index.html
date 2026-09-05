@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ROOK WALL STUDIO | We Create Stories — Independent Film Production</title>
+  <meta name="description" content="ROOK WALL STUDIO is a premier creative film production studio crafting evocative cinema, unforgettable visuals, and powerful narratives across the globe.">
+
+  <!-- Authentication Protection Script (Inline pre-render check to prevent flash of content) -->
+  <script>
+    (function() {
+      try {
+        var session = localStorage.getItem('rookwall_session');
+        if (!session) {
+          window.location.replace('login.html');
+        }
+      } catch (e) {
+        window.location.replace('login.html');
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts: Cinzel (Cinematic Serif) & Plus Jakarta Sans (Modern Clean UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 for High Fidelity Vector Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       STICKY NAVIGATION BAR
+       ==================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      
+      <!-- LEFT: Logo & Brand Lockup -->
+      <a href="index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+        <div class="brand-icon" aria-hidden="true">
+          <i class="fa-solid fa-chess-rook"></i>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-text-main">ROOK WALL</span>
+          <span class="brand-text-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <!-- CENTER: Main Navigation Links (Exactly 4 items) -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul id="navMenu" class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active" aria-current="page">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/productions.html" class="nav-link">PRODUCTIONS</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/services.html" class="nav-link">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/about.html" class="nav-link">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT: Notification, Theme Toggle & Login/Logout Action -->
+      <div class="nav-actions">
+        <!-- 🔔 Notification Toggle Button -->
+        <button type="button" id="notifBtn" class="icon-btn" aria-label="Toggle notifications" aria-expanded="false">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+          <span class="notif-badge" aria-hidden="true"></span>
+        </button>
+
+        <!-- Notification Flyout Panel -->
+        <div id="notificationPanel" class="notification-panel" role="region" aria-label="Studio Announcements">
+          <div class="notif-header">
+            <h4 class="notif-title">
+              <i class="fa-solid fa-bullhorn" style="color:var(--accent-bright);"></i>
+              NOTIFICATIONS
+            </h4>
+            <span style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase;">Live Feed</span>
+          </div>
+          <ul class="notif-list">
+            <li class="notif-item">
+              <i class="fa-solid fa-clapperboard notif-item-icon" aria-hidden="true"></i>
+              <span>🎬 New production announced: <strong>Project Phoenix</strong></span>
+            </li>
+            <li class="notif-item">
+              <i class="fa-solid fa-masks-theater notif-item-icon" aria-hidden="true"></i>
+              <span>🎭 Casting applications are open for 2026 slate</span>
+            </li>
+            <li class="notif-item">
+              <i class="fa-solid fa-film notif-item-icon" aria-hidden="true"></i>
+              <span>🎥 New trailer coming soon: <strong>The Horizon</strong></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 🌙 Theme Toggle Button -->
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Switch Theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+
+        <!-- Auth Action: Dynamically shows LOGOUT if logged in -->
+        <a href="login.html" id="navAuthBtn" class="nav-auth-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+          <span>LOGIN</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       HERO SECTION
+       ==================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-container">
+      <div class="hero-bg-image anim-bg-zoom" role="img" aria-label="Cinematic movie camera rig on film set"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-film-grain"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-studio-tag anim-fade-in">
+        <span>ROOK WALL STUDIO</span>
+      </div>
+
+      <h1 class="hero-tagline anim-slide-up">
+        WE CREATE<br>
+        <span>STORIES.</span>
+      </h1>
+
+      <p class="hero-description anim-slide-up" style="animation-delay: 0.15s;">
+        &ldquo;Independent film production driven by bold ideas, powerful performances and unforgettable visuals.&rdquo;
+      </p>
+
+      <div class="hero-cta-group anim-slide-up" style="animation-delay: 0.3s;">
+        <a href="pages/productions.html" class="btn btn-primary btn-hover-sweep">
+          <span>EXPLORE PRODUCTIONS</span>
+          <i class="fa-solid fa-film" aria-hidden="true"></i>
+        </a>
+        <a href="pages/careers.html" class="btn btn-outline btn-hover-sweep">
+          <span>JOIN OUR TEAM</span>
+          <i class="fa-solid fa-users" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll to Discover Indicator -->
+    <a href="#welcome" class="hero-scroll-indicator" aria-label="Scroll down to welcome section">
+      <span>SCROLL TO DISCOVER</span>
+      <span class="scroll-arrow anim-bounce">
+        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </section>
+
+  <!-- ====================================================================
+       LATEST UPDATES (MARQUEE SECTION - COLLEGE REQUIREMENT)
+       ==================================================================== -->
+  <div class="marquee-bar-section" role="region" aria-label="Latest Studio Updates">
+    <div class="marquee-container">
+      <div class="marquee-badge">
+        <i class="fa-solid fa-satellite-dish" aria-hidden="true"></i>
+        <span>LATEST UPDATES</span>
+      </div>
+      <marquee class="studio-marquee" behavior="scroll" direction="left" scrollamount="6">
+        LATEST UPDATES <span class="marquee-bullet">•</span> PROJECT PHOENIX ENTERS PRODUCTION <span class="marquee-bullet">•</span> NEW TRAILER RELEASED <span class="marquee-bullet">•</span> CREATIVE TEAM APPLICATIONS OPEN <span class="marquee-bullet">•</span> ROOK WALL STUDIO 2026
+      </marquee>
+    </div>
+  </div>
+
+  <main>
+    <!-- ====================================================================
+         WELCOME SECTION (SEMANTIC HTML: section, article, aside)
+         ==================================================================== -->
+    <section class="welcome-section" id="welcome">
+      <div class="container welcome-layout">
+        
+        <!-- Article Component -->
+        <article class="welcome-article reveal-on-scroll">
+          <div class="section-pill">
+            <i class="fa-solid fa-clapperboard" aria-hidden="true"></i>
+            <span>Who We Are</span>
+          </div>
+
+          <h2 class="section-title" style="text-align: left;">WELCOME TO ROOK WALL STUDIO</h2>
+
+          <p class="welcome-lead">
+            &ldquo;ROOK WALL STUDIO is a creative film production studio focused on developing original stories and transforming ideas into powerful cinematic experiences.&rdquo;
+          </p>
+
+          <div class="vision-mission-grid">
+            <!-- Our Vision -->
+            <div class="vm-card card-hover-effect">
+              <div class="vm-card-header">
+                <div class="vm-icon-wrap" aria-hidden="true">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <h3 class="vm-title">OUR VISION</h3>
+              </div>
+              <p class="vm-desc">
+                &ldquo;To create stories that connect with audiences and leave a lasting impact.&rdquo;
+              </p>
+            </div>
+
+            <!-- Our Mission -->
+            <div class="vm-card card-hover-effect">
+              <div class="vm-card-header">
+                <div class="vm-icon-wrap" aria-hidden="true">
+                  <i class="fa-solid fa-compass"></i>
+                </div>
+                <h3 class="vm-title">OUR MISSION</h3>
+              </div>
+              <p class="vm-desc">
+                &ldquo;To bring together writers, directors, actors, cinematographers, editors and artists to create meaningful visual storytelling.&rdquo;
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Aside Component -->
+        <aside class="welcome-aside reveal-on-scroll">
+          <div class="aside-image-card">
+            <img src="assets/images/welcome-studio.jpg" alt="Rook Wall Studio cinematic camera and production lights on set">
+            <div class="aside-img-overlay">
+              <span class="aside-badge">BEHIND THE LENS</span>
+              <span class="aside-caption">Crafting Timeless Cinema</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         STUDIO STATISTICS (ANIMATED COUNTERS IN NUMBERS)
+         ==================================================================== -->
+    <section class="stats-section" id="statistics">
+      <div class="container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">Milestones</span>
+          <h2 class="section-title">OUR JOURNEY IN NUMBERS</h2>
+          <p class="section-subtitle">A testament to our relentless pursuit of narrative excellence and visual ambition.</p>
+        </div>
+
+        <div class="stats-grid">
+          <!-- Stat 1: 50+ Productions -->
+          <div class="stat-card reveal-on-scroll">
+            <div class="stat-icon" aria-hidden="true">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="50" data-suffix="+">0</span>
+            </div>
+            <div class="stat-label">Productions</div>
+          </div>
+
+          <!-- Stat 2: 10+ Awards -->
+          <div class="stat-card reveal-on-scroll">
+            <div class="stat-icon" aria-hidden="true">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="10" data-suffix="+">0</span>
+            </div>
+            <div class="stat-label">Awards</div>
+          </div>
+
+          <!-- Stat 3: 100+ Creative Minds -->
+          <div class="stat-card reveal-on-scroll">
+            <div class="stat-icon" aria-hidden="true">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="100" data-suffix="+">0</span>
+            </div>
+            <div class="stat-label">Creative Minds</div>
+          </div>
+
+          <!-- Stat 4: 1M+ Global Audience -->
+          <div class="stat-card reveal-on-scroll">
+            <div class="stat-icon" aria-hidden="true">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="1" data-suffix="M+">0</span>
+            </div>
+            <div class="stat-label">Global Audience</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURES SECTION (HTML <ul> and <li> COLLEGE REQUIREMENT)
+         ==================================================================== -->
+    <section class="features-section" id="features">
+      <div class="container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">Excellence</span>
+          <h2 class="section-title">WHY ROOK WALL STUDIO</h2>
+          <p class="section-subtitle">Setting new benchmarks through world-class production infrastructure and fearless creativity.</p>
+        </div>
+
+        <!-- Semantic Unordered List Styled as Cinematic Feature Cards -->
+        <ul class="features-list">
+          <!-- 1. Original Storytelling -->
+          <li class="feature-item-card reveal-on-scroll">
+            <div class="feature-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-clapperboard"></i>
+            </div>
+            <h3 class="feature-heading">Original Storytelling</h3>
+            <p class="feature-text">Narratives born from profound human experiences, conceptualized from scratch to resonate across cultures.</p>
+          </li>
+
+          <!-- 2. Professional Production -->
+          <li class="feature-item-card reveal-on-scroll">
+            <div class="feature-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <h3 class="feature-heading">Professional Production</h3>
+            <p class="feature-text">Rigorous pre-production, industry-standard equipment, and seasoned line management on every shoot.</p>
+          </li>
+
+          <!-- 3. Cinematic Visuals -->
+          <li class="feature-item-card reveal-on-scroll">
+            <div class="feature-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-camera"></i>
+            </div>
+            <h3 class="feature-heading">Cinematic Visuals</h3>
+            <p class="feature-text">Masterful camera movement, anamorphic lenses, and atmospheric lighting crafted by visionary directors of photography.</p>
+          </li>
+
+          <!-- 4. Creative Collaboration -->
+          <li class="feature-item-card reveal-on-scroll">
+            <div class="feature-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-people-group"></i>
+            </div>
+            <h3 class="feature-heading">Creative Collaboration</h3>
+            <p class="feature-text">An inclusive forum where screenwriters, visual artists, and sound composers harmonize their crafts.</p>
+          </li>
+
+          <!-- 5. Modern Post Production -->
+          <li class="feature-item-card reveal-on-scroll">
+            <div class="feature-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="feature-heading">Modern Post Production</h3>
+            <p class="feature-text">High-end color grading suites, seamless editorial workflows, and state-of-the-art computational VFX.</p>
+          </li>
+
+          <!-- 6. Global Distribution -->
+          <li class="feature-item-card reveal-on-scroll">
+            <div class="feature-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <h3 class="feature-heading">Global Distribution</h3>
+            <p class="feature-text">Direct pipelines to premier global film festivals, streaming platforms, and theatrical exhibitors.</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SERVICES PREVIEW (HTML <ol> and <li> COLLEGE REQUIREMENT)
+         ==================================================================== -->
+    <section class="services-section" id="services">
+      <div class="container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">Capabilities</span>
+          <h2 class="section-title">OUR SERVICES</h2>
+          <p class="section-subtitle">Comprehensive end-to-end filmmaking solutions tailored for narrative cinema, commercials, and documentaries.</p>
+        </div>
+
+        <!-- Semantic Ordered List Styled Professionally -->
+        <ol class="services-ordered-list">
+          <!-- 1. Film Production -->
+          <li class="service-item reveal-on-scroll">
+            <div class="service-header-row">
+              <span class="service-index-number">01</span>
+              <i class="fa-solid fa-film service-icon-small" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="service-title">Film Production</h3>
+              <p class="service-desc">Complete executive production handling financing, scheduling, on-set logistics, and principal photography.</p>
+            </div>
+          </li>
+
+          <!-- 2. Direction -->
+          <li class="service-item reveal-on-scroll">
+            <div class="service-header-row">
+              <span class="service-index-number">02</span>
+              <i class="fa-solid fa-bullhorn service-icon-small" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="service-title">Direction</h3>
+              <p class="service-desc">Auteur vision guiding actors, scene rhythm, and dramatic tension to realize the script's emotional core.</p>
+            </div>
+          </li>
+
+          <!-- 3. Cinematography -->
+          <li class="service-item reveal-on-scroll">
+            <div class="service-header-row">
+              <span class="service-index-number">03</span>
+              <i class="fa-solid fa-camera-retro service-icon-small" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="service-title">Cinematography</h3>
+              <p class="service-desc">Composition, focal length mastery, and bespoke lighting designs that evoke the atmosphere of each narrative.</p>
+            </div>
+          </li>
+
+          <!-- 4. Video Editing -->
+          <li class="service-item reveal-on-scroll">
+            <div class="service-header-row">
+              <span class="service-index-number">04</span>
+              <i class="fa-solid fa-scissors service-icon-small" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="service-title">Video Editing</h3>
+              <p class="service-desc">Rhythmic cutting, pacing calibration, and structural sculpting to ensure seamless visual storytelling.</p>
+            </div>
+          </li>
+
+          <!-- 5. VFX & Animation -->
+          <li class="service-item reveal-on-scroll">
+            <div class="service-header-row">
+              <span class="service-index-number">05</span>
+              <i class="fa-solid fa-cube service-icon-small" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="service-title">VFX & Animation</h3>
+              <p class="service-desc">Photorealistic compositing, environment extensions, CGI assets, and dynamic motion graphic design.</p>
+            </div>
+          </li>
+
+          <!-- 6. Sound Design -->
+          <li class="service-item reveal-on-scroll">
+            <div class="service-header-row">
+              <span class="service-index-number">06</span>
+              <i class="fa-solid fa-volume-high service-icon-small" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3 class="service-title">Sound Design</h3>
+              <p class="service-desc">Foley artistry, spatial audio mixing, atmospheric soundscapes, and orchestral score integration.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="services-cta-wrap reveal-on-scroll">
+          <a href="pages/services.html" class="btn btn-outline btn-hover-sweep">
+            <span>VIEW ALL SERVICES</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FEATURED PRODUCTIONS (CSS GRID + POSTER HOVER REVEAL)
+         ==================================================================== -->
+    <section class="productions-section" id="productions">
+      <div class="container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">Cinema Slate</span>
+          <h2 class="section-title">FEATURED PRODUCTIONS</h2>
+          <p class="section-subtitle">Discover our acclaimed projects capturing imaginations across international screens.</p>
+        </div>
+
+        <div class="productions-grid">
+          
+          <!-- Production 1: Project Phoenix -->
+          <div class="production-card reveal-on-scroll" tabindex="0">
+            <img src="assets/images/prod-phoenix.jpg" alt="Project Phoenix film poster" class="prod-poster-img">
+            
+            <div class="prod-default-info">
+              <div class="prod-meta-tag">Feature Film &bull; 2026</div>
+              <h3 class="prod-title">PROJECT PHOENIX</h3>
+            </div>
+
+            <div class="prod-hover-overlay">
+              <div class="prod-hover-details">
+                <div class="prod-meta-tag">Feature Film &bull; 2026</div>
+                <h3 class="prod-title">PROJECT PHOENIX</h3>
+                <p class="prod-hover-desc">A gripping psychological thriller examining memory, redemption, and identity against a dystopian cityscape.</p>
+                <a href="pages/productions.html" class="btn btn-primary btn-hover-sweep prod-btn">
+                  <span>VIEW DETAILS</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Production 2: The Horizon -->
+          <div class="production-card reveal-on-scroll" tabindex="0">
+            <img src="assets/images/prod-horizon.jpg" alt="The Horizon film poster" class="prod-poster-img">
+            
+            <div class="prod-default-info">
+              <div class="prod-meta-tag">Short Film &bull; 2026</div>
+              <h3 class="prod-title">THE HORIZON</h3>
+            </div>
+
+            <div class="prod-hover-overlay">
+              <div class="prod-hover-details">
+                <div class="prod-meta-tag">Short Film &bull; 2026</div>
+                <h3 class="prod-title">THE HORIZON</h3>
+                <p class="prod-hover-desc">An intimate, visually poetic journey of two estranged travelers crossing desolate coastal terrain at dusk.</p>
+                <a href="pages/productions.html" class="btn btn-primary btn-hover-sweep prod-btn">
+                  <span>VIEW DETAILS</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Production 3: Echoes -->
+          <div class="production-card reveal-on-scroll" tabindex="0">
+            <img src="assets/images/prod-echoes.jpg" alt="Echoes documentary film poster" class="prod-poster-img">
+            
+            <div class="prod-default-info">
+              <div class="prod-meta-tag">Documentary &bull; 2025</div>
+              <h3 class="prod-title">ECHOES</h3>
+            </div>
+
+            <div class="prod-hover-overlay">
+              <div class="prod-hover-details">
+                <div class="prod-meta-tag">Documentary &bull; 2025</div>
+                <h3 class="prod-title">ECHOES</h3>
+                <p class="prod-hover-desc">A landmark exploration into forgotten indigenous melodies and their profound connection to disappearing forests.</p>
+                <a href="pages/productions.html" class="btn btn-primary btn-hover-sweep prod-btn">
+                  <span>VIEW DETAILS</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center;" class="reveal-on-scroll">
+          <a href="pages/productions.html" class="btn btn-primary btn-hover-sweep">
+            <span>VIEW ALL PRODUCTIONS</span>
+            <i class="fa-solid fa-film" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CINEMATIC SPOTLIGHT BANNER SLIDER (COLLEGE REQUIREMENT)
+         ==================================================================== -->
+    <section class="banner-slider-section reveal-on-scroll" id="spotlightSlider" aria-label="Studio Spotlight Showcase">
+      <div class="container">
+        
+        <div class="section-heading-wrap">
+          <span class="section-pill">Now In Focus</span>
+          <h2 class="section-title">STUDIO SPOTLIGHT SLATE</h2>
+          <p class="section-subtitle">&ldquo;Explore key frames and cinematic highlights from our active production slate.&rdquo;</p>
+        </div>
+
+        <div class="cinematic-slider-container" id="cinematicSlider" role="region" aria-roledescription="carousel" aria-label="Featured Studio Productions Spotlight">
+          
+          <div class="slider-track" id="sliderTrack">
+            
+            <!-- Slide 1 -->
+            <div class="slider-slide active" role="group" aria-roledescription="slide" aria-label="1 of 4: Project Phoenix">
+              <img src="assets/images/prod-phoenix.jpg" alt="Project Phoenix cinematic still" class="slider-slide-img" loading="lazy">
+              <div class="slider-slide-overlay">
+                <div class="slider-slide-content">
+                  <span class="slider-slide-tag">FEATURE FILM // 2026</span>
+                  <h3 class="slider-slide-title">PROJECT PHOENIX</h3>
+                  <p class="slider-slide-desc">A dystopian drama exploring the thin boundary between human memory and neural surveillance.</p>
+                  <a href="pages/production-details.html?id=phoenix" class="btn btn-primary btn-hover-sweep slider-cta-btn">
+                    <span>EXPLORE PROJECT</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slider-slide" role="group" aria-roledescription="slide" aria-label="2 of 4: The Horizon">
+              <img src="assets/images/prod-horizon.jpg" alt="The Horizon coastal cinematic still" class="slider-slide-img" loading="lazy">
+              <div class="slider-slide-overlay">
+                <div class="slider-slide-content">
+                  <span class="slider-slide-tag">SHORT FILM // 2026</span>
+                  <h3 class="slider-slide-title">THE HORIZON</h3>
+                  <p class="slider-slide-desc">An intimate, poetic journey across desolate Atlantic coastline captured in 65mm natural light.</p>
+                  <a href="pages/production-details.html?id=horizon" class="btn btn-primary btn-hover-sweep slider-cta-btn">
+                    <span>EXPLORE PROJECT</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slider-slide" role="group" aria-roledescription="slide" aria-label="3 of 4: Echoes">
+              <img src="assets/images/prod-echoes.jpg" alt="Echoes temperate rainforest still" class="slider-slide-img" loading="lazy">
+              <div class="slider-slide-overlay">
+                <div class="slider-slide-content">
+                  <span class="slider-slide-tag">DOCUMENTARY // 2025</span>
+                  <h3 class="slider-slide-title">ECHOES</h3>
+                  <p class="slider-slide-desc">A sensory inquiry into forgotten indigenous chants and acoustic communication inside ancient forests.</p>
+                  <a href="pages/production-details.html?id=echoes" class="btn btn-primary btn-hover-sweep slider-cta-btn">
+                    <span>EXPLORE PROJECT</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slider-slide" role="group" aria-roledescription="slide" aria-label="4 of 4: Midnight Stories">
+              <img src="assets/images/prod-midnight.jpg" alt="Midnight Stories urban noir still" class="slider-slide-img" loading="lazy">
+              <div class="slider-slide-overlay">
+                <div class="slider-slide-content">
+                  <span class="slider-slide-tag">SERIES // 2026</span>
+                  <h3 class="slider-slide-title">MIDNIGHT STORIES</h3>
+                  <p class="slider-slide-desc">Atmospheric nocturnal anthology tracing interconnected lives and secrets between midnight and dawn.</p>
+                  <a href="pages/production-details.html?id=midnight-stories" class="btn btn-primary btn-hover-sweep slider-cta-btn">
+                    <span>EXPLORE PROJECT</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slider Controls -->
+          <button type="button" id="sliderPrevBtn" class="slider-ctrl-btn slider-prev" aria-label="Previous Slide">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button type="button" id="sliderNextBtn" class="slider-ctrl-btn slider-next" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+
+          <!-- Slider Pagination Dots -->
+          <div class="slider-dots-row" id="sliderDots" role="tablist" aria-label="Slide Indicators">
+            <button type="button" class="slider-dot active" role="tab" aria-selected="true" aria-label="Slide 1" data-index="0"></button>
+            <button type="button" class="slider-dot" role="tab" aria-selected="false" aria-label="Slide 2" data-index="1"></button>
+            <button type="button" class="slider-dot" role="tab" aria-selected="false" aria-label="Slide 3" data-index="2"></button>
+            <button type="button" class="slider-dot" role="tab" aria-selected="false" aria-label="Slide 4" data-index="3"></button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         THE STUDIO ARCHIVE — Gallery Access Section
+         ==================================================================== -->
+    <section class="studio-archive-section reveal-on-scroll" id="studio-archive" aria-label="The Studio Archive">
+      <!-- Cinematic background image with dark overlay -->
+      <div class="archive-bg" role="img" aria-label="Behind-the-scenes film set atmosphere"></div>
+      <div class="archive-overlay"></div>
+
+      <div class="container archive-content">
+        <!-- Decorative eyebrow label -->
+        <div class="archive-eyebrow">
+          <span class="archive-eyebrow-line" aria-hidden="true"></span>
+          <span class="archive-eyebrow-text">
+            <i class="fa-solid fa-photo-film" aria-hidden="true"></i>
+            EXCLUSIVE ACCESS
+          </span>
+          <span class="archive-eyebrow-line" aria-hidden="true"></span>
+        </div>
+
+        <!-- Section Heading -->
+        <h2 class="archive-heading">THE STUDIO ARCHIVE</h2>
+
+        <!-- Description -->
+        <p class="archive-description">
+          &ldquo;Step behind the frame and explore the moments, people and places that shape our productions.&rdquo;
+        </p>
+
+        <!-- Preview thumbnails strip -->
+        <div class="archive-preview-strip" aria-hidden="true">
+          <div class="archive-thumb" style="background-image: url('assets/images/gallery/bts-1.jpg');"></div>
+          <div class="archive-thumb" style="background-image: url('assets/images/gallery/bts-2.jpg');"></div>
+          <div class="archive-thumb" style="background-image: url('assets/images/gallery/bts-3.jpg');"></div>
+          <div class="archive-thumb" style="background-image: url('assets/images/gallery/bts-4.jpg');"></div>
+          <div class="archive-thumb" style="background-image: url('assets/images/gallery/bts-5.jpg');"></div>
+        </div>
+
+        <!-- CTA Button — accessible link styled as button -->
+        <a href="pages/gallery.html" class="archive-cta-btn" aria-label="Explore Studio Archive gallery">
+          <span class="archive-btn-text">EXPLORE STUDIO ARCHIVE</span>
+          <span class="archive-btn-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         STUDIO APPLICATION MODULES (TABLE COLLEGE REQUIREMENT)
+         ==================================================================== -->
+    <section class="modules-section reveal-on-scroll" id="modules" aria-labelledby="modules-heading">
+      <div class="container">
+        
+        <div class="section-heading-wrap">
+          <span class="section-pill">Core Architecture</span>
+          <h2 class="section-title" id="modules-heading">STUDIO APPLICATION MODULES</h2>
+          <p class="section-subtitle">&ldquo;Explore the core modules that power the Rook Wall Studio experience.&rdquo;</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="modules-table" aria-label="Studio Application Modules">
+            <thead>
+              <tr>
+                <th scope="col" class="th-module-id">MODULE ID</th>
+                <th scope="col" class="th-module-name">MODULE NAME</th>
+                <th scope="col" class="th-module-desc">DESCRIPTION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="module-id-cell"><span class="module-badge">RW01</span></td>
+                <td class="module-name-cell"><strong>Production Management</strong></td>
+                <td class="module-desc-cell">Manage studio productions and production information.</td>
+              </tr>
+              <tr>
+                <td class="module-id-cell"><span class="module-badge">RW02</span></td>
+                <td class="module-name-cell"><strong>Creative Team</strong></td>
+                <td class="module-desc-cell">Manage directors, crew members and creative professionals.</td>
+              </tr>
+              <tr>
+                <td class="module-id-cell"><span class="module-badge">RW03</span></td>
+                <td class="module-name-cell"><strong>Media Library</strong></td>
+                <td class="module-desc-cell">Organize production posters, images, trailers and studio media.</td>
+              </tr>
+              <tr>
+                <td class="module-id-cell"><span class="module-badge">RW04</span></td>
+                <td class="module-name-cell"><strong>Project Tracking</strong></td>
+                <td class="module-desc-cell">Track production stages, progress and upcoming milestones.</td>
+              </tr>
+              <tr>
+                <td class="module-id-cell"><span class="module-badge">RW05</span></td>
+                <td class="module-name-cell"><strong>Applications</strong></td>
+                <td class="module-desc-cell">Manage creative-team applications and recruitment activity.</td>
+              </tr>
+              <tr>
+                <td class="module-id-cell"><span class="module-badge">RW06</span></td>
+                <td class="module-name-cell"><strong>Studio Communication</strong></td>
+                <td class="module-desc-cell">Manage enquiries, notifications and communication.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         JOIN ROOK WALL STUDIO — REGISTRATION FORM (COLLEGE REQUIREMENT)
+         ==================================================================== -->
+    <section class="registration-section reveal-on-scroll" id="registration" aria-labelledby="registration-heading">
+      <div class="container">
+        
+        <div class="section-heading-wrap">
+          <span class="section-pill">Creative Community</span>
+          <h2 class="section-title" id="registration-heading">JOIN ROOK WALL STUDIO</h2>
+          <p class="section-subtitle">&ldquo;Create your studio account and become part of our creative community.&rdquo;</p>
+        </div>
+
+        <div class="registration-form-wrapper">
+          
+          <!-- Registration Success Message Box (Hidden initially) -->
+          <div id="registrationSuccess" class="registration-success-card" style="display: none;" role="region" aria-live="polite">
+            <div class="reg-success-icon" aria-hidden="true">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="reg-success-title">REGISTRATION SUCCESSFUL</h3>
+            <p class="reg-success-desc">&ldquo;Welcome to Rook Wall Studio.&rdquo;</p>
+            <p class="reg-success-sub">Your creative studio account profile has been registered in the system.</p>
+            <div class="reg-success-actions">
+              <button type="button" id="regResetAnother" class="btn btn-primary btn-hover-sweep">
+                <span>REGISTER ANOTHER ACCOUNT</span>
+                <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+              </button>
+              <a href="login.html" class="btn btn-outline btn-hover-sweep">
+                <span>GO TO LOGIN</span>
+                <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- HTML5 Registration Form -->
+          <form id="registrationForm" class="registration-form" novalidate>
+            
+            <div class="reg-form-grid">
+              <!-- Full Name -->
+              <div class="reg-form-group">
+                <label for="registration-name" class="reg-label">Full Name <span class="req-star" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="registration-name"
+                  name="name"
+                  class="reg-input"
+                  placeholder="Enter your full name"
+                  required
+                  minlength="2"
+                  autocomplete="name"
+                >
+                <div class="reg-feedback" id="regNameFeedback" aria-live="polite"></div>
+              </div>
+
+              <!-- Email -->
+              <div class="reg-form-group">
+                <label for="registration-email" class="reg-label">Email Address <span class="req-star" aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="registration-email"
+                  name="email"
+                  class="reg-input"
+                  placeholder="you@example.com"
+                  required
+                  autocomplete="email"
+                >
+                <div class="reg-feedback" id="regEmailFeedback" aria-live="polite"></div>
+              </div>
+
+              <!-- Phone -->
+              <div class="reg-form-group">
+                <label for="registration-phone" class="reg-label">Phone Number <span class="req-star" aria-hidden="true">*</span></label>
+                <input
+                  type="tel"
+                  id="registration-phone"
+                  name="phone"
+                  class="reg-input"
+                  placeholder="Enter your phone number"
+                  required
+                  pattern="[0-9\+\-\s\(\)]{10,15}"
+                  autocomplete="tel"
+                >
+                <div class="reg-feedback" id="regPhoneFeedback" aria-live="polite"></div>
+              </div>
+
+              <!-- Password -->
+              <div class="reg-form-group">
+                <label for="registration-password" class="reg-label">Password <span class="req-star" aria-hidden="true">*</span></label>
+                <input
+                  type="password"
+                  id="registration-password"
+                  name="password"
+                  class="reg-input"
+                  placeholder="Create a password"
+                  required
+                  minlength="6"
+                  autocomplete="new-password"
+                >
+                <div class="reg-feedback" id="regPasswordFeedback" aria-live="polite"></div>
+              </div>
+
+              <!-- Gender (Radio buttons: Male, Female, Other) -->
+              <div class="reg-form-group reg-col-full">
+                <label class="reg-label">Gender <span class="req-star" aria-hidden="true">*</span></label>
+                <div class="gender-radio-group" role="radiogroup" aria-label="Gender">
+                  <label class="radio-label">
+                    <input type="radio" name="gender" value="Male" required>
+                    <span class="radio-custom"></span>
+                    <span>Male</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gender" value="Female">
+                    <span class="radio-custom"></span>
+                    <span>Female</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gender" value="Other">
+                    <span class="radio-custom"></span>
+                    <span>Other</span>
+                  </label>
+                </div>
+                <div class="reg-feedback" id="regGenderFeedback" aria-live="polite"></div>
+              </div>
+
+              <!-- Date of Birth -->
+              <div class="reg-form-group reg-col-full">
+                <label for="registration-dob" class="reg-label">Date of Birth <span class="req-star" aria-hidden="true">*</span></label>
+                <input
+                  type="date"
+                  id="registration-dob"
+                  name="dob"
+                  class="reg-input"
+                  required
+                >
+                <div class="reg-feedback" id="regDobFeedback" aria-live="polite"></div>
+              </div>
+
+              <!-- Address -->
+              <div class="reg-form-group reg-col-full">
+                <label for="registration-address" class="reg-label">Address <span class="req-star" aria-hidden="true">*</span></label>
+                <textarea
+                  id="registration-address"
+                  name="address"
+                  class="reg-input reg-textarea"
+                  placeholder="Enter your address"
+                  required
+                  rows="3"
+                ></textarea>
+                <div class="reg-feedback" id="regAddressFeedback" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="reg-buttons-row">
+              <button type="submit" class="btn btn-primary btn-hover-sweep" id="regSubmitBtn">
+                <span>REGISTER</span>
+                <i class="fa-solid fa-user-check" aria-hidden="true"></i>
+              </button>
+              <button type="reset" class="btn btn-outline btn-hover-sweep" id="regResetBtn">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+                <span>RESET</span>
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CREATIVE CTA BANNER
+         ==================================================================== -->
+    <section class="cta-banner-section reveal-on-scroll" id="cta">
+      <div class="cta-bg-image"></div>
+      <div class="cta-dark-overlay"></div>
+      
+      <div class="container cta-content">
+        <h2 class="cta-heading">HAVE A STORY TO TELL?</h2>
+        <p class="cta-text">&ldquo;Let's bring your vision to the screen.&rdquo;</p>
+        
+        <div class="cta-btn-group">
+          <a href="pages/contact.html" class="btn btn-primary btn-hover-sweep">
+            <span>START A PROJECT</span>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </a>
+          <a href="pages/careers.html" class="btn btn-outline btn-hover-sweep">
+            <span>JOIN OUR TEAM</span>
+            <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i>
+          </a>
+          <a href="pages/dashboard.html" class="btn btn-outline btn-hover-sweep" aria-label="Open Studio Dashboard">
+            <span>VIEW STUDIO DASHBOARD</span>
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ABOUT PREVIEW SECTION
+         ==================================================================== -->
+    <section class="about-preview-section" id="about">
+      <div class="container">
+        
+        <div class="about-preview-card reveal-on-scroll">
+          <div class="about-text-column">
+            <span class="section-pill">Our Heritage</span>
+            <h2 class="about-lead-title">MORE THAN A PRODUCTION HOUSE.</h2>
+            <p class="about-lead-desc">
+              &ldquo;ROOK WALL STUDIO brings together storytellers, filmmakers, artists and technical creators to build memorable cinematic experiences.&rdquo;
+            </p>
+            <div>
+              <a href="pages/about.html" class="btn btn-primary btn-hover-sweep">
+                <span>DISCOVER OUR STORY</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Three Core Values -->
+          <div class="about-values-grid">
+            <div class="value-pill-card">
+              <div class="value-icon-circle" aria-hidden="true">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <div>
+                <h4 class="value-title">STORY</h4>
+                <p class="value-desc">The beating heart of every project we commission.</p>
+              </div>
+            </div>
+
+            <div class="value-pill-card">
+              <div class="value-icon-circle" aria-hidden="true">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <div>
+                <h4 class="value-title">CREATIVITY</h4>
+                <p class="value-desc">Uncompromising originality across visuals and sound.</p>
+              </div>
+            </div>
+
+            <div class="value-pill-card">
+              <div class="value-icon-circle" aria-hidden="true">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <div>
+                <h4 class="value-title">IMPACT</h4>
+                <p class="value-desc">Leaving indelible memories in the audience's mind.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT PREVIEW SECTION
+         ==================================================================== -->
+    <section class="contact-preview-section" id="contact">
+      <div class="container contact-layout">
+        
+        <div class="contact-info-column reveal-on-scroll">
+          <span class="section-pill">Get In Touch</span>
+          <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">LET'S CREATE SOMETHING GREAT</h2>
+          
+          <div class="contact-info-list">
+            <!-- Email -->
+            <div class="contact-info-card">
+              <div class="contact-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="contact-card-label">Email</div>
+                <div class="contact-card-value">contact@rookwallstudio.com</div>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-info-card">
+              <div class="contact-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="contact-card-label">Phone</div>
+                <div class="contact-card-value">+91 XXXXX XXXXX</div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-info-card">
+              <div class="contact-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="contact-card-label">Location</div>
+                <div class="contact-card-value">Coimbatore, Tamil Nadu</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social-wrap">
+            <h4 class="contact-social-title">Follow Us</h4>
+            <div class="social-icon-row">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <a href="pages/contact.html" class="btn btn-primary btn-hover-sweep">
+              <span>CONTACT US</span>
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-visual-column reveal-on-scroll">
+          <div class="aside-image-card" style="border-radius: var(--radius-lg);">
+            <img src="assets/images/cta-bg.jpg" alt="Rook Wall Studio cinema production room">
+            <div class="aside-img-overlay">
+              <span class="aside-badge">HEADQUARTERS</span>
+              <span class="aside-caption">Open for Creative Inquiries</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER (PREMIUM MULTI-COLUMN)
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Column 1: Brand Info & Live Studio Status Clock -->
+        <div class="footer-col">
+          <a href="index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+            <div class="brand-icon" aria-hidden="true">
+              <i class="fa-solid fa-chess-rook"></i>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-text-main">ROOK WALL</span>
+              <span class="brand-text-sub">STUDIO</span>
+            </div>
+          </a>
+
+          <p class="footer-brand-bio">
+            &ldquo;WE CREATE STORIES.&rdquo;<br>
+            Stories That Stay Forever.
+          </p>
+
+          <!-- Studio Status Area: Live Date and Time updating every second -->
+          <div class="footer-clock-box">
+            <i class="fa-solid fa-broadcast-tower footer-clock-icon" aria-hidden="true"></i>
+            <div class="clock-text-wrap">
+              <span class="clock-label">STUDIO STATUS &bull; LIVE</span>
+              <div class="clock-display">
+                <span id="liveDate">05 SEP 2026</span> &bull; <span id="liveTime">00:00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="pages/productions.html" class="footer-nav-link">Productions</a></li>
+            <li><a href="pages/services.html" class="footer-nav-link">Services</a></li>
+            <li><a href="pages/about.html" class="footer-nav-link">About</a></li>
+            <li><a href="pages/careers.html" class="footer-nav-link">Careers</a></li>
+            <li><a href="pages/gallery.html" class="footer-nav-link">Gallery</a></li>
+            <li><a href="pages/contact.html" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Follow Us Social Media -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-instagram" style="width: 20px;"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-youtube" style="width: 20px;"></i> YouTube
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-linkedin-in" style="width: 20px;"></i> LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Student Information -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Student Information</h4>
+          <div class="student-info-card">
+            <div>
+              <span class="student-label">Designed &amp; Developed by:</span>
+              <div class="student-val">[STUDENT NAME]</div>
+            </div>
+            <div style="margin-top: 0.5rem;">
+              <span class="student-label">Register Number:</span>
+              <div class="student-val">[REGISTER NUMBER]</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 ROOK WALL STUDIO. All Rights Reserved.</div>
+        <div>Cinema In Motion &bull; Coimbatore, Tamil Nadu</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       FLOATING SCROLL-TO-TOP BUTTON
+       ==================================================================== -->
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Vanilla JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,695 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | ROOK WALL STUDIO</title>
+  <meta name="description" content="Cinematic production services by Rook Wall Studio — from concept development to final release.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/services.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="top">
+    <div class="container navbar">
+      <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+        <div class="brand-icon" aria-hidden="true"><i class="fa-solid fa-chess-rook"></i></div>
+        <div class="brand-text-block">
+          <span class="brand-text-main">ROOK WALL</span>
+          <span class="brand-text-sub">STUDIO</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul id="navMenu" class="nav-menu">
+          <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="productions.html" class="nav-link">PRODUCTIONS</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link nav-link--active" aria-current="page">SERVICES</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" id="notifBtn" class="icon-btn" aria-label="Toggle notifications" aria-expanded="false">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+          <span class="notif-badge" id="notifCount">3</span>
+        </button>
+        <div id="notificationPanel" class="notification-panel" role="region" aria-label="Notifications">
+          <div class="notif-header">
+            <h4 class="notif-title"><i class="fa-solid fa-bell" style="color:var(--accent-bright);"></i> NOTIFICATIONS</h4>
+          </div>
+          <ul class="notif-list">
+            <li class="notif-item notif-unread">
+              <i class="fa-solid fa-clapperboard notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">New service added</span>
+                <span class="notif-item-desc">Digital Distribution now available for indie creators.</span>
+              </div>
+            </li>
+            <li class="notif-item notif-unread">
+              <i class="fa-solid fa-film notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">Production schedule</span>
+                <span class="notif-item-desc">Project Phoenix post-production on schedule.</span>
+              </div>
+            </li>
+            <li class="notif-item notif-unread">
+              <i class="fa-solid fa-handshake notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">Consultation booking open</span>
+                <span class="notif-item-desc">Q3 creative consultation slots available.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Switch theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <a href="../login.html" id="navAuthBtn" class="nav-auth-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+          <span>LOGIN</span>
+        </a>
+        <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="services-hero" aria-label="Services hero banner">
+    <div class="services-hero-bg" role="img" aria-label="Cinematic production background"></div>
+    <div class="services-hero-overlay" aria-hidden="true"></div>
+    <div class="services-hero-grain" aria-hidden="true"></div>
+    <div class="container services-hero-content">
+      <nav class="services-breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="../index.html">HOME</a></li>
+          <li class="breadcrumb-sep" aria-hidden="true">/</li>
+          <li class="breadcrumb-item breadcrumb-current" aria-current="page">SERVICES</li>
+        </ol>
+      </nav>
+      <div class="services-hero-text">
+        <div class="services-hero-label"><i class="fa-solid fa-chess-rook" aria-hidden="true"></i> ROOK WALL STUDIO</div>
+        <h1 class="services-hero-heading">OUR SERVICES</h1>
+        <p class="services-hero-subtitle">"From the first idea to the final frame."</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content">
+
+  <!-- INTRODUCTION -->
+  <section class="services-intro-section" id="intro" aria-labelledby="intro-heading">
+    <div class="container">
+      <div class="services-intro-grid">
+        <article class="services-intro-article reveal-svc">
+          <span class="section-pill">The Process</span>
+          <h2 class="section-title" id="intro-heading">FROM IDEA TO SCREEN</h2>
+          <p class="services-intro-highlight">
+            Rook Wall Studio brings together creative vision, technical expertise and production experience to transform ideas into compelling screen stories.
+          </p>
+          <p class="services-intro-body">
+            We partner with visionary storytellers, independent directors, and innovative brands to craft cinema that commands attention. Every project receives end-to-end focus, ensuring uncompromising aesthetic standards and technical precision across every stage of delivery.
+          </p>
+        </article>
+        <aside class="services-intro-aside reveal-svc" aria-label="Studio overview key highlights">
+          <div class="intro-stat-card">
+            <div class="intro-stat-icon" aria-hidden="true"><i class="fa-solid fa-clapperboard"></i></div>
+            <div class="intro-stat-info">
+              <span class="intro-stat-num">8+</span>
+              <span class="intro-stat-text">Core Disciplines</span>
+            </div>
+          </div>
+          <div class="intro-stat-card">
+            <div class="intro-stat-icon" aria-hidden="true"><i class="fa-solid fa-sliders"></i></div>
+            <div class="intro-stat-info">
+              <span class="intro-stat-num">4K HDR</span>
+              <span class="intro-stat-text">Mastering Pipeline</span>
+            </div>
+          </div>
+          <div class="intro-stat-card">
+            <div class="intro-stat-icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></div>
+            <div class="intro-stat-info">
+              <span class="intro-stat-num">100%</span>
+              <span class="intro-stat-text">In-House Dedicated Crew</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES ORDERED LIST (SEMANTIC COLLEGE REQUIREMENT) -->
+  <section class="services-list-section" id="services-index" aria-labelledby="services-list-heading">
+    <div class="container">
+      <div class="section-header reveal-svc">
+        <span class="section-pill">Structured Catalog</span>
+        <h2 class="section-title" id="services-list-heading">STUDIO SERVICES CATALOG</h2>
+        <p class="section-subtitle">Our comprehensive, full-spectrum production roadmap categorized in chronological delivery order.</p>
+      </div>
+      <ol class="services-ordered-list reveal-svc">
+        <li class="ordered-service-item">
+          <div class="ordered-service-header">
+            <h3 class="ordered-service-name">Film Development</h3>
+          </div>
+          <p class="ordered-service-desc">Concept development, story planning and project preparation.</p>
+        </li>
+        <li class="ordered-service-item">
+          <div class="ordered-service-header">
+            <h3 class="ordered-service-name">Pre-Production</h3>
+          </div>
+          <p class="ordered-service-desc">Script planning, casting, locations, scheduling and production design.</p>
+        </li>
+        <li class="ordered-service-item">
+          <div class="ordered-service-header">
+            <h3 class="ordered-service-name">Film Production</h3>
+          </div>
+          <p class="ordered-service-desc">Professional cinematography, direction, lighting, sound and on-set production.</p>
+        </li>
+        <li class="ordered-service-item">
+          <div class="ordered-service-header">
+            <h3 class="ordered-service-name">Post-Production</h3>
+          </div>
+          <p class="ordered-service-desc">Editing, colour grading, sound design, visual effects and final mastering.</p>
+        </li>
+        <li class="ordered-service-item">
+          <div class="ordered-service-header">
+            <h3 class="ordered-service-name">Trailer &amp; Promotional Content</h3>
+          </div>
+          <p class="ordered-service-desc">Cinematic trailers, teasers and promotional videos.</p>
+        </li>
+        <li class="ordered-service-item">
+          <div class="ordered-service-header">
+            <h3 class="ordered-service-name">Documentary Production</h3>
+          </div>
+          <p class="ordered-service-desc">Research-driven documentary storytelling and visual production.</p>
+        </li>
+        <li class="ordered-service-item">
+          <div class="ordered-service-header">
+            <h3 class="ordered-service-name">Creative Consultation</h3>
+          </div>
+          <p class="ordered-service-desc">Story development, visual direction and production planning.</p>
+        </li>
+        <li class="ordered-service-item">
+          <div class="ordered-service-header">
+            <h3 class="ordered-service-name">Digital Distribution</h3>
+          </div>
+          <p class="ordered-service-desc">Preparation of productions for digital platforms and online audiences.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SERVICE CARDS GRID -->
+  <section class="services-cards-section" id="service-cards" aria-labelledby="cards-heading">
+    <div class="container">
+      <div class="section-header reveal-svc">
+        <span class="section-pill">Interactive Overview</span>
+        <h2 class="section-title" id="cards-heading">FEATURED SERVICE MODULES</h2>
+        <p class="section-subtitle">Select any module to inspect detailed deliverables, creative personnel, and production pipelines.</p>
+      </div>
+      <div class="service-cards-grid">
+        <!-- Card 1 -->
+        <article class="service-card reveal-svc" data-service-id="development">
+          <div class="service-card-num" aria-hidden="true">01</div>
+          <div class="service-card-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-pen-nib service-card-icon"></i>
+          </div>
+          <h3 class="service-card-title">FILM DEVELOPMENT</h3>
+          <p class="service-card-desc">Concept ideation, narrative design, script doctoring, character architecture, and investor-ready lookbooks.</p>
+          <button type="button" class="btn-learn-more js-open-modal" data-service="development" aria-haspopup="dialog">
+            <span>LEARN MORE</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="service-card reveal-svc" data-service-id="pre-production">
+          <div class="service-card-num" aria-hidden="true">02</div>
+          <div class="service-card-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-clipboard-list service-card-icon"></i>
+          </div>
+          <h3 class="service-card-title">PRE-PRODUCTION</h3>
+          <p class="service-card-desc">Comprehensive storyboarding, location scouting, casting calls, breakdown sheets, and rigorous call scheduling.</p>
+          <button type="button" class="btn-learn-more js-open-modal" data-service="pre-production" aria-haspopup="dialog">
+            <span>LEARN MORE</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="service-card reveal-svc" data-service-id="production">
+          <div class="service-card-num" aria-hidden="true">03</div>
+          <div class="service-card-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-film service-card-icon"></i>
+          </div>
+          <h3 class="service-card-title">PRODUCTION</h3>
+          <p class="service-card-desc">Principal photography, RED/ARRI multi-camera setups, cinematic gaffer lighting, and pristine location sound capture.</p>
+          <button type="button" class="btn-learn-more js-open-modal" data-service="production" aria-haspopup="dialog">
+            <span>LEARN MORE</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="service-card reveal-svc" data-service-id="post-production">
+          <div class="service-card-num" aria-hidden="true">04</div>
+          <div class="service-card-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-sliders service-card-icon"></i>
+          </div>
+          <h3 class="service-card-title">POST-PRODUCTION</h3>
+          <p class="service-card-desc">Offline/online picture cut, DaVinci Resolve color grading, Dolby Atmos sound design, original scoring, and VFX compositing.</p>
+          <button type="button" class="btn-learn-more js-open-modal" data-service="post-production" aria-haspopup="dialog">
+            <span>LEARN MORE</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="service-card reveal-svc" data-service-id="promotional">
+          <div class="service-card-num" aria-hidden="true">05</div>
+          <div class="service-card-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-clapperboard service-card-icon"></i>
+          </div>
+          <h3 class="service-card-title">PROMOTIONAL CONTENT</h3>
+          <p class="service-card-desc">Impactful cinematic trailers, festival cut downs, social media teasers, high-resolution key art, and press materials.</p>
+          <button type="button" class="btn-learn-more js-open-modal" data-service="promotional" aria-haspopup="dialog">
+            <span>LEARN MORE</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="service-card reveal-svc" data-service-id="documentary">
+          <div class="service-card-num" aria-hidden="true">06</div>
+          <div class="service-card-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-video service-card-icon"></i>
+          </div>
+          <h3 class="service-card-title">DOCUMENTARY</h3>
+          <p class="service-card-desc">Investigative research, intimate observational cinema, verité camera technique, archival restoration, and human interest portraits.</p>
+          <button type="button" class="btn-learn-more js-open-modal" data-service="documentary" aria-haspopup="dialog">
+            <span>LEARN MORE</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="service-card reveal-svc" data-service-id="consultation">
+          <div class="service-card-num" aria-hidden="true">07</div>
+          <div class="service-card-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-lightbulb service-card-icon"></i>
+          </div>
+          <h3 class="service-card-title">CREATIVE CONSULTATION</h3>
+          <p class="service-card-desc">Independent creative auditing, budget engineering, film market analysis, visual tone calibration, and festival route planning.</p>
+          <button type="button" class="btn-learn-more js-open-modal" data-service="consultation" aria-haspopup="dialog">
+            <span>LEARN MORE</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="service-card reveal-svc" data-service-id="distribution">
+          <div class="service-card-num" aria-hidden="true">08</div>
+          <div class="service-card-icon-wrap" aria-hidden="true">
+            <i class="fa-solid fa-satellite-dish service-card-icon"></i>
+          </div>
+          <h3 class="service-card-title">DIGITAL DISTRIBUTION</h3>
+          <p class="service-card-desc">DCP cinema mastering, Apple ProRes / Netflix spec delivery packaging, metadata structuring, and streaming platform handoffs.</p>
+          <button type="button" class="btn-learn-more js-open-modal" data-service="distribution" aria-haspopup="dialog">
+            <span>LEARN MORE</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE PROCESS (HOW WE WORK) -->
+  <section class="services-process-section" id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section-header reveal-svc">
+        <span class="section-pill">Execution Blueprint</span>
+        <h2 class="section-title" id="process-heading">HOW WE WORK</h2>
+        <p class="section-subtitle">A disciplined four-stage pipeline designed to protect creative integrity and ensure on-time delivery.</p>
+      </div>
+      <div class="workflow-timeline" role="list" aria-label="Production stages timeline">
+        <div class="workflow-step reveal-svc" role="listitem">
+          <div class="workflow-marker" aria-hidden="true">
+            <span class="workflow-num">01</span>
+            <span class="workflow-dot"></span>
+          </div>
+          <div class="workflow-connector" aria-hidden="true"></div>
+          <article class="workflow-card">
+            <div class="workflow-icon" aria-hidden="true"><i class="fa-solid fa-compass"></i></div>
+            <h3 class="workflow-title">DISCOVER</h3>
+            <p class="workflow-desc">We understand your story and creative vision, dissecting character arcs, visual references, and target audience goals.</p>
+          </article>
+        </div>
+
+        <div class="workflow-step reveal-svc" role="listitem">
+          <div class="workflow-marker" aria-hidden="true">
+            <span class="workflow-num">02</span>
+            <span class="workflow-dot"></span>
+          </div>
+          <div class="workflow-connector" aria-hidden="true"></div>
+          <article class="workflow-card">
+            <div class="workflow-icon" aria-hidden="true"><i class="fa-solid fa-diagram-project"></i></div>
+            <h3 class="workflow-title">DEVELOP</h3>
+            <p class="workflow-desc">We transform the concept into a structured production plan, locking scripts, schedules, technical gear, and locations.</p>
+          </article>
+        </div>
+
+        <div class="workflow-step reveal-svc" role="listitem">
+          <div class="workflow-marker" aria-hidden="true">
+            <span class="workflow-num">03</span>
+            <span class="workflow-dot"></span>
+          </div>
+          <div class="workflow-connector" aria-hidden="true"></div>
+          <article class="workflow-card">
+            <div class="workflow-icon" aria-hidden="true"><i class="fa-solid fa-camera-movie"></i></div>
+            <h3 class="workflow-title">CREATE</h3>
+            <p class="workflow-desc">Our creative and production teams bring the story to life on set with uncompromising visual fidelity and emotional honesty.</p>
+          </article>
+        </div>
+
+        <div class="workflow-step reveal-svc" role="listitem">
+          <div class="workflow-marker" aria-hidden="true">
+            <span class="workflow-num">04</span>
+            <span class="workflow-dot"></span>
+          </div>
+          <article class="workflow-card">
+            <div class="workflow-icon" aria-hidden="true"><i class="fa-solid fa-box-archive"></i></div>
+            <h3 class="workflow-title">DELIVER</h3>
+            <p class="workflow-desc">We complete post-production and prepare the final project for its audience across theatrical screenings and streaming releases.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTION CAPABILITIES (ANIMATED PROGRESS BARS) -->
+  <section class="services-capabilities-section" id="capabilities" aria-labelledby="capabilities-heading">
+    <div class="capabilities-bg" aria-hidden="true"></div>
+    <div class="capabilities-overlay" aria-hidden="true"></div>
+    <div class="container capabilities-content">
+      <div class="section-header reveal-svc">
+        <span class="section-pill">Technical Benchmark</span>
+        <h2 class="section-title" id="capabilities-heading">OUR CAPABILITIES</h2>
+        <p class="section-subtitle">Calibrated studio performance metrics across core cinematic proficiencies.</p>
+      </div>
+      <div class="capabilities-grid">
+        <!-- Capability 1 -->
+        <div class="capability-item reveal-svc">
+          <div class="capability-header">
+            <span class="capability-name">STORY DEVELOPMENT</span>
+            <span class="capability-percent">90%</span>
+          </div>
+          <div class="capability-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Story Development proficiency">
+            <div class="capability-bar js-capability-bar" data-width="90%"></div>
+          </div>
+        </div>
+
+        <!-- Capability 2 -->
+        <div class="capability-item reveal-svc">
+          <div class="capability-header">
+            <span class="capability-name">CINEMATOGRAPHY</span>
+            <span class="capability-percent">95%</span>
+          </div>
+          <div class="capability-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Cinematography proficiency">
+            <div class="capability-bar js-capability-bar" data-width="95%"></div>
+          </div>
+        </div>
+
+        <!-- Capability 3 -->
+        <div class="capability-item reveal-svc">
+          <div class="capability-header">
+            <span class="capability-name">POST-PRODUCTION</span>
+            <span class="capability-percent">88%</span>
+          </div>
+          <div class="capability-track" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Post-Production proficiency">
+            <div class="capability-bar js-capability-bar" data-width="88%"></div>
+          </div>
+        </div>
+
+        <!-- Capability 4 -->
+        <div class="capability-item reveal-svc">
+          <div class="capability-header">
+            <span class="capability-name">VISUAL DESIGN</span>
+            <span class="capability-percent">85%</span>
+          </div>
+          <div class="capability-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Visual Design proficiency">
+            <div class="capability-bar js-capability-bar" data-width="85%"></div>
+          </div>
+        </div>
+
+        <!-- Capability 5 -->
+        <div class="capability-item reveal-svc">
+          <div class="capability-header">
+            <span class="capability-name">DIGITAL CONTENT</span>
+            <span class="capability-percent">92%</span>
+          </div>
+          <div class="capability-track" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Digital Content proficiency">
+            <div class="capability-bar js-capability-bar" data-width="92%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE COMPARISON TABLE -->
+  <section class="services-comparison-section" id="comparison" aria-labelledby="comparison-heading">
+    <div class="container">
+      <div class="section-header reveal-svc">
+        <span class="section-pill">Scope Matrix</span>
+        <h2 class="section-title" id="comparison-heading">PRODUCTION SCOPE COMPARISON</h2>
+        <p class="section-subtitle">How our core phases align with different cinematic project tiers.</p>
+      </div>
+      <div class="table-responsive reveal-svc">
+        <table class="services-table" aria-label="Service Scope Comparison Table">
+          <thead>
+            <tr>
+              <th scope="col">SERVICE</th>
+              <th scope="col">PRE-PRODUCTION</th>
+              <th scope="col">PRODUCTION</th>
+              <th scope="col">POST-PRODUCTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="service-type-cell"><i class="fa-solid fa-film" aria-hidden="true"></i> Feature Film</th>
+              <td><span class="table-badge badge-full">Full Scope</span> Script lock, casting, scouting, animatics</td>
+              <td><span class="table-badge badge-full">Full Scope</span> Multi-camera ARRI/RED, sound crew, lighting team</td>
+              <td><span class="table-badge badge-full">Full Scope</span> Dolby Atmos, DCI grade, original score, VFX</td>
+            </tr>
+            <tr>
+              <th scope="row" class="service-type-cell"><i class="fa-solid fa-clapperboard" aria-hidden="true"></i> Short Film</th>
+              <td><span class="table-badge badge-focus">Focused</span> Storyboarding, casting, 1-week prep</td>
+              <td><span class="table-badge badge-focus">Focused</span> 3-5 shoot days, dedicated cinema package</td>
+              <td><span class="table-badge badge-focus">Focused</span> 4K master, color pass, sound design</td>
+            </tr>
+            <tr>
+              <th scope="row" class="service-type-cell"><i class="fa-solid fa-video" aria-hidden="true"></i> Documentary</th>
+              <td><span class="table-badge badge-special">Research</span> Archival search, subject outreach, permits</td>
+              <td><span class="table-badge badge-special">Verité</span> Field crew, natural light, run-and-gun audio</td>
+              <td><span class="table-badge badge-full">Full Scope</span> Extensive paper edit, fact check, final cut</td>
+            </tr>
+            <tr>
+              <th scope="row" class="service-type-cell"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i> Commercial Content</th>
+              <td><span class="table-badge badge-rapid">Agile</span> Visual mood boards, shot lists, talent calls</td>
+              <td><span class="table-badge badge-focus">High Speed</span> Studio/location shooting, high frame rate</td>
+              <td><span class="table-badge badge-rapid">Fast Turn</span> Quick cuts, multi-aspect ratio social deliverables</td>
+            </tr>
+            <tr>
+              <th scope="row" class="service-type-cell"><i class="fa-solid fa-tv" aria-hidden="true"></i> Digital Series</th>
+              <td><span class="table-badge badge-full">Full Scope</span> Writers room, episodic production bible</td>
+              <td><span class="table-badge badge-full">Full Scope</span> Block shooting, multi-episode continuity</td>
+              <td><span class="table-badge badge-full">Full Scope</span> Batch color grade, episodic sound editorial</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ROOK WALL (SEMANTIC UL / LI) -->
+  <section class="services-why-section" id="why" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-header reveal-svc">
+        <span class="section-pill">Our Commitment</span>
+        <h2 class="section-title" id="why-heading">WHY ROOK WALL?</h2>
+        <p class="section-subtitle">Four foundational values that protect your production's narrative vision.</p>
+      </div>
+      <ul class="why-list" role="list">
+        <li class="why-item reveal-svc">
+          <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-eye"></i></div>
+          <div class="why-content">
+            <h3 class="why-title">CREATIVE VISION</h3>
+            <p class="why-desc">Every production starts with a clear story.</p>
+          </div>
+        </li>
+        <li class="why-item reveal-svc">
+          <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-network-wired"></i></div>
+          <div class="why-content">
+            <h3 class="why-title">PROFESSIONAL WORKFLOW</h3>
+            <p class="why-desc">Structured production from concept to delivery.</p>
+          </div>
+        </li>
+        <li class="why-item reveal-svc">
+          <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-people-carry-box"></i></div>
+          <div class="why-content">
+            <h3 class="why-title">COLLABORATIVE TEAM</h3>
+            <p class="why-desc">Creative professionals working together.</p>
+          </div>
+        </li>
+        <li class="why-item reveal-svc">
+          <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="why-content">
+            <h3 class="why-title">STORY-FIRST APPROACH</h3>
+            <p class="why-desc">Technology supports the story rather than replacing it.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="services-cta-section" id="cta" aria-labelledby="cta-heading">
+    <div class="container services-cta-container">
+      <div class="services-cta-card reveal-svc">
+        <span class="section-pill">Initiate Production</span>
+        <h2 class="section-title" id="cta-heading">HAVE A PROJECT IN MIND?</h2>
+        <p class="section-subtitle">"Let's turn your idea into a production."</p>
+        <div class="services-cta-btn-group">
+          <a href="contact.html" class="btn btn-primary btn-hover-sweep">
+            <span>START A PROJECT</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="productions.html" class="btn btn-outline btn-hover-sweep">
+            <span>VIEW PRODUCTIONS</span>
+            <i class="fa-solid fa-film" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- SERVICE INTERACTIVE MODAL DIALOG -->
+  <div id="serviceModal" class="service-modal" role="dialog" aria-modal="true" aria-labelledby="modalServiceTitle" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close service modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="modal-header">
+          <div class="modal-icon-badge" id="modalServiceIcon" aria-hidden="true">
+            <i class="fa-solid fa-film"></i>
+          </div>
+          <div>
+            <span class="modal-pill" id="modalServiceCategory">Production Service</span>
+            <h3 class="modal-title" id="modalServiceTitle">Service Title</h3>
+          </div>
+        </div>
+        <div class="modal-body">
+          <p class="modal-desc" id="modalServiceDesc">Service description text will populate here dynamically.</p>
+          
+          <div class="modal-detail-block">
+            <h4 class="modal-block-title"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> WHAT WE PROVIDE</h4>
+            <ul class="modal-bullet-list" id="modalServiceProvide">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+
+          <div class="modal-detail-block">
+            <h4 class="modal-block-title"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> TYPICAL WORKFLOW</h4>
+            <p class="modal-workflow-text" id="modalServiceWorkflow">Workflow details will populate here.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="contact.html" class="btn btn-primary btn-modal-action">
+            <span>INQUIRE ABOUT THIS SERVICE</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <button type="button" class="btn btn-outline btn-modal-dismiss" id="modalDismissBtn">CLOSE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-top-grid">
+      <div class="footer-col footer-col--brand">
+        <a href="../index.html" class="footer-brand" aria-label="ROOK WALL STUDIO Home">
+          <div class="brand-icon" aria-hidden="true"><i class="fa-solid fa-chess-rook"></i></div>
+          <div class="brand-text-block">
+            <span class="brand-text-main">ROOK WALL</span>
+            <span class="brand-text-sub">STUDIO</span>
+          </div>
+        </a>
+        <p class="footer-brand-bio">An independent cinematic production house dedicated to compelling visual narratives, unyielding artistry, and the craft of moving pictures.</p>
+        <div class="footer-motto-badge">WE CREATE STORIES.</div>
+        <div class="footer-social-links" aria-label="Social media links">
+          <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">QUICK LINKS</h4>
+        <ul class="footer-nav-list">
+          <li><a href="../index.html" class="footer-nav-link">Home</a></li>
+          <li><a href="productions.html" class="footer-nav-link">Productions</a></li>
+          <li><a href="services.html" class="footer-nav-link">Services</a></li>
+          <li><a href="about.html" class="footer-nav-link">About</a></li>
+          <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">STUDIO ARCHIVE</h4>
+        <ul class="footer-nav-list">
+          <li><a href="gallery.html" class="footer-nav-link">Studio Archive &amp; Gallery</a></li>
+          <li><a href="careers.html" class="footer-nav-link">Careers &amp; Opportunities</a></li>
+          <li><a href="dashboard.html" class="footer-nav-link">Studio Dashboard</a></li>
+          <li><a href="production-details.html?id=phoenix" class="footer-nav-link">Featured Production</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col--student">
+        <h4 class="footer-col-title">STUDENT INFO</h4>
+        <div class="student-info-card">
+          <div class="student-field"><span class="student-label">Name:</span> <span class="student-val">[STUDENT NAME]</span></div>
+          <div class="student-field"><span class="student-label">Reg No:</span> <span class="student-val">[REGISTER NUMBER]</span></div>
+          <div class="student-field"><span class="student-label">Subject:</span> <span class="student-val">Web Development Project</span></div>
+          <div class="footer-clock-box" aria-live="polite">
+            <span class="clock-label"><i class="fa-regular fa-clock" aria-hidden="true"></i> LIVE TIME</span>
+            <div id="liveDate" class="live-date">--</div>
+            <div id="liveTime" class="live-time">--:--:--</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright-text">&copy; 2026 ROOK WALL STUDIO. All rights reserved. Cinematic Production House.</p>
+        <p class="designer-text">Designed with precision for college web technology demonstration.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="../js/services.js"></script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | ROOK WALL STUDIO</title>
+  <meta name="description" content="Contact Rook Wall Studio — get in touch for film production, project enquiries, and creative collaborations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="top">
+    <div class="container navbar">
+      <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+        <div class="brand-icon" aria-hidden="true"><i class="fa-solid fa-chess-rook"></i></div>
+        <div class="brand-text-block">
+          <span class="brand-text-main">ROOK WALL</span>
+          <span class="brand-text-sub">STUDIO</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul id="navMenu" class="nav-menu">
+          <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="productions.html" class="nav-link">PRODUCTIONS</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" id="notifBtn" class="icon-btn" aria-label="Toggle notifications" aria-expanded="false">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+          <span class="notif-badge" id="notifCount">2</span>
+        </button>
+        <div id="notificationPanel" class="notification-panel" role="region" aria-label="Notifications">
+          <div class="notif-header">
+            <h4 class="notif-title"><i class="fa-solid fa-bell" style="color:var(--accent-bright);"></i> NOTIFICATIONS</h4>
+          </div>
+          <ul class="notif-list">
+            <li class="notif-item notif-unread">
+              <i class="fa-solid fa-headset notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">Enquiry response time</span>
+                <span class="notif-item-desc">Typical response within 24 business hours.</span>
+              </div>
+            </li>
+            <li class="notif-item notif-unread">
+              <i class="fa-solid fa-location-dot notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">Studio visits</span>
+                <span class="notif-item-desc">Studio tours available by prior appointment.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Switch theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <a href="../login.html" id="navAuthBtn" class="nav-auth-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+          <span>LOGIN</span>
+        </a>
+        <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="contact-hero" aria-label="Contact hero banner">
+    <div class="contact-hero-bg" role="img" aria-label="Cinematic studio lighting and film equipment background"></div>
+    <div class="contact-hero-overlay" aria-hidden="true"></div>
+    <div class="contact-hero-grain" aria-hidden="true"></div>
+    <div class="container contact-hero-content">
+      <nav class="contact-breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="../index.html">HOME</a></li>
+          <li class="breadcrumb-sep" aria-hidden="true">/</li>
+          <li class="breadcrumb-item breadcrumb-current" aria-current="page">CONTACT</li>
+        </ol>
+      </nav>
+      <div class="contact-hero-text">
+        <div class="contact-hero-label"><i class="fa-solid fa-chess-rook" aria-hidden="true"></i> ROOK WALL STUDIO</div>
+        <h1 class="contact-hero-heading">LET'S CREATE SOMETHING.</h1>
+        <p class="contact-hero-subtitle">"Have a story, project or idea? Let's start the conversation."</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content">
+
+  <!-- CONTACT CATEGORY CARDS -->
+  <section class="contact-cards-section" id="channels" aria-labelledby="channels-heading">
+    <div class="container">
+      <div class="section-header reveal-cnt">
+        <span class="section-pill">Direct Channels</span>
+        <h2 class="section-title" id="channels-heading">CHOOSE YOUR INQUIRY PATH</h2>
+        <p class="section-subtitle">Connect directly with the specialized department tailored to your production objectives.</p>
+      </div>
+      <div class="contact-channels-grid">
+        <!-- Card 1 -->
+        <article class="channel-card reveal-cnt" tabindex="0">
+          <div class="channel-icon-wrap" aria-hidden="true"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <h3 class="channel-title">GENERAL ENQUIRIES</h3>
+          <p class="channel-desc">For general questions, media press kits, and studio background information.</p>
+          <a href="#contact-form-block" class="channel-action js-channel-link" data-type="General Enquiry">
+            <span>SEND ENQUIRY</span>
+            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="channel-card reveal-cnt" tabindex="0">
+          <div class="channel-icon-wrap" aria-hidden="true"><i class="fa-solid fa-clapperboard"></i></div>
+          <h3 class="channel-title">PROJECT ENQUIRIES</h3>
+          <p class="channel-desc">For narrative screenplays, commercial productions, and feature film proposals.</p>
+          <a href="#contact-form-block" class="channel-action js-channel-link" data-type="Project Proposal">
+            <span>PROPOSE PROJECT</span>
+            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="channel-card reveal-cnt" tabindex="0">
+          <div class="channel-icon-wrap" aria-hidden="true"><i class="fa-solid fa-user-astronaut"></i></div>
+          <h3 class="channel-title">CAREERS</h3>
+          <p class="channel-desc">For directors, cinematographers, sound designers, and post-production talent.</p>
+          <a href="careers.html" class="channel-action">
+            <span>VIEW ROLES</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="channel-card reveal-cnt" tabindex="0">
+          <div class="channel-icon-wrap" aria-hidden="true"><i class="fa-solid fa-handshake-simple"></i></div>
+          <h3 class="channel-title">PARTNERSHIPS</h3>
+          <p class="channel-desc">For co-production ventures, equipment sponsors, and distribution networks.</p>
+          <a href="#contact-form-block" class="channel-action js-channel-link" data-type="Partnership">
+            <span>START DIALOGUE</span>
+            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO-COLUMN CONTACT WORKSPACE -->
+  <section class="contact-workspace-section" id="contact-workspace" aria-labelledby="get-in-touch-heading">
+    <div class="container">
+      <div class="contact-two-col-layout">
+        
+        <!-- LEFT COLUMN: STUDIO INFO & LOCATION -->
+        <aside class="contact-info-col reveal-cnt" aria-label="Studio contact info and location">
+          <div class="info-block-header">
+            <span class="section-pill">Headquarters</span>
+            <h2 class="section-title" id="get-in-touch-heading">GET IN TOUCH</h2>
+            <p class="info-block-lead">Whether initiating an independent picture or seeking studio equipment support, our doors are open.</p>
+          </div>
+
+          <div class="info-cards-stack">
+            <!-- Email -->
+            <div class="info-card">
+              <div class="info-card-icon" aria-hidden="true"><i class="fa-solid fa-at"></i></div>
+              <div class="info-card-content">
+                <span class="info-card-label">EMAIL</span>
+                <a href="mailto:hello@rookwallstudio.com" class="info-card-value info-link">hello@rookwallstudio.com</a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="info-card">
+              <div class="info-card-icon" aria-hidden="true"><i class="fa-solid fa-phone-volume"></i></div>
+              <div class="info-card-content">
+                <span class="info-card-label">PHONE</span>
+                <span class="info-card-value">+91 XXXXX XXXXX</span>
+              </div>
+            </div>
+
+            <!-- Studio Location -->
+            <div class="info-card">
+              <div class="info-card-icon" aria-hidden="true"><i class="fa-solid fa-building-shield"></i></div>
+              <div class="info-card-content">
+                <span class="info-card-label">STUDIO</span>
+                <span class="info-card-value">Coimbatore, Tamil Nadu, India</span>
+              </div>
+            </div>
+
+            <!-- Office Hours -->
+            <div class="info-card">
+              <div class="info-card-icon" aria-hidden="true"><i class="fa-regular fa-clock"></i></div>
+              <div class="info-card-content">
+                <span class="info-card-label">OFFICE HOURS</span>
+                <span class="info-card-value">Monday – Friday<br>9:00 AM – 6:00 PM IST</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STYLIZED LOCATION CARD (VISIT THE STUDIO) -->
+          <div class="studio-location-card">
+            <div class="location-map-graphic" role="img" aria-label="Stylized map showing Rook Wall Studio location in Coimbatore">
+              <div class="map-grid-lines" aria-hidden="true"></div>
+              <div class="radar-ping" aria-hidden="true"></div>
+              <div class="map-pin-marker" aria-hidden="true">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="map-badge">
+                <span class="map-badge-pin"><i class="fa-solid fa-film"></i></span>
+                <span class="map-badge-text">ROOK WALL MAIN LOT</span>
+              </div>
+            </div>
+            <div class="location-card-footer">
+              <h3 class="location-card-title">VISIT THE STUDIO</h3>
+              <p class="location-card-address"><i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i> Coimbatore, Tamil Nadu, India</p>
+              <p class="location-card-note">In-person consultations and studio floor tours scheduled exclusively by advance appointment.</p>
+            </div>
+          </div>
+
+          <!-- SOCIAL CHANNELS -->
+          <div class="studio-social-block">
+            <h3 class="studio-social-title">FOLLOW THE STUDIO</h3>
+            <div class="social-btn-row">
+              <a href="https://instagram.com" class="contact-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <span>Instagram</span>
+              </a>
+              <a href="https://youtube.com" class="contact-social-btn" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                <span>YouTube</span>
+              </a>
+              <a href="https://linkedin.com" class="contact-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- RIGHT COLUMN: CONTACT FORM WORKSPACE -->
+        <div class="contact-form-col reveal-cnt" id="contact-form-block">
+          <div class="form-card-wrapper">
+            <div class="form-card-header">
+              <span class="section-pill">Direct Message</span>
+              <h2 class="form-card-title">START A CONVERSATION</h2>
+              <p class="form-card-subtitle">Fill in the parameters below. Your draft is continuously saved locally.</p>
+            </div>
+
+            <!-- FORM SUCCESS CONFIRMATION PANEL (Initially Hidden) -->
+            <div id="formSuccessPanel" class="form-success-panel" style="display: none;" role="region" aria-live="polite">
+              <div class="success-icon-badge" aria-hidden="true"><i class="fa-solid fa-circle-check"></i></div>
+              <h3 class="success-title">MESSAGE RECEIVED</h3>
+              <p class="success-lead">Thank you for reaching out to Rook Wall Studio.</p>
+              <p class="success-desc">Our production supervisors review incoming dossiers daily. We will get back to you within 24 business hours.</p>
+              
+              <div class="success-summary-box">
+                <div class="summary-row"><span class="summary-lbl">Sender:</span> <strong id="successSenderName">--</strong></div>
+                <div class="summary-row"><span class="summary-lbl">Category:</span> <strong id="successCategory">--</strong></div>
+                <div class="summary-row"><span class="summary-lbl">Status:</span> <strong class="status-dispatched"><i class="fa-solid fa-paper-plane"></i> Logged to Dispatch Queue</strong></div>
+              </div>
+
+              <div class="success-actions">
+                <a href="../index.html" class="btn btn-primary btn-hover-sweep">
+                  <i class="fa-solid fa-house" aria-hidden="true"></i>
+                  <span>BACK TO HOME</span>
+                </a>
+                <a href="productions.html" class="btn btn-outline btn-hover-sweep">
+                  <i class="fa-solid fa-film" aria-hidden="true"></i>
+                  <span>VIEW PRODUCTIONS</span>
+                </a>
+                <button type="button" class="btn btn-text-link" id="btnSendAnother">
+                  <span>Send Another Message</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- HTML5 FORM -->
+            <form id="contactForm" class="contact-form" novalidate>
+              
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="contactName" class="form-label">
+                  <span>FULL NAME</span>
+                  <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-user input-icon" aria-hidden="true"></i>
+                  <input type="text" id="contactName" name="name" class="form-control" required minlength="2" maxlength="60" placeholder="e.g. Anandha Krishnan" autocomplete="name">
+                </div>
+                <div class="field-feedback" id="nameFeedback" aria-live="polite"></div>
+              </div>
+
+              <!-- Email & Phone (Grid Row) -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">
+                    <span>EMAIL ADDRESS</span>
+                    <span class="req-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-envelope input-icon" aria-hidden="true"></i>
+                    <input type="email" id="contactEmail" name="email" class="form-control" required placeholder="name@domain.com" autocomplete="email">
+                  </div>
+                  <div class="field-feedback" id="emailFeedback" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactPhone" class="form-label">
+                    <span>PHONE NUMBER</span>
+                    <span class="req-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-phone input-icon" aria-hidden="true"></i>
+                    <input type="tel" id="contactPhone" name="phone" class="form-control" required pattern="[0-9\+\-\s\(\)]{10,15}" placeholder="+91 98765 43210" autocomplete="tel">
+                  </div>
+                  <div class="field-feedback" id="phoneFeedback" aria-live="polite"></div>
+                </div>
+              </div>
+
+              <!-- Subject -->
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">
+                  <span>SUBJECT</span>
+                  <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-heading input-icon" aria-hidden="true"></i>
+                  <input type="text" id="contactSubject" name="subject" class="form-control" required minlength="3" maxlength="100" placeholder="e.g. Project Phoenix Script Option / Production Service">
+                </div>
+                <div class="field-feedback" id="subjectFeedback" aria-live="polite"></div>
+              </div>
+
+              <!-- Enquiry Type (Select) -->
+              <div class="form-group">
+                <label for="contactEnquiryType" class="form-label">
+                  <span>ENQUIRY TYPE</span>
+                  <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-list-check input-icon" aria-hidden="true"></i>
+                  <select id="contactEnquiryType" name="enquiryType" class="form-control" required>
+                    <option value="" disabled selected>Select an enquiry category</option>
+                    <option value="General Enquiry">General Enquiry</option>
+                    <option value="Project Proposal">Project Proposal</option>
+                    <option value="Production Service">Production Service</option>
+                    <option value="Career">Career</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="field-feedback" id="typeFeedback" aria-live="polite"></div>
+              </div>
+
+              <!-- Message (Textarea with Counter) -->
+              <div class="form-group">
+                <div class="label-with-counter">
+                  <label for="contactMessage" class="form-label">
+                    <span>MESSAGE</span>
+                    <span class="req-star" aria-hidden="true">*</span>
+                  </label>
+                  <span class="char-count-text" aria-live="polite"><span id="charCount">0</span> / 500</span>
+                </div>
+                <textarea id="contactMessage" name="message" class="form-control form-textarea" required maxlength="500" rows="5" placeholder="Outline your project scope, creative synopsis, tentative budget or inquiry details..."></textarea>
+                <div class="field-feedback" id="messageFeedback" aria-live="polite"></div>
+              </div>
+
+              <!-- Draft notice -->
+              <div class="draft-indicator-bar" id="draftIndicator">
+                <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i>
+                <span id="draftStatusText">Auto-saving draft locally...</span>
+              </div>
+
+              <!-- Form Action Buttons -->
+              <div class="form-actions-row">
+                <button type="submit" class="btn btn-primary btn-submit-message btn-hover-sweep" id="btnSubmitMessage">
+                  <span>SEND MESSAGE</span>
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                </button>
+                <button type="reset" class="btn btn-outline" id="btnResetForm">
+                  <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+                  <span>RESET</span>
+                </button>
+                <button type="button" class="btn btn-outline btn-clear-draft" id="btnClearDraft">
+                  <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+                  <span>CLEAR DRAFT</span>
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="contact-faq-section" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-header reveal-cnt">
+        <span class="section-pill">Inquiry Guidance</span>
+        <h2 class="section-title" id="faq-heading">FREQUENTLY ASKED QUESTIONS</h2>
+        <p class="section-subtitle">Key answers regarding our creative review timelines, submission policies, and studio workflow.</p>
+      </div>
+      <div class="faq-accordion-container reveal-cnt">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAns1">
+            <span class="faq-q-text">What type of productions do you work on?</span>
+            <span class="faq-toggle-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div id="faqAns1" class="faq-answer-panel" role="region">
+            <p class="faq-answer-text">We focus on narrative feature films, independent short films, high-concept digital series, and research-driven documentaries. We also engineer cinematic promotional trailers, lookbooks, and visual brand films that demand festival-grade storytelling.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAns2">
+            <span class="faq-q-text">Do you accept independent projects?</span>
+            <span class="faq-toggle-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div id="faqAns2" class="faq-answer-panel" role="region">
+            <p class="faq-answer-text">Yes, absolutely. Rook Wall Studio was founded to champion bold independent voices. We actively evaluate external screenplays, treatment drafts, and work-in-progress rough cuts for co-production partnerships, color finishing, or full physical production backing.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAns3">
+            <span class="faq-q-text">How can I join the creative team?</span>
+            <span class="faq-toggle-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div id="faqAns3" class="faq-answer-panel" role="region">
+            <p class="faq-answer-text">We are continuously recruiting visionary cinematographers, lighting technicians, Davinci Resolve colorists, sound designers, and assistant directors. Please check our live openings on the <a href="careers.html" class="inline-accent-link">Careers Page</a> or apply via the career inquiry path above.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAns4">
+            <span class="faq-q-text">Can I submit a project proposal?</span>
+            <span class="faq-toggle-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div id="faqAns4" class="faq-answer-panel" role="region">
+            <p class="faq-answer-text">Yes. Simply select "Project Proposal" in the enquiry form above, include a high-level narrative logline and your anticipated timeline. Our development desk will reach out with secure file transmission guidelines for full screenplays and lookbooks.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="contact-cta-section" id="cta" aria-labelledby="cta-heading">
+    <div class="container contact-cta-container">
+      <div class="contact-cta-card reveal-cnt">
+        <span class="section-pill">The Next Frame</span>
+        <h2 class="section-title" id="cta-heading">YOUR STORY COULD BE OUR NEXT PRODUCTION.</h2>
+        <p class="section-subtitle">"Tell us what you're imagining."</p>
+        <div class="contact-cta-btn-group">
+          <a href="productions.html" class="btn btn-primary btn-hover-sweep">
+            <span>EXPLORE PRODUCTIONS</span>
+            <i class="fa-solid fa-film" aria-hidden="true"></i>
+          </a>
+          <a href="careers.html" class="btn btn-outline btn-hover-sweep">
+            <span>JOIN OUR TEAM</span>
+            <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-top-grid">
+      <div class="footer-col footer-col--brand">
+        <a href="../index.html" class="footer-brand" aria-label="ROOK WALL STUDIO Home">
+          <div class="brand-icon" aria-hidden="true"><i class="fa-solid fa-chess-rook"></i></div>
+          <div class="brand-text-block">
+            <span class="brand-text-main">ROOK WALL</span>
+            <span class="brand-text-sub">STUDIO</span>
+          </div>
+        </a>
+        <p class="footer-brand-bio">An independent cinematic production house dedicated to compelling visual narratives, unyielding artistry, and the craft of moving pictures.</p>
+        <div class="footer-motto-badge">WE CREATE STORIES.</div>
+        <div class="footer-social-links" aria-label="Social media links">
+          <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">QUICK LINKS</h4>
+        <ul class="footer-nav-list">
+          <li><a href="../index.html" class="footer-nav-link">Home</a></li>
+          <li><a href="productions.html" class="footer-nav-link">Productions</a></li>
+          <li><a href="services.html" class="footer-nav-link">Services</a></li>
+          <li><a href="about.html" class="footer-nav-link">About</a></li>
+          <li><a href="contact.html" class="footer-nav-link footer-nav-link--active">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">ADDITIONAL</h4>
+        <ul class="footer-nav-list">
+          <li><a href="careers.html" class="footer-nav-link">Careers</a></li>
+          <li><a href="gallery.html" class="footer-nav-link">Studio Archive</a></li>
+          <li><a href="dashboard.html" class="footer-nav-link">Dashboard</a></li>
+          <li><a href="production-details.html?id=phoenix" class="footer-nav-link">Featured Production</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col--student">
+        <h4 class="footer-col-title">STUDENT INFO</h4>
+        <div class="student-info-card">
+          <div class="student-field"><span class="student-label">Name:</span> <span class="student-val">[STUDENT NAME]</span></div>
+          <div class="student-field"><span class="student-label">Reg No:</span> <span class="student-val">[REGISTER NUMBER]</span></div>
+          <div class="student-field"><span class="student-label">Subject:</span> <span class="student-val">Web Development Project</span></div>
+          <div class="footer-clock-box" aria-live="polite">
+            <span class="clock-label"><i class="fa-regular fa-clock" aria-hidden="true"></i> LIVE TIME</span>
+            <div id="liveDate" class="live-date">--</div>
+            <div id="liveTime" class="live-time">--:--:--</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright-text">&copy; 2026 ROOK WALL STUDIO. All rights reserved. Cinematic Production House.</p>
+        <p class="designer-text">Designed with precision for college web technology demonstration.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="../js/contact.js"></script>
+</body>
+</html>

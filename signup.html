@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Create Account | ROOK WALL STUDIO — Film Production</title>
+  <meta name="description" content="Join Rook Wall Studio. A premium film production company crafting evocative cinema and dramatic stories.">
+  
+  <!-- Google Fonts: Cinzel (Cinematic Serif) & Plus Jakarta Sans (Modern Clean UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 for High Fidelity Vector Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <!-- ====================================================================
+         LEFT SIDE: CINEMATIC VISUAL STAGE
+         ==================================================================== -->
+    <aside class="cinematic-stage" aria-label="Visual Brand Story">
+      <!-- Background Visual with Slow Cinematic Zoom -->
+      <div class="cinematic-bg" style="background-image: url('assets/images/auth/signup-bg.jpg');" role="img" aria-label="Film production camera and dramatic lighting on studio set"></div>
+      
+      <!-- Studio Atmospheric Overlays -->
+      <div class="cinematic-overlay"></div>
+      <div class="film-grain"></div>
+      <div class="ambient-glow"></div>
+
+      <!-- Studio Brand Header -->
+      <header class="cinematic-header">
+        <a href="signup.html" class="brand-logo-lockup" aria-label="ROOK WALL STUDIO Home">
+          <div class="brand-icon" aria-hidden="true">
+            <i class="fa-solid fa-chess-rook"></i>
+          </div>
+          <div class="brand-name">
+            <span>ROOK WALL</span>
+            <span class="brand-sub">STUDIO</span>
+          </div>
+        </a>
+      </header>
+
+      <!-- Central Cinematic Hero Typography -->
+      <div class="cinematic-body">
+        <div class="production-badge">
+          <span class="pulse-dot"></span>
+          <span>We Create Stories</span>
+        </div>
+        
+        <h1 class="cinematic-quote">
+          BE PART OF<br>
+          <span class="highlight">THE STORY.</span>
+        </h1>
+        
+        <p class="cinematic-desc">
+          Enter the gateway of visionary storytelling. Join our ensemble of cinematographers, directors, writers, and artists crafting compelling narratives across the globe.
+        </p>
+      </div>
+
+      <!-- Studio Production Metadata Strip -->
+      <footer class="cinematic-footer">
+        <div class="production-metadata">
+          <div class="meta-item">
+            <span class="meta-label">Module</span>
+            <span class="meta-val">AUTHENTICATION // 01</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label">Format</span>
+            <span class="meta-val">ANAMORPHIC 2.39:1</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label">Status</span>
+            <span class="meta-val"><i class="fa-solid fa-record-vinyl" style="color:var(--accent);"></i> REC // ACTIVE</span>
+          </div>
+        </div>
+      </footer>
+    </aside>
+
+    <!-- ====================================================================
+         RIGHT SIDE: AUTHENTICATION FORM STAGE
+         ==================================================================== -->
+    <main class="auth-stage">
+      <div class="form-container">
+        
+        <!-- Form Header -->
+        <div class="form-header">
+          <span class="subheading-pill">ROOK WALL STUDIO</span>
+          <h2 class="form-title">CREATE ACCOUNT</h2>
+          <p class="form-subtitle">Join ROOK WALL STUDIO</p>
+        </div>
+
+        <!-- Global Status Notification Banner -->
+        <div id="globalAlert" class="auth-alert" role="alert" aria-live="polite">
+          <i class="alert-icon fa-solid fa-circle-check" aria-hidden="true"></i>
+          <div class="alert-content">
+            <div class="alert-title"></div>
+            <div class="alert-message"></div>
+            <div class="alert-action"></div>
+          </div>
+        </div>
+
+        <!-- Signup Form -->
+        <form id="signupForm" class="auth-form" novalidate>
+          
+          <!-- Field 1: Full Name -->
+          <div class="input-group">
+            <label for="fullName" class="input-label">
+              <span>Full Name</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="input-icon fa-solid fa-user" aria-hidden="true"></i>
+              <input 
+                type="text" 
+                id="fullName" 
+                name="fullName" 
+                class="form-input" 
+                placeholder="Christopher Nolan" 
+                autocomplete="name"
+                required
+              >
+            </div>
+            <div id="nameError" class="field-error" role="alert">
+              <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+              <span class="error-text">Please enter your name.</span>
+            </div>
+          </div>
+
+          <!-- Field 2: Email -->
+          <div class="input-group">
+            <label for="email" class="input-label">
+              <span>Email Address</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="input-icon fa-solid fa-envelope" aria-hidden="true"></i>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="form-input" 
+                placeholder="director@rookwallstudio.com" 
+                autocomplete="email"
+                required
+              >
+            </div>
+            <div id="emailError" class="field-error" role="alert">
+              <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+              <span class="error-text">Please enter a valid email.</span>
+            </div>
+          </div>
+
+          <!-- Field 3: Password -->
+          <div class="input-group">
+            <label for="password" class="input-label">
+              <span>Password</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="input-icon fa-solid fa-lock" aria-hidden="true"></i>
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                class="form-input" 
+                placeholder="At least 8 characters" 
+                autocomplete="new-password"
+                required
+              >
+              <button 
+                type="button" 
+                class="password-toggle-btn" 
+                data-target="password" 
+                aria-label="Toggle password visibility"
+                tabindex="0"
+              >
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div id="passwordError" class="field-error" role="alert">
+              <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+              <span class="error-text">Password must contain at least 8 characters.</span>
+            </div>
+          </div>
+
+          <!-- Field 4: Confirm Password -->
+          <div class="input-group">
+            <label for="confirmPassword" class="input-label">
+              <span>Confirm Password</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="input-icon fa-solid fa-shield-halved" aria-hidden="true"></i>
+              <input 
+                type="password" 
+                id="confirmPassword" 
+                name="confirmPassword" 
+                class="form-input" 
+                placeholder="Re-enter your password" 
+                autocomplete="new-password"
+                required
+              >
+              <button 
+                type="button" 
+                class="password-toggle-btn" 
+                data-target="confirmPassword" 
+                aria-label="Toggle confirm password visibility"
+                tabindex="0"
+              >
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div id="confirmPasswordError" class="field-error" role="alert">
+              <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+              <span class="error-text">Passwords do not match.</span>
+            </div>
+          </div>
+
+          <!-- Terms and Conditions Checkbox -->
+          <div class="input-group" style="margin-top: -0.25rem;">
+            <label class="remember-me-label" for="termsCheckbox" style="font-size: 0.82rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.55rem;">
+              <input type="checkbox" id="termsCheckbox" name="terms" class="custom-checkbox" required>
+              <span>I agree to the <span style="color: var(--accent-bright);">Terms & Conditions</span> and Studio Policies</span>
+            </label>
+            <div id="termsError" class="field-error" role="alert">
+              <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+              <span class="error-text">You must agree to the Terms & Conditions.</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="signupSubmitBtn" class="btn-primary">
+            <span>CREATE ACCOUNT</span>
+            <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+          </button>
+
+        </form>
+
+        <!-- Switch to Login Navigation -->
+        <div class="form-footer">
+          <span>Already have an account?</span>
+          <a href="login.html" class="switch-auth-link">Login</a>
+        </div>
+
+        <!-- Prototype Disclaimer Badge -->
+        <div class="prototype-badge">
+          <i class="fa-solid fa-film"></i>
+          <span>Rook Wall Studio &bull; Frontend Authentication Prototype</span>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Vanilla JavaScript -->
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Productions | ROOK WALL STUDIO — We Create Stories</title>
+  <meta name="description" content="Explore the cinematic slate of Rook Wall Studio. Feature films, short films, documentaries, and series driven by bold narratives and unforgettable visuals.">
+
+  <!-- Google Fonts: Cinzel (Cinematic Serif) & Plus Jakarta Sans (Modern Clean UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 for High Fidelity Vector Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core & Page Specific Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/productions.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       1. NAVIGATION BAR (STICKY)
+       ==================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      
+      <!-- LEFT: Logo & Brand Lockup -->
+      <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+        <div class="brand-icon" aria-hidden="true">
+          <i class="fa-solid fa-chess-rook"></i>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-text-main">ROOK WALL</span>
+          <span class="brand-text-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <!-- CENTER: Main Navigation Links (Exactly 4 items, PRODUCTIONS active) -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul id="navMenu" class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="productions.html" class="nav-link active" aria-current="page">PRODUCTIONS</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT: Notification, Theme Toggle & Login/Logout Action -->
+      <div class="nav-actions">
+        <!-- 🔔 Notification Toggle Button -->
+        <button type="button" id="notifBtn" class="icon-btn" aria-label="Toggle notifications" aria-expanded="false">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+          <span class="notif-badge" aria-hidden="true"></span>
+        </button>
+
+        <!-- Notification Flyout Panel -->
+        <div id="notificationPanel" class="notification-panel" role="region" aria-label="Studio Announcements">
+          <div class="notif-header">
+            <h4 class="notif-title">
+              <i class="fa-solid fa-bullhorn" style="color:var(--accent-bright);"></i>
+              NOTIFICATIONS
+            </h4>
+            <span style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase;">Live Feed</span>
+          </div>
+          <ul class="notif-list">
+            <li class="notif-item">
+              <i class="fa-solid fa-clapperboard notif-item-icon" aria-hidden="true"></i>
+              <span>🎬 New production announced: <strong>Project Phoenix</strong></span>
+            </li>
+            <li class="notif-item">
+              <i class="fa-solid fa-masks-theater notif-item-icon" aria-hidden="true"></i>
+              <span>🎭 Casting applications are open for 2026 slate</span>
+            </li>
+            <li class="notif-item">
+              <i class="fa-solid fa-film notif-item-icon" aria-hidden="true"></i>
+              <span>🎥 New trailer coming soon: <strong>The Horizon</strong></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 🌙 Theme Toggle Button -->
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Switch Theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+
+        <!-- Dynamic Auth Button (LOGIN / LOGOUT) -->
+        <a href="../login.html" id="navAuthBtn" class="nav-auth-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+          <span>LOGIN</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       2. HERO SECTION
+       ==================================================================== -->
+  <section class="prod-hero-section" id="productions-hero">
+    <div class="prod-hero-bg-container">
+      <div class="prod-hero-bg-image" role="img" aria-label="Moody cinematic studio lighting and production setup"></div>
+      <div class="prod-hero-overlay"></div>
+      <div class="prod-hero-grain"></div>
+    </div>
+
+    <div class="container prod-hero-content">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-wrap anim-fade-in" aria-label="Breadcrumb">
+        <a href="../index.html" class="breadcrumb-link">HOME</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">PRODUCTIONS</span>
+      </nav>
+
+      <div class="prod-hero-small anim-fade-in" style="animation-delay: 0.1s;">
+        <span>ROOK WALL STUDIO</span>
+      </div>
+
+      <h1 class="prod-hero-title anim-slide-up" style="animation-delay: 0.15s;">
+        OUR PRODUCTIONS
+      </h1>
+
+      <p class="prod-hero-subtitle anim-slide-up" style="animation-delay: 0.25s;">
+        &ldquo;Stories created for the screen.&rdquo;
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <!-- ====================================================================
+         3. FEATURED PRODUCTION SPOTLIGHT (PROJECT PHOENIX)
+         ==================================================================== -->
+    <section class="featured-prod-section" id="featured-production">
+      <div class="container">
+        
+        <div class="section-heading-wrap reveal-on-scroll">
+          <span class="section-pill">Headline Release</span>
+          <h2 class="section-title">FEATURED PRODUCTION</h2>
+          <p class="section-subtitle">Our flagship cinematic endeavor exploring the limits of human resilience.</p>
+        </div>
+
+        <article class="featured-prod-card reveal-on-scroll">
+          <!-- Left: Cinematic Media Poster -->
+          <div class="featured-media-wrap">
+            <img 
+              src="../assets/images/prod-phoenix.jpg" 
+              alt="Project Phoenix feature film poster" 
+              class="featured-poster-img"
+              onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80';"
+            >
+            <div class="featured-media-overlay"></div>
+            <div class="featured-spotlight-badge">
+              <i class="fa-solid fa-star"></i>
+              <span>SPOTLIGHT RELEASE</span>
+            </div>
+          </div>
+
+          <!-- Right: Production Details -->
+          <div class="featured-info-wrap">
+            <div class="featured-meta-pill-row">
+              <span class="featured-pill accent">FEATURE FILM</span>
+              <span class="featured-pill">2026</span>
+              <span class="featured-pill">DRAMA / THRILLER</span>
+            </div>
+
+            <h3 class="featured-title">PROJECT PHOENIX</h3>
+
+            <p class="featured-desc">
+              &ldquo;A story of ambition, sacrifice and the people who rise when everything seems lost.&rdquo;
+            </p>
+
+            <!-- Director, Producer, Rating Specs -->
+            <div class="featured-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">Director</span>
+                <span class="spec-val">Arjun Varma</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Producer</span>
+                <span class="spec-val">ROOK WALL STUDIO</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Rating</span>
+                <span class="spec-val rating-val">
+                  <i class="fa-solid fa-star"></i> 4.8 / 5
+                </span>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="featured-actions-row">
+              <a href="production-details.html?id=phoenix" class="btn btn-primary btn-hover-sweep">
+                <span>VIEW DETAILS</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+
+              <button type="button" class="btn btn-outline btn-hover-sweep btn-watch-trailer" data-title="Project Phoenix">
+                <i class="fa-solid fa-play" aria-hidden="true"></i>
+                <span>WATCH TRAILER</span>
+              </button>
+
+              <button type="button" class="btn-wishlist" data-prod-id="phoenix" aria-label="Toggle Project Phoenix in wishlist" aria-pressed="false">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                <span class="wishlist-btn-text">Wishlist</span>
+              </button>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. SEARCH AND FILTER DISCOVERY SECTION
+         ==================================================================== -->
+    <section class="filter-section" id="production-discovery">
+      <div class="container">
+        
+        <div class="filter-controls-container">
+          <!-- Top: Search Bar -->
+          <div class="search-bar-wrap">
+            <i class="fa-solid fa-magnifying-glass search-input-icon" aria-hidden="true"></i>
+            <input 
+              type="text" 
+              id="prodSearchInput" 
+              class="search-input" 
+              placeholder="Search productions by title, genre, or keyword..." 
+              aria-label="Search productions"
+            >
+            <button type="button" id="searchClearBtn" class="search-clear-btn" aria-label="Clear search input">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Bottom: Filter Rows (Category & Year) -->
+          <div class="filter-row">
+            
+            <!-- Category Filter Cluster -->
+            <div class="filter-cluster">
+              <span class="filter-label">Category:</span>
+              <div class="filter-btn-group" role="group" aria-label="Filter by Category">
+                <button type="button" class="filter-btn category-filter-btn active" data-category="all">All</button>
+                <button type="button" class="filter-btn category-filter-btn" data-category="Feature Film">Feature Film</button>
+                <button type="button" class="filter-btn category-filter-btn" data-category="Short Film">Short Film</button>
+                <button type="button" class="filter-btn category-filter-btn" data-category="Documentary">Documentary</button>
+                <button type="button" class="filter-btn category-filter-btn" data-category="Series">Series</button>
+              </div>
+            </div>
+
+            <!-- Year Filter Cluster -->
+            <div class="filter-cluster">
+              <span class="filter-label">Year:</span>
+              <div class="filter-btn-group" role="group" aria-label="Filter by Release Year">
+                <button type="button" class="filter-btn year-filter-btn active" data-year="all">All Years</button>
+                <button type="button" class="filter-btn year-filter-btn" data-year="2026">2026</button>
+                <button type="button" class="filter-btn year-filter-btn" data-year="2025">2025</button>
+                <button type="button" class="filter-btn year-filter-btn" data-year="2024">2024</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Filter Status Counter & Reset -->
+          <div class="filter-status-bar">
+            <span class="results-count">
+              Showing <strong id="resultsCountNumber">6</strong> of 6 studio productions
+            </span>
+            <button type="button" id="resetFiltersBtn" class="reset-filters-btn">
+              <i class="fa-solid fa-rotate-left"></i> Reset all filters
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. PRODUCTION CARDS GRID
+         ==================================================================== -->
+    <section class="productions-grid-section" id="catalog-grid">
+      <div class="container">
+        
+        <div class="prod-cards-grid" id="productionsContainer">
+          
+          <!-- Card 1: PROJECT PHOENIX -->
+          <article 
+            class="prod-card" 
+            data-id="phoenix" 
+            data-title="Project Phoenix" 
+            data-category="Feature Film" 
+            data-year="2026" 
+            data-genre="Drama / Thriller" 
+            data-desc="A story of ambition, sacrifice and the people who rise when everything seems lost."
+            tabindex="0"
+          >
+            <img 
+              src="../assets/images/prod-phoenix.jpg" 
+              alt="Project Phoenix movie poster" 
+              class="prod-card-poster"
+              loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80';"
+            >
+            <div class="prod-card-base-overlay"></div>
+
+            <!-- Resting State Info -->
+            <div class="prod-card-resting-info">
+              <div class="card-category-year">Feature Film &bull; 2026</div>
+              <h3 class="card-prod-title">PROJECT PHOENIX</h3>
+            </div>
+
+            <!-- Hover Revealed Overlay -->
+            <div class="prod-card-hover-overlay">
+              <div class="hover-tags-row">
+                <span class="hover-category-tag">Feature Film &bull; 2026</span>
+                <span class="hover-rating-tag"><i class="fa-solid fa-star"></i> 4.8</span>
+              </div>
+              <h4 class="hover-title">PROJECT PHOENIX</h4>
+              <div class="hover-genre">Drama / Thriller</div>
+              <p class="hover-desc">A story of ambition, sacrifice and the people who rise when everything seems lost.</p>
+
+              <div class="hover-buttons-row">
+                <a href="production-details.html?id=phoenix" class="btn btn-primary btn-hover-sweep hover-details-btn">
+                  <span>VIEW DETAILS</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="btn-wishlist" data-prod-id="phoenix" aria-label="Toggle Project Phoenix in wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  <span class="wishlist-btn-text">Wishlist</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: THE HORIZON -->
+          <article 
+            class="prod-card" 
+            data-id="horizon" 
+            data-title="The Horizon" 
+            data-category="Feature Film" 
+            data-year="2025" 
+            data-genre="Adventure / Drama" 
+            data-desc="An intimate, visually poetic journey of two estranged travelers crossing desolate coastal terrain at dusk."
+            tabindex="0"
+          >
+            <img 
+              src="../assets/images/prod-horizon.jpg" 
+              alt="The Horizon movie poster" 
+              class="prod-card-poster"
+              loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?auto=format&fit=crop&w=800&q=80';"
+            >
+            <div class="prod-card-base-overlay"></div>
+
+            <!-- Resting State Info -->
+            <div class="prod-card-resting-info">
+              <div class="card-category-year">Feature Film &bull; 2025</div>
+              <h3 class="card-prod-title">THE HORIZON</h3>
+            </div>
+
+            <!-- Hover Revealed Overlay -->
+            <div class="prod-card-hover-overlay">
+              <div class="hover-tags-row">
+                <span class="hover-category-tag">Feature Film &bull; 2025</span>
+                <span class="hover-rating-tag"><i class="fa-solid fa-star"></i> 4.6</span>
+              </div>
+              <h4 class="hover-title">THE HORIZON</h4>
+              <div class="hover-genre">Adventure / Drama</div>
+              <p class="hover-desc">An intimate, visually poetic journey of two estranged travelers crossing desolate coastal terrain at dusk.</p>
+
+              <div class="hover-buttons-row">
+                <a href="production-details.html?id=horizon" class="btn btn-primary btn-hover-sweep hover-details-btn">
+                  <span>VIEW DETAILS</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="btn-wishlist" data-prod-id="horizon" aria-label="Toggle The Horizon in wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  <span class="wishlist-btn-text">Wishlist</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: ECHOES -->
+          <article 
+            class="prod-card" 
+            data-id="echoes" 
+            data-title="Echoes" 
+            data-category="Short Film" 
+            data-year="2025" 
+            data-genre="Mystery / Drama" 
+            data-desc="A landmark exploration into forgotten indigenous melodies and their profound connection to disappearing forests."
+            tabindex="0"
+          >
+            <img 
+              src="../assets/images/prod-echoes.jpg" 
+              alt="Echoes movie poster" 
+              class="prod-card-poster"
+              loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80';"
+            >
+            <div class="prod-card-base-overlay"></div>
+
+            <!-- Resting State Info -->
+            <div class="prod-card-resting-info">
+              <div class="card-category-year">Short Film &bull; 2025</div>
+              <h3 class="card-prod-title">ECHOES</h3>
+            </div>
+
+            <!-- Hover Revealed Overlay -->
+            <div class="prod-card-hover-overlay">
+              <div class="hover-tags-row">
+                <span class="hover-category-tag">Short Film &bull; 2025</span>
+                <span class="hover-rating-tag"><i class="fa-solid fa-star"></i> 4.7</span>
+              </div>
+              <h4 class="hover-title">ECHOES</h4>
+              <div class="hover-genre">Mystery / Drama</div>
+              <p class="hover-desc">A landmark exploration into forgotten indigenous melodies and their profound connection to disappearing forests.</p>
+
+              <div class="hover-buttons-row">
+                <a href="production-details.html?id=echoes" class="btn btn-primary btn-hover-sweep hover-details-btn">
+                  <span>VIEW DETAILS</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="btn-wishlist" data-prod-id="echoes" aria-label="Toggle Echoes in wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  <span class="wishlist-btn-text">Wishlist</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: LAST FRAME -->
+          <article 
+            class="prod-card" 
+            data-id="last-frame" 
+            data-title="Last Frame" 
+            data-category="Short Film" 
+            data-year="2024" 
+            data-genre="Psychological Thriller" 
+            data-desc="An obsessive projectionist discovers disturbing anomalies hidden inside old celluloid film reels."
+            tabindex="0"
+          >
+            <img 
+              src="../assets/images/prod-lastframe.jpg" 
+              alt="Last Frame movie poster" 
+              class="prod-card-poster"
+              loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1574267432553-4b4628081c31?auto=format&fit=crop&w=800&q=80';"
+            >
+            <div class="prod-card-base-overlay"></div>
+
+            <!-- Resting State Info -->
+            <div class="prod-card-resting-info">
+              <div class="card-category-year">Short Film &bull; 2024</div>
+              <h3 class="card-prod-title">LAST FRAME</h3>
+            </div>
+
+            <!-- Hover Revealed Overlay -->
+            <div class="prod-card-hover-overlay">
+              <div class="hover-tags-row">
+                <span class="hover-category-tag">Short Film &bull; 2024</span>
+                <span class="hover-rating-tag"><i class="fa-solid fa-star"></i> 4.5</span>
+              </div>
+              <h4 class="hover-title">LAST FRAME</h4>
+              <div class="hover-genre">Psychological Thriller</div>
+              <p class="hover-desc">An obsessive projectionist discovers disturbing anomalies hidden inside old celluloid film reels.</p>
+
+              <div class="hover-buttons-row">
+                <a href="production-details.html?id=last-frame" class="btn btn-primary btn-hover-sweep hover-details-btn">
+                  <span>VIEW DETAILS</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="btn-wishlist" data-prod-id="last-frame" aria-label="Toggle Last Frame in wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  <span class="wishlist-btn-text">Wishlist</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: BEYOND THE SILENCE -->
+          <article 
+            class="prod-card" 
+            data-id="beyond-silence" 
+            data-title="Beyond The Silence" 
+            data-category="Documentary" 
+            data-year="2024" 
+            data-genre="Documentary" 
+            data-desc="An immersive investigation uncovering the untold stories and resilience of sound designers across war zones."
+            tabindex="0"
+          >
+            <img 
+              src="../assets/images/prod-beyondsilence.jpg" 
+              alt="Beyond The Silence documentary poster" 
+              class="prod-card-poster"
+              loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80';"
+            >
+            <div class="prod-card-base-overlay"></div>
+
+            <!-- Resting State Info -->
+            <div class="prod-card-resting-info">
+              <div class="card-category-year">Documentary &bull; 2024</div>
+              <h3 class="card-prod-title">BEYOND THE SILENCE</h3>
+            </div>
+
+            <!-- Hover Revealed Overlay -->
+            <div class="prod-card-hover-overlay">
+              <div class="hover-tags-row">
+                <span class="hover-category-tag">Documentary &bull; 2024</span>
+                <span class="hover-rating-tag"><i class="fa-solid fa-star"></i> 4.9</span>
+              </div>
+              <h4 class="hover-title">BEYOND THE SILENCE</h4>
+              <div class="hover-genre">Documentary</div>
+              <p class="hover-desc">An immersive investigation uncovering the untold stories and resilience of sound designers across war zones.</p>
+
+              <div class="hover-buttons-row">
+                <a href="production-details.html?id=beyond-silence" class="btn btn-primary btn-hover-sweep hover-details-btn">
+                  <span>VIEW DETAILS</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="btn-wishlist" data-prod-id="beyond-silence" aria-label="Toggle Beyond The Silence in wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  <span class="wishlist-btn-text">Wishlist</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: MIDNIGHT STORIES -->
+          <article 
+            class="prod-card" 
+            data-id="midnight-stories" 
+            data-title="Midnight Stories" 
+            data-category="Series" 
+            data-year="2026" 
+            data-genre="Crime / Mystery" 
+            data-desc="An atmospheric anthology tracing interconnected secrets veiled under the shadows of a nocturnal metropolis."
+            tabindex="0"
+          >
+            <img 
+              src="../assets/images/prod-midnight.jpg" 
+              alt="Midnight Stories series poster" 
+              class="prod-card-poster"
+              loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1509281373149-e957c6296406?auto=format&fit=crop&w=800&q=80';"
+            >
+            <div class="prod-card-base-overlay"></div>
+
+            <!-- Resting State Info -->
+            <div class="prod-card-resting-info">
+              <div class="card-category-year">Series &bull; 2026</div>
+              <h3 class="card-prod-title">MIDNIGHT STORIES</h3>
+            </div>
+
+            <!-- Hover Revealed Overlay -->
+            <div class="prod-card-hover-overlay">
+              <div class="hover-tags-row">
+                <span class="hover-category-tag">Series &bull; 2026</span>
+                <span class="hover-rating-tag"><i class="fa-solid fa-star"></i> 4.8</span>
+              </div>
+              <h4 class="hover-title">MIDNIGHT STORIES</h4>
+              <div class="hover-genre">Crime / Mystery</div>
+              <p class="hover-desc">An atmospheric anthology tracing interconnected secrets veiled under the shadows of a nocturnal metropolis.</p>
+
+              <div class="hover-buttons-row">
+                <a href="production-details.html?id=midnight-stories" class="btn btn-primary btn-hover-sweep hover-details-btn">
+                  <span>VIEW DETAILS</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="btn-wishlist" data-prod-id="midnight-stories" aria-label="Toggle Midnight Stories in wishlist" aria-pressed="false">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  <span class="wishlist-btn-text">Wishlist</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Empty State: No Productions Found -->
+          <div id="noResultsBox" class="no-results-box" role="status">
+            <div class="no-results-icon">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <h3 class="no-results-title">No productions found.</h3>
+            <p class="no-results-text">We couldn't find any productions matching your active search or filter combination.</p>
+            <button type="button" id="noResultsClearBtn" class="btn btn-outline btn-hover-sweep">
+              <span>CLEAR FILTERS</span>
+              <i class="fa-solid fa-rotate-left"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. PRODUCTION STATISTICS
+         ==================================================================== -->
+    <section class="prod-stats-section" id="production-statistics">
+      <div class="container">
+        
+        <div class="prod-stats-grid">
+          <!-- 1. Total Productions -->
+          <div class="prod-stat-item reveal-on-scroll">
+            <div class="prod-stat-number" data-target="6" data-pad="true">00</div>
+            <div class="prod-stat-label">TOTAL PRODUCTIONS</div>
+          </div>
+
+          <!-- 2. Feature Films -->
+          <div class="prod-stat-item reveal-on-scroll">
+            <div class="prod-stat-number" data-target="2" data-pad="true">00</div>
+            <div class="prod-stat-label">FEATURE FILMS</div>
+          </div>
+
+          <!-- 3. Short Films -->
+          <div class="prod-stat-item reveal-on-scroll">
+            <div class="prod-stat-number" data-target="2" data-pad="true">00</div>
+            <div class="prod-stat-label">SHORT FILMS</div>
+          </div>
+
+          <!-- 4. Documentaries -->
+          <div class="prod-stat-item reveal-on-scroll">
+            <div class="prod-stat-number" data-target="1" data-pad="true">00</div>
+            <div class="prod-stat-label">DOCUMENTARIES</div>
+          </div>
+
+          <!-- 5. Series -->
+          <div class="prod-stat-item reveal-on-scroll">
+            <div class="prod-stat-number" data-target="1" data-pad="true">00</div>
+            <div class="prod-stat-label">SERIES</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. CINEMATIC QUOTE SECTION
+         ==================================================================== -->
+    <section class="quote-banner-section reveal-on-scroll" id="cinematic-quote">
+      <div class="quote-bg-image"></div>
+      <div class="quote-dark-overlay"></div>
+
+      <div class="container quote-content">
+        <h2 class="quote-heading">EVERY FRAME HAS A STORY.</h2>
+        <p class="quote-text">
+          &ldquo;From the first idea to the final frame, we create stories designed to leave a mark.&rdquo;
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. CREATIVE CTA SECTION
+         ==================================================================== -->
+    <section class="cta-banner-section reveal-on-scroll" id="cta-contact">
+      <div class="cta-bg-image"></div>
+      <div class="cta-dark-overlay"></div>
+      
+      <div class="container cta-content">
+        <h2 class="cta-heading">HAVE A STORY TO TELL?</h2>
+        <p class="cta-text">&ldquo;Bring your vision to Rook Wall Studio.&rdquo;</p>
+        
+        <div class="cta-btn-group">
+          <a href="contact.html" class="btn btn-primary btn-hover-sweep">
+            <span>START A PROJECT</span>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </a>
+          <a href="careers.html" class="btn btn-outline btn-hover-sweep">
+            <span>JOIN OUR TEAM</span>
+            <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       9. MULTI-COLUMN FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Column 1: Brand Info & Live Studio Status Clock -->
+        <div class="footer-col">
+          <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+            <div class="brand-icon" aria-hidden="true">
+              <i class="fa-solid fa-chess-rook"></i>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-text-main">ROOK WALL</span>
+              <span class="brand-text-sub">STUDIO</span>
+            </div>
+          </a>
+
+          <p class="footer-brand-bio">
+            &ldquo;WE CREATE STORIES.&rdquo;<br>
+            Stories That Stay Forever.
+          </p>
+
+          <!-- Studio Status Area: Live Date and Time updating every second -->
+          <div class="footer-clock-box">
+            <i class="fa-solid fa-broadcast-tower footer-clock-icon" aria-hidden="true"></i>
+            <div class="clock-text-wrap">
+              <span class="clock-label">STUDIO STATUS &bull; LIVE</span>
+              <div class="clock-display">
+                <span id="liveDate">05 SEP 2026</span> &bull; <span id="liveTime">00:00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="../index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="productions.html" class="footer-nav-link" style="color:var(--accent-bright);">Productions</a></li>
+            <li><a href="services.html" class="footer-nav-link">Services</a></li>
+            <li><a href="about.html" class="footer-nav-link">About</a></li>
+            <li><a href="careers.html" class="footer-nav-link">Careers</a></li>
+            <li><a href="gallery.html" class="footer-nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Follow Us Social Media -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-instagram" style="width: 20px;"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-youtube" style="width: 20px;"></i> YouTube
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-linkedin-in" style="width: 20px;"></i> LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Student Information -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Student Information</h4>
+          <div class="student-info-card">
+            <div>
+              <span class="student-label">Designed &amp; Developed by:</span>
+              <div class="student-val">[STUDENT NAME]</div>
+            </div>
+            <div style="margin-top: 0.5rem;">
+              <span class="student-label">Register Number:</span>
+              <div class="student-val">[REGISTER NUMBER]</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 ROOK WALL STUDIO. All Rights Reserved.</div>
+        <div>Cinema In Motion &bull; Coimbatore, Tamil Nadu</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       10. FLOATING SCROLL-TO-TOP BUTTON
+       ==================================================================== -->
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- ====================================================================
+       11. WISHLIST TOAST NOTIFICATION
+       ==================================================================== -->
+  <div id="wishlistToast" class="wishlist-toast" role="alert" aria-live="polite">
+    <i class="fa-solid fa-heart wishlist-toast-icon" aria-hidden="true"></i>
+    <span id="wishlistToastText">Added to wishlist</span>
+  </div>
+
+  <!-- ====================================================================
+       12. WATCH TRAILER MODAL
+       ==================================================================== -->
+  <div id="trailerModal" class="trailer-modal" role="dialog" aria-modal="true" aria-labelledby="trailerModalTitle" aria-hidden="true">
+    <div class="trailer-modal-content">
+      <div class="trailer-modal-header">
+        <h3 id="trailerModalTitle" class="trailer-modal-title">PROJECT PHOENIX &bull; OFFICIAL TEASER</h3>
+        <button type="button" id="closeTrailerModalBtn" class="icon-btn" aria-label="Close trailer video">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="trailer-video-box">
+        <iframe id="trailerIframe" src="" title="Production Trailer" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanilla JavaScript -->
+  <script src="../js/productions.js"></script>
+</body>
+</html>

@@ -1,0 +1,1112 @@
+﻿/* ==========================================================================
+   ROOK WALL STUDIO — SERVICES PAGE STYLES (css/services.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION
+   -------------------------------------------------------------------------- */
+.services-hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--nav-height, 80px) + 3rem) 0 4.5rem;
+  overflow: hidden;
+  background-color: var(--bg-primary, #08080a);
+}
+
+.services-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/careers-hero-bg.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  transform: scale(1.04);
+  animation: svcHeroZoom 18s ease-in-out infinite alternate;
+  filter: brightness(0.5) contrast(1.15);
+  z-index: 0;
+}
+
+@keyframes svcHeroZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+.services-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(8,8,10,0.45) 0%, rgba(8,8,10,0.92) 80%),
+              linear-gradient(180deg, rgba(8,8,10,0.2) 0%, rgba(8,8,10,0.98) 100%);
+  z-index: 1;
+}
+
+.services-hero-grain {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 0);
+  background-size: 4px 4px;
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 2;
+}
+
+.services-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.services-breadcrumb {
+  margin-bottom: 2rem;
+}
+
+.services-breadcrumb .breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.services-breadcrumb .breadcrumb-item a {
+  color: var(--text-muted, #8a8a93);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.services-breadcrumb .breadcrumb-item a:hover {
+  color: var(--accent-bright, #ef233c);
+}
+
+.services-breadcrumb .breadcrumb-sep {
+  color: rgba(255,255,255,0.25);
+}
+
+.services-breadcrumb .breadcrumb-current {
+  color: var(--text-primary, #ffffff);
+  font-weight: 600;
+}
+
+.services-hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: var(--accent-bright, #ef233c);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.services-hero-heading {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.05em;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 1.25rem;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.8);
+}
+
+.services-hero-subtitle {
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--text-secondary, #b8b8c2);
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   2. SCROLL REVEAL UTILITY
+   -------------------------------------------------------------------------- */
+.reveal-svc {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-svc.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Header Shared */
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-header .section-pill {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-bright, #ef233c);
+  background: rgba(217, 4, 41, 0.1);
+  border: 1px solid rgba(217, 4, 41, 0.28);
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.section-header .section-title {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: clamp(2rem, 3.6vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 0.75rem;
+}
+
+.section-header .section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted, #8a8a93);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   3. INTRODUCTION SECTION (FROM IDEA TO SCREEN)
+   -------------------------------------------------------------------------- */
+.services-intro-section {
+  padding: 6rem 0;
+  background-color: var(--bg-primary, #08080a);
+}
+
+.services-intro-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.services-intro-article .section-pill {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-bright, #ef233c);
+  background: rgba(217, 4, 41, 0.1);
+  border: 1px solid rgba(217, 4, 41, 0.28);
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.services-intro-highlight {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 1.25rem;
+  border-left: 3px solid var(--accent-bright, #ef233c);
+  padding-left: 1.25rem;
+}
+
+.services-intro-body {
+  font-size: 1rem;
+  color: var(--text-secondary, #b8b8c2);
+  line-height: 1.7;
+}
+
+.services-intro-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.intro-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(16, 16, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.intro-stat-card:hover {
+  transform: translateX(8px);
+  border-color: rgba(217, 4, 41, 0.4);
+}
+
+.intro-stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: rgba(217, 4, 41, 0.12);
+  color: var(--accent-bright, #ef233c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.intro-stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-stat-num {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+}
+
+.intro-stat-text {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted, #8a8a93);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   4. SERVICES ORDERED LIST (COLLEGE SEMANTIC REQUIREMENT)
+   -------------------------------------------------------------------------- */
+.services-list-section {
+  padding: 6rem 0;
+  background-color: var(--bg-secondary, #101015);
+}
+
+.services-ordered-list {
+  list-style: none;
+  counter-reset: svc-counter;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  padding: 0;
+  margin: 0;
+}
+
+.ordered-service-item {
+  counter-increment: svc-counter;
+  position: relative;
+  background: rgba(16, 16, 22, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2rem 2rem 2rem 5.5rem;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.ordered-service-item::before {
+  content: counter(svc-counter, decimal-leading-zero);
+  position: absolute;
+  top: 1.75rem;
+  left: 1.75rem;
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent-bright, #ef233c);
+  opacity: 0.85;
+}
+
+.ordered-service-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(217, 4, 41, 0.4);
+  box-shadow: 0 12px 28px -6px rgba(0,0,0,0.5);
+}
+
+.ordered-service-name {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 0.5rem;
+}
+
+.ordered-service-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted, #8a8a93);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. SERVICE CARDS GRID
+   -------------------------------------------------------------------------- */
+.services-cards-section {
+  padding: 6.5rem 0;
+  background-color: var(--bg-primary, #08080a);
+}
+
+.service-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+.service-card {
+  position: relative;
+  background: rgba(16, 16, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent, #d90429), transparent);
+  opacity: 0.3;
+  transition: opacity 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(217, 4, 41, 0.45);
+  box-shadow: 0 20px 40px -10px rgba(217, 4, 41, 0.22);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card-num {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.12);
+  margin-bottom: 1.25rem;
+}
+
+.service-card-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+  background: rgba(217, 4, 41, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: transform 0.35s ease, background-color 0.35s ease;
+}
+
+.service-card-icon {
+  font-size: 1.5rem;
+  color: var(--accent-bright, #ef233c);
+  transition: transform 0.35s ease;
+}
+
+.service-card:hover .service-card-icon-wrap {
+  background: rgba(217, 4, 41, 0.2);
+}
+
+.service-card:hover .service-card-icon {
+  transform: scale(1.18);
+}
+
+.service-card-title {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 0.85rem;
+}
+
+.service-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted, #8a8a93);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.btn-learn-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 0.75rem 1.1rem;
+  font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary, #ffffff);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-learn-more i {
+  transition: transform 0.3s ease;
+  color: var(--accent-bright, #ef233c);
+}
+
+.service-card:hover .btn-learn-more {
+  background: var(--accent-bright, #ef233c);
+  border-color: var(--accent-bright, #ef233c);
+  box-shadow: 0 4px 16px rgba(239, 35, 60, 0.4);
+}
+
+.service-card:hover .btn-learn-more i {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   6. WORKFLOW TIMELINE (HOW WE WORK)
+   -------------------------------------------------------------------------- */
+.services-process-section {
+  padding: 6.5rem 0;
+  background-color: var(--bg-secondary, #101015);
+}
+
+.workflow-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.workflow-step {
+  flex: 1;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.workflow-step:last-child {
+  padding-right: 0;
+}
+
+.workflow-marker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.workflow-num {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-bright, #ef233c);
+}
+
+.workflow-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-primary, #08080a);
+  border: 3px solid var(--accent-bright, #ef233c);
+  box-shadow: 0 0 12px rgba(239, 35, 60, 0.5);
+}
+
+.workflow-connector {
+  position: absolute;
+  top: 14px;
+  left: 65px;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(239, 35, 60, 0.5), rgba(255, 255, 255, 0.1));
+  z-index: 1;
+}
+
+.workflow-card {
+  background: rgba(16, 16, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.workflow-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(217, 4, 41, 0.4);
+}
+
+.workflow-icon {
+  font-size: 1.75rem;
+  color: var(--accent-bright, #ef233c);
+  margin-bottom: 1rem;
+}
+
+.workflow-title {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 0.6rem;
+}
+
+.workflow-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted, #8a8a93);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. PRODUCTION CAPABILITIES (PROGRESS BARS)
+   -------------------------------------------------------------------------- */
+.services-capabilities-section {
+  position: relative;
+  padding: 6.5rem 0;
+  background-color: var(--bg-primary, #08080a);
+  overflow: hidden;
+}
+
+.capabilities-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.18) grayscale(25%);
+}
+
+.capabilities-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(8,8,10,0.6) 0%, rgba(8,8,10,0.95) 90%);
+}
+
+.capabilities-content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.capabilities-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.capability-item {
+  background: rgba(16, 16, 22, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  backdrop-filter: blur(8px);
+}
+
+.capability-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.capability-name {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-primary, #ffffff);
+}
+
+.capability-percent {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-bright, #ef233c);
+}
+
+.capability-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.capability-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent, #d90429), var(--accent-bright, #ef233c));
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(239, 35, 60, 0.6);
+  transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   8. SERVICE COMPARISON TABLE
+   -------------------------------------------------------------------------- */
+.services-comparison-section {
+  padding: 6.5rem 0;
+  background-color: var(--bg-secondary, #101015);
+}
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(16, 16, 22, 0.7);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.5);
+}
+
+.services-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 720px;
+}
+
+.services-table thead {
+  background: rgba(217, 4, 41, 0.12);
+  border-bottom: 1px solid rgba(217, 4, 41, 0.3);
+}
+
+.services-table th,
+.services-table td {
+  padding: 1.35rem 1.5rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.services-table th {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-primary, #ffffff);
+}
+
+.services-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.25s ease;
+}
+
+.services-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.services-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.service-type-cell {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+  white-space: nowrap;
+}
+
+.service-type-cell i {
+  color: var(--accent-bright, #ef233c);
+  margin-right: 0.5rem;
+}
+
+.table-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-right: 0.4rem;
+}
+
+.badge-full {
+  background: rgba(217, 4, 41, 0.15);
+  color: var(--accent-bright, #ef233c);
+  border: 1px solid rgba(217, 4, 41, 0.35);
+}
+
+.badge-focus {
+  background: rgba(67, 97, 238, 0.15);
+  color: #729cf0;
+  border: 1px solid rgba(67, 97, 238, 0.35);
+}
+
+.badge-special {
+  background: rgba(247, 127, 0, 0.15);
+  color: #fca311;
+  border: 1px solid rgba(247, 127, 0, 0.35);
+}
+
+.badge-rapid {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   9. WHY ROOK WALL (SEMANTIC LIST)
+   -------------------------------------------------------------------------- */
+.services-why-section {
+  padding: 6.5rem 0;
+  background-color: var(--bg-primary, #08080a);
+}
+
+.why-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-item {
+  background: rgba(16, 16, 22, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2.25rem 1.75rem;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(217, 4, 41, 0.4);
+}
+
+.why-icon {
+  font-size: 2rem;
+  color: var(--accent-bright, #ef233c);
+  margin-bottom: 1.25rem;
+}
+
+.why-title {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 0.6rem;
+}
+
+.why-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted, #8a8a93);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   10. CONTACT CTA
+   -------------------------------------------------------------------------- */
+.services-cta-section {
+  padding: 6.5rem 0;
+  background-color: var(--bg-secondary, #101015);
+}
+
+.services-cta-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.services-cta-card {
+  background: rgba(16, 16, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 4rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(0,0,0,0.5);
+}
+
+.services-cta-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent, #d90429), transparent);
+}
+
+.services-cta-btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   11. SERVICE MODAL DIALOG
+   -------------------------------------------------------------------------- */
+.service-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  padding: 1.5rem;
+}
+
+.service-modal.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 4, 6, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.modal-dialog {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 620px;
+  transform: scale(0.92) translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-modal.is-active .modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+.modal-content {
+  background: #121218;
+  border: 1px solid rgba(217, 4, 41, 0.35);
+  border-radius: 14px;
+  padding: 2.5rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(217, 4, 41, 0.15);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted, #8a8a93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.modal-close-btn:hover {
+  background: var(--accent-bright, #ef233c);
+  color: #ffffff;
+  border-color: var(--accent-bright, #ef233c);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.25rem;
+}
+
+.modal-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(217, 4, 41, 0.15);
+  color: var(--accent-bright, #ef233c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.modal-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-bright, #ef233c);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.modal-title {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+  margin: 0;
+}
+
+.modal-desc {
+  font-size: 0.98rem;
+  color: var(--text-secondary, #b8b8c2);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+.modal-detail-block {
+  margin-bottom: 1.5rem;
+}
+
+.modal-block-title {
+  font-family: var(--font-cinematic, 'Cinzel', serif);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-primary, #ffffff);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.modal-block-title i {
+  color: var(--accent-bright, #ef233c);
+}
+
+.modal-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-bullet-list li {
+  font-size: 0.9rem;
+  color: var(--text-muted, #8a8a93);
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.modal-bullet-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-bright, #ef233c);
+}
+
+.modal-workflow-text {
+  font-size: 0.9rem;
+  color: var(--text-muted, #8a8a93);
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.9rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin: 0;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   12. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .service-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .why-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .services-ordered-list {
+    grid-template-columns: 1fr;
+  }
+  .service-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .workflow-timeline {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .workflow-step {
+    padding-right: 0;
+    padding-left: 3rem;
+  }
+  .workflow-connector {
+    display: none;
+  }
+  .workflow-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .why-list {
+    grid-template-columns: 1fr;
+  }
+  .services-cta-card {
+    padding: 3rem 1.5rem;
+  }
+  .services-cta-btn-group {
+    flex-direction: column;
+  }
+  .modal-content {
+    padding: 1.75rem;
+  }
+  .modal-footer {
+    flex-direction: column-reverse;
+  }
+  .modal-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-hero {
+    padding: calc(var(--nav-height, 80px) + 1.5rem) 0 3rem;
+  }
+  .ordered-service-item {
+    padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+  }
+}

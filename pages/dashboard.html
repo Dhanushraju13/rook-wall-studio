@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Studio Dashboard | ROOK WALL STUDIO</title>
+  <meta name="description" content="ROOK WALL STUDIO internal dashboard — track productions, creative activity and studio progress.">
+
+  <!-- Authentication Protection -->
+  <script>
+    (function () {
+      try {
+        var session = localStorage.getItem('rookwall_session');
+        if (!session) { window.location.replace('../login.html'); }
+      } catch (e) { window.location.replace('../login.html'); }
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <!-- STICKY NAVIGATION -->
+  <header class="site-header" id="top">
+    <div class="container navbar">
+      <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+        <div class="brand-icon" aria-hidden="true"><i class="fa-solid fa-chess-rook"></i></div>
+        <div class="brand-text-block">
+          <span class="brand-text-main">ROOK WALL</span>
+          <span class="brand-text-sub">STUDIO</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul id="navMenu" class="nav-menu">
+          <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="productions.html" class="nav-link">PRODUCTIONS</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" id="notifBtn" class="icon-btn dash-notif-toggle" aria-label="Toggle notifications" aria-expanded="false">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+          <span class="notif-badge" id="notifCount">4</span>
+        </button>
+        <div id="notificationPanel" class="notification-panel" role="region" aria-label="Studio Notifications">
+          <div class="notif-header">
+            <h4 class="notif-title">
+              <i class="fa-solid fa-bell" style="color:var(--accent-bright);"></i>
+              NOTIFICATIONS
+            </h4>
+            <button type="button" id="markAllReadBtn" class="notif-mark-read-btn" aria-label="Mark all notifications as read">MARK ALL AS READ</button>
+          </div>
+          <ul class="notif-list" id="notifList">
+            <li class="notif-item notif-unread" data-notif-id="1">
+              <i class="fa-solid fa-clapperboard notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">New production update</span>
+                <span class="notif-item-desc">Project Phoenix entered production.</span>
+              </div>
+              <span class="unread-dot" aria-hidden="true"></span>
+            </li>
+            <li class="notif-item notif-unread" data-notif-id="2">
+              <i class="fa-solid fa-film notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">Trailer published</span>
+                <span class="notif-item-desc">The Horizon trailer is now available.</span>
+              </div>
+              <span class="unread-dot" aria-hidden="true"></span>
+            </li>
+            <li class="notif-item notif-unread" data-notif-id="3">
+              <i class="fa-solid fa-user notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">New application</span>
+                <span class="notif-item-desc">A creative team application was received.</span>
+              </div>
+              <span class="unread-dot" aria-hidden="true"></span>
+            </li>
+            <li class="notif-item notif-unread" data-notif-id="4">
+              <i class="fa-solid fa-calendar notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">Production meeting</span>
+                <span class="notif-item-desc">Upcoming studio meeting scheduled.</span>
+              </div>
+              <span class="unread-dot" aria-hidden="true"></span>
+            </li>
+          </ul>
+        </div>
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Switch Theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <a href="../login.html" id="navAuthBtn" class="nav-auth-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+          <span>LOGIN</span>
+        </a>
+        <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- DASHBOARD HERO -->
+  <section class="dash-hero" aria-label="Dashboard Header">
+    <div class="dash-hero-bg" role="img" aria-label="Cinematic studio background"></div>
+    <div class="dash-hero-overlay"></div>
+    <div class="container dash-hero-content">
+      <div class="dash-hero-left">
+        <div class="dash-eyebrow">
+          <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+          <span>STUDIO CONTROL PANEL</span>
+        </div>
+        <h1 class="dash-hero-title">STUDIO DASHBOARD</h1>
+        <p class="dash-hero-subtitle">"Your production activity at a glance."</p>
+      </div>
+      <div class="dash-hero-right">
+        <div class="dash-datetime-card" aria-live="polite" aria-label="Current date and time">
+          <div class="dash-date" id="dashDate">LOADING...</div>
+          <div class="dash-time" id="dashTime">00:00:00</div>
+          <div class="dash-datetime-label">STUDIO TIME &bull; LIVE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN DASHBOARD -->
+  <main class="dash-main">
+    <div class="container">
+
+      <!-- TOP ROW: Welcome + Quick Actions -->
+      <div class="dash-top-row">
+        <article class="dash-welcome-card reveal-on-scroll" aria-label="Welcome panel">
+          <div class="dash-welcome-bg" aria-hidden="true"></div>
+          <div class="dash-welcome-overlay" aria-hidden="true"></div>
+          <div class="dash-welcome-body">
+            <div class="dash-welcome-tag">
+              <i class="fa-solid fa-chess-rook" aria-hidden="true"></i>
+              ROOK WALL STUDIO
+            </div>
+            <h2 class="dash-welcome-title">WELCOME BACK</h2>
+            <p class="dash-welcome-desc">Track productions, creative activity and studio progress from one place.</p>
+            <a href="productions.html" class="dash-welcome-btn" aria-label="View all productions">
+              <span>VIEW PRODUCTIONS</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <aside class="dash-quick-actions reveal-on-scroll" aria-label="Quick Actions">
+          <h2 class="dash-section-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> QUICK ACTIONS</h2>
+          <div class="quick-actions-grid">
+            <a href="contact.html" class="quick-action-btn qa-primary" aria-label="Start a new project">
+              <i class="fa-solid fa-plus" aria-hidden="true"></i><span>NEW PROJECT</span>
+            </a>
+            <a href="productions.html" class="quick-action-btn" aria-label="View all productions">
+              <i class="fa-solid fa-film" aria-hidden="true"></i><span>VIEW PRODUCTIONS</span>
+            </a>
+            <a href="gallery.html" class="quick-action-btn" aria-label="Open Studio Archive">
+              <i class="fa-solid fa-photo-film" aria-hidden="true"></i><span>STUDIO ARCHIVE</span>
+            </a>
+            <a href="careers.html" class="quick-action-btn" aria-label="Join our team">
+              <i class="fa-solid fa-users" aria-hidden="true"></i><span>JOIN OUR TEAM</span>
+            </a>
+            <a href="contact.html" class="quick-action-btn" aria-label="Contact the studio">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i><span>CONTACT STUDIO</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- STATS SECTION -->
+      <section class="dash-stats-section" id="statsSection" aria-label="Studio Statistics">
+        <div class="dash-section-header reveal-on-scroll">
+          <h2 class="dash-section-title"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> STUDIO AT A GLANCE</h2>
+          <p class="dash-section-subtitle">Live production metrics updated automatically.</p>
+        </div>
+        <div class="stats-cards-grid">
+          <div class="stat-dash-card reveal-on-scroll" role="region" aria-label="Total Productions">
+            <div class="stat-dash-icon" aria-hidden="true"><i class="fa-solid fa-film"></i></div>
+            <div class="stat-dash-value"><span class="js-counter" data-target="50" data-suffix="">0</span></div>
+            <div class="stat-dash-label">Total Productions</div>
+            <div class="stat-dash-trend"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +8 this year</div>
+          </div>
+          <div class="stat-dash-card reveal-on-scroll" role="region" aria-label="Active Productions">
+            <div class="stat-dash-icon accent-green" aria-hidden="true"><i class="fa-solid fa-circle-play"></i></div>
+            <div class="stat-dash-value"><span class="js-counter" data-target="12" data-suffix="">0</span></div>
+            <div class="stat-dash-label">Active Productions</div>
+            <div class="stat-dash-trend"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> Currently in progress</div>
+          </div>
+          <div class="stat-dash-card reveal-on-scroll" role="region" aria-label="Creative Members">
+            <div class="stat-dash-icon accent-blue" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
+            <div class="stat-dash-value"><span class="js-counter" data-target="100" data-suffix="">0</span></div>
+            <div class="stat-dash-label">Creative Members</div>
+            <div class="stat-dash-trend"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> +14 this quarter</div>
+          </div>
+          <div class="stat-dash-card reveal-on-scroll" role="region" aria-label="Awards">
+            <div class="stat-dash-icon accent-gold" aria-hidden="true"><i class="fa-solid fa-trophy"></i></div>
+            <div class="stat-dash-value"><span class="js-counter" data-target="10" data-suffix="">0</span></div>
+            <div class="stat-dash-label">Awards</div>
+            <div class="stat-dash-trend"><i class="fa-solid fa-star" aria-hidden="true"></i> International recognition</div>
+          </div>
+          <div class="stat-dash-card reveal-on-scroll" role="region" aria-label="Global Audience">
+            <div class="stat-dash-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></div>
+            <div class="stat-dash-value"><span class="js-counter" data-target="1" data-suffix="M+">0</span></div>
+            <div class="stat-dash-label">Global Audience</div>
+            <div class="stat-dash-trend"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> Growing worldwide</div>
+          </div>
+          <div class="stat-dash-card reveal-on-scroll" role="region" aria-label="Pending Tasks">
+            <div class="stat-dash-icon accent-warn" aria-hidden="true"><i class="fa-solid fa-list-check"></i></div>
+            <div class="stat-dash-value"><span class="js-counter" data-target="06" data-suffix="">00</span></div>
+            <div class="stat-dash-label">Pending Tasks</div>
+            <div class="stat-dash-trend"><i class="fa-solid fa-clock" aria-hidden="true"></i> Needs attention</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MID ROW: Production Status + Featured Production -->
+      <div class="dash-mid-row">
+        <section class="dash-productions-status reveal-on-scroll" aria-label="Production Status">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-bars-progress" aria-hidden="true"></i> PRODUCTION STATUS</h2>
+          </div>
+          <div class="prod-status-list" id="prodStatusList">
+
+            <article class="prod-status-card" data-project="phoenix" tabindex="0"
+              aria-label="Project Phoenix — click to expand details" aria-expanded="false">
+              <div class="prod-status-header">
+                <div class="prod-status-meta">
+                  <h3 class="prod-status-name">PROJECT PHOENIX</h3>
+                  <span class="prod-status-stage stage-production">Pre-production / Production</span>
+                </div>
+                <div class="prod-status-pct">80%</div>
+              </div>
+              <div class="prod-progress-wrap" data-tooltip="Project Phoenix — 80% complete"
+                role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="prod-progress-bar" data-width="80"></div>
+              </div>
+              <div class="prod-status-detail" aria-hidden="true">
+                <dl class="prod-detail-grid">
+                  <dt>Project</dt><dd>PROJECT PHOENIX</dd>
+                  <dt>Stage</dt><dd>Production</dd>
+                  <dt>Progress</dt><dd>80%</dd>
+                  <dt>Director</dt><dd>Arjun Varma</dd>
+                  <dt>Producer</dt><dd>Rook Wall Studio</dd>
+                  <dt>Next Milestone</dt><dd>Principal photography</dd>
+                </dl>
+              </div>
+            </article>
+
+            <article class="prod-status-card" data-project="horizon" tabindex="0"
+              aria-label="The Horizon — click to expand details" aria-expanded="false">
+              <div class="prod-status-header">
+                <div class="prod-status-meta">
+                  <h3 class="prod-status-name">THE HORIZON</h3>
+                  <span class="prod-status-stage stage-active">Production</span>
+                </div>
+                <div class="prod-status-pct">65%</div>
+              </div>
+              <div class="prod-progress-wrap" data-tooltip="The Horizon — 65% complete"
+                role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                <div class="prod-progress-bar" data-width="65"></div>
+              </div>
+              <div class="prod-status-detail" aria-hidden="true">
+                <dl class="prod-detail-grid">
+                  <dt>Project</dt><dd>The Horizon</dd>
+                  <dt>Stage</dt><dd>Production</dd>
+                  <dt>Progress</dt><dd>65%</dd>
+                  <dt>Director</dt><dd>Divya Rajan</dd>
+                  <dt>Producer</dt><dd>Suresh Natarajan</dd>
+                  <dt>Next Milestone</dt><dd>Wrap of principal photography — Nov 2026</dd>
+                </dl>
+              </div>
+            </article>
+
+            <article class="prod-status-card" data-project="echoes" tabindex="0"
+              aria-label="Echoes — click to expand details" aria-expanded="false">
+              <div class="prod-status-header">
+                <div class="prod-status-meta">
+                  <h3 class="prod-status-name">ECHOES</h3>
+                  <span class="prod-status-stage stage-post">Post-production</span>
+                </div>
+                <div class="prod-status-pct">45%</div>
+              </div>
+              <div class="prod-progress-wrap" data-tooltip="Echoes — 45% complete"
+                role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                <div class="prod-progress-bar" data-width="45"></div>
+              </div>
+              <div class="prod-status-detail" aria-hidden="true">
+                <dl class="prod-detail-grid">
+                  <dt>Project</dt><dd>Echoes</dd>
+                  <dt>Stage</dt><dd>Post-production</dd>
+                  <dt>Progress</dt><dd>45%</dd>
+                  <dt>Director</dt><dd>Karthik Venkat</dd>
+                  <dt>Producer</dt><dd>Ananya Pillai</dd>
+                  <dt>Next Milestone</dt><dd>Color Grade Delivery — Dec 2026</dd>
+                </dl>
+              </div>
+            </article>
+
+            <article class="prod-status-card" data-project="midnight" tabindex="0"
+              aria-label="Midnight Stories — click to expand details" aria-expanded="false">
+              <div class="prod-status-header">
+                <div class="prod-status-meta">
+                  <h3 class="prod-status-name">MIDNIGHT STORIES</h3>
+                  <span class="prod-status-stage stage-dev">Development</span>
+                </div>
+                <div class="prod-status-pct">30%</div>
+              </div>
+              <div class="prod-progress-wrap" data-tooltip="Midnight Stories — 30% complete"
+                role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                <div class="prod-progress-bar" data-width="30"></div>
+              </div>
+              <div class="prod-status-detail" aria-hidden="true">
+                <dl class="prod-detail-grid">
+                  <dt>Project</dt><dd>Midnight Stories</dd>
+                  <dt>Stage</dt><dd>Development</dd>
+                  <dt>Progress</dt><dd>30%</dd>
+                  <dt>Director</dt><dd>Priya Chandran</dd>
+                  <dt>Producer</dt><dd>Vijay Balaji</dd>
+                  <dt>Next Milestone</dt><dd>Script Lock — Jan 2027</dd>
+                </dl>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <aside class="dash-featured-prod reveal-on-scroll" aria-label="Featured Production">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-star" aria-hidden="true"></i> FEATURED PRODUCTION</h2>
+          </div>
+          <div class="featured-prod-card">
+            <div class="featured-prod-img-wrap">
+              <img src="../assets/images/prod-phoenix.jpg" alt="Project Phoenix film poster" class="featured-prod-img">
+              <div class="featured-prod-badge">IN PRODUCTION</div>
+            </div>
+            <div class="featured-prod-body">
+              <h3 class="featured-prod-title">PROJECT PHOENIX</h3>
+              <div class="featured-prod-meta-grid">
+                <div class="fp-meta-item">
+                  <span class="fp-meta-label">Genre</span>
+                  <span class="fp-meta-val">Drama / Thriller</span>
+                </div>
+                <div class="fp-meta-item">
+                  <span class="fp-meta-label">Year</span>
+                  <span class="fp-meta-val">2026</span>
+                </div>
+                <div class="fp-meta-item">
+                  <span class="fp-meta-label">Status</span>
+                  <span class="fp-meta-val status-active">In Production</span>
+                </div>
+                <div class="fp-meta-item">
+                  <span class="fp-meta-label">Rating</span>
+                  <span class="fp-meta-val"><i class="fa-solid fa-star" aria-hidden="true" style="color:var(--accent-bright);font-size:0.75rem;"></i> 4.8 / 5</span>
+                </div>
+              </div>
+              <a href="production-details.html?id=phoenix" class="dash-featured-btn" aria-label="View Project Phoenix details">
+                <span>VIEW PRODUCTION</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- BOTTOM ROW: Activity + Performance -->
+      <div class="dash-bottom-row">
+
+        <section class="dash-activity reveal-on-scroll" aria-label="Recent Studio Activity">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> RECENT STUDIO ACTIVITY</h2>
+          </div>
+          <ul class="activity-list" role="list">
+            <li class="activity-item">
+              <div class="activity-icon-wrap activity-icon-red" aria-hidden="true"><i class="fa-solid fa-clapperboard"></i></div>
+              <div class="activity-body">
+                <p class="activity-title">Project Phoenix moved to production</p>
+                <time class="activity-time" datetime="2026-09-05T22:00">2 hours ago</time>
+              </div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-icon-wrap activity-icon-blue" aria-hidden="true"><i class="fa-solid fa-video"></i></div>
+              <div class="activity-body">
+                <p class="activity-title">New trailer uploaded</p>
+                <time class="activity-time" datetime="2026-09-05T19:00">5 hours ago</time>
+              </div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-icon-wrap activity-icon-green" aria-hidden="true"><i class="fa-solid fa-user-plus"></i></div>
+              <div class="activity-body">
+                <p class="activity-title">New crew application received</p>
+                <time class="activity-time" datetime="2026-09-04">Yesterday</time>
+              </div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-icon-wrap activity-icon-red" aria-hidden="true"><i class="fa-solid fa-film"></i></div>
+              <div class="activity-body">
+                <p class="activity-title">The Horizon entered post-production</p>
+                <time class="activity-time" datetime="2026-09-03">2 days ago</time>
+              </div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-icon-wrap activity-icon-gold" aria-hidden="true"><i class="fa-solid fa-trophy"></i></div>
+              <div class="activity-body">
+                <p class="activity-title">Echoes selected for International Film Festival</p>
+                <time class="activity-time" datetime="2026-09-01">4 days ago</time>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="dash-performance reveal-on-scroll" aria-label="Studio Performance">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> STUDIO PERFORMANCE</h2>
+          </div>
+          <div class="perf-list">
+            <div class="perf-item">
+              <div class="perf-label-row">
+                <span class="perf-label">Production Completion</span>
+                <span class="perf-pct">78%</span>
+              </div>
+              <div class="perf-bar-wrap" data-tooltip="Production Completion — 78%"
+                role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Production Completion 78%">
+                <div class="perf-bar" data-width="78"></div>
+              </div>
+            </div>
+            <div class="perf-item">
+              <div class="perf-label-row">
+                <span class="perf-label">Audience Growth</span>
+                <span class="perf-pct">64%</span>
+              </div>
+              <div class="perf-bar-wrap" data-tooltip="Audience Growth — 64%"
+                role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" aria-label="Audience Growth 64%">
+                <div class="perf-bar perf-bar-blue" data-width="64"></div>
+              </div>
+            </div>
+            <div class="perf-item">
+              <div class="perf-label-row">
+                <span class="perf-label">Team Growth</span>
+                <span class="perf-pct">82%</span>
+              </div>
+              <div class="perf-bar-wrap" data-tooltip="Team Growth — 82%"
+                role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Team Growth 82%">
+                <div class="perf-bar perf-bar-green" data-width="82"></div>
+              </div>
+            </div>
+            <div class="perf-item">
+              <div class="perf-label-row">
+                <span class="perf-label">Project Success</span>
+                <span class="perf-pct">91%</span>
+              </div>
+              <div class="perf-bar-wrap" data-tooltip="Project Success Rate — 91%"
+                role="progressbar" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100" aria-label="Project Success Rate 91%">
+                <div class="perf-bar perf-bar-gold" data-width="91"></div>
+              </div>
+            </div>
+          </div>
+          <blockquote class="dash-perf-quote">
+            <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+            Stories told, milestones achieved.
+          </blockquote>
+        </section>
+
+      </div><!-- /.dash-bottom-row -->
+
+      <!-- STUDIO CUSTOMISE PANEL — input[type=color] + input[type=range] HTML5 demonstration -->
+      <section class="dash-customise-panel reveal-on-scroll" aria-labelledby="customise-heading" style="margin-top:2.5rem; padding:2rem; background:var(--bg-card,rgba(255,255,255,0.04)); border:1px solid rgba(255,255,255,0.08); border-radius:12px;">
+        <div class="dash-section-header" style="margin-bottom:1.5rem;">
+          <h2 class="dash-section-title" id="customise-heading"><i class="fa-solid fa-palette" aria-hidden="true"></i> STUDIO UI CUSTOMISE</h2>
+          <p class="dash-section-subtitle">Personalise your dashboard accent colour and brightness.</p>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:center;">
+
+          <!-- input[type=color] -->
+          <div style="display:flex; flex-direction:column; gap:0.5rem;">
+            <label for="accentColorPicker" style="font-size:0.78rem; letter-spacing:0.08em; color:var(--text-secondary);">ACCENT COLOUR</label>
+            <input
+              type="color"
+              id="accentColorPicker"
+              name="accentColor"
+              value="#e63946"
+              style="width:52px; height:38px; border:none; border-radius:6px; cursor:pointer; background:transparent;"
+              aria-label="Pick studio accent colour"
+            >
+          </div>
+
+          <!-- input[type=range] -->
+          <div style="display:flex; flex-direction:column; gap:0.5rem; flex:1; min-width:180px;">
+            <label for="uiBrightness" style="font-size:0.78rem; letter-spacing:0.08em; color:var(--text-secondary);">
+              UI BRIGHTNESS — <span id="brightnessVal">100</span>%
+            </label>
+            <input
+              type="range"
+              id="uiBrightness"
+              name="uiBrightness"
+              min="60"
+              max="100"
+              value="100"
+              step="5"
+              style="width:100%; accent-color:var(--accent-bright,#e63946);"
+              aria-label="Adjust UI brightness"
+              aria-valuemin="60"
+              aria-valuemax="100"
+              aria-valuenow="100"
+            >
+          </div>
+
+          <button type="button" id="resetCustomiseBtn" class="btn btn-outline" style="padding:0.55rem 1.2rem; font-size:0.78rem;" aria-label="Reset UI customisations to defaults">
+            <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> RESET
+          </button>
+        </div>
+      </section>
+
+    </div><!-- /.container -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+            <div class="brand-icon" aria-hidden="true"><i class="fa-solid fa-chess-rook"></i></div>
+            <div class="brand-text-block">
+              <span class="brand-text-main">ROOK WALL</span>
+              <span class="brand-text-sub">STUDIO</span>
+            </div>
+          </a>
+          <p class="footer-brand-bio">"WE CREATE STORIES."<br>Stories That Stay Forever.</p>
+          <div class="footer-clock-box">
+            <i class="fa-solid fa-broadcast-tower footer-clock-icon" aria-hidden="true"></i>
+            <div class="clock-text-wrap">
+              <span class="clock-label">STUDIO STATUS &bull; LIVE</span>
+              <div class="clock-display">
+                <span id="liveDate">05 SEP 2026</span> &bull; <span id="liveTime">00:00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="../index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="productions.html" class="footer-nav-link">Productions</a></li>
+            <li><a href="services.html" class="footer-nav-link">Services</a></li>
+            <li><a href="about.html" class="footer-nav-link">About</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <ul class="footer-nav-list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link"><i class="fa-brands fa-instagram" style="width:20px;"></i> Instagram</a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link"><i class="fa-brands fa-youtube" style="width:20px;"></i> YouTube</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link"><i class="fa-brands fa-linkedin-in" style="width:20px;"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Student Information</h4>
+          <div class="student-info-card">
+            <div>
+              <span class="student-label">Designed &amp; Developed by:</span>
+              <div class="student-val">[STUDENT NAME]</div>
+            </div>
+            <div style="margin-top:0.5rem;">
+              <span class="student-label">Register Number:</span>
+              <div class="student-val">[REGISTER NUMBER]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ROOK WALL STUDIO. All Rights Reserved.</div>
+        <div>Cinema In Motion &bull; Coimbatore, Tamil Nadu</div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

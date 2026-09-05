@@ -1,0 +1,468 @@
+/* ==========================================================================
+   ROOK WALL STUDIO - RESPONSIVE STYLES
+   Responsive Media Queries for Desktop, Tablet, and Mobile devices
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Large Desktops & Ultra-wide Displays (1440px and up)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 1440px) {
+  .cinematic-stage {
+    flex: 0 0 48%;
+    padding: 4.5rem;
+  }
+
+  .auth-stage {
+    flex: 0 0 52%;
+    padding: 3.5rem;
+  }
+
+  .form-container {
+    max-width: 480px;
+    padding: 3.25rem 2.75rem;
+  }
+
+  .cinematic-quote {
+    font-size: 3.4rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Laptops & Standard Desktops (1024px to 1439px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1439px) and (min-width: 1025px) {
+  .cinematic-stage {
+    flex: 0 0 45%;
+    padding: 3rem;
+  }
+
+  .auth-stage {
+    flex: 0 0 55%;
+    padding: 2.5rem;
+  }
+
+  .form-container {
+    max-width: 450px;
+    padding: 2.5rem 2.25rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets in Landscape & Compact Laptops (868px to 1024px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .auth-wrapper {
+    flex-direction: row;
+  }
+
+  .cinematic-stage {
+    flex: 0 0 38%;
+    padding: 2.25rem 2rem;
+  }
+
+  .cinematic-quote {
+    font-size: 2.2rem;
+  }
+
+  .cinematic-desc {
+    font-size: 0.88rem;
+  }
+
+  .production-metadata {
+    gap: 0.85rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .meta-divider {
+    display: none;
+  }
+
+  .auth-stage {
+    flex: 0 0 62%;
+    padding: 2.25rem 1.75rem;
+  }
+
+  .form-container {
+    max-width: 420px;
+    padding: 2.25rem 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile & Small Tablets (768px and below)
+   Stacks the layout vertically
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .auth-wrapper {
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  /* Compact Cinematic Header Banner on Mobile */
+  .cinematic-stage {
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 260px;
+    padding: 1.75rem 1.5rem;
+    justify-content: flex-start;
+  }
+
+  .cinematic-stage::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(0deg, var(--bg-primary) 0%, transparent 100%);
+    z-index: 3;
+  }
+
+  .cinematic-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .brand-name {
+    font-size: 1.1rem;
+  }
+
+  .cinematic-body {
+    margin: 0;
+  }
+
+  .production-badge {
+    margin-bottom: 0.75rem;
+    font-size: 0.68rem;
+    padding: 0.25rem 0.65rem;
+  }
+
+  .cinematic-quote {
+    font-size: 1.65rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+  }
+
+  .cinematic-desc {
+    display: none; /* Hide longer narrative paragraph on mobile to keep focus crisp */
+  }
+
+  .cinematic-footer {
+    display: none; /* Hide metadata strip on mobile */
+  }
+
+  /* Form Stage Container on Mobile */
+  .auth-stage {
+    flex: 1 0 auto;
+    width: 100%;
+    min-height: auto;
+    padding: 1.25rem 1rem 3rem 1rem;
+    margin-top: -1rem;
+    background: transparent;
+  }
+
+  .auth-stage::before {
+    display: none; /* Remove vertical separator line */
+  }
+
+  .form-container {
+    max-width: 100%;
+    padding: 2rem 1.35rem;
+    border-radius: var(--radius-lg);
+    background: rgba(16, 16, 22, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .form-title {
+    font-size: 1.55rem;
+  }
+
+  .form-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .form-input {
+    font-size: 16px; /* Prevents auto-zoom on iOS safari */
+    padding: 0.75rem 0.85rem 0.75rem 2.45rem;
+  }
+
+  .input-icon {
+    left: 0.85rem;
+  }
+
+  .btn-primary {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.88rem;
+    letter-spacing: 0.14em;
+  }
+
+  .form-options-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .prototype-badge {
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Extra Small Mobile Phones (380px and below)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 380px) {
+  .cinematic-stage {
+    min-height: 220px;
+    padding: 1.25rem 1rem;
+  }
+
+  .cinematic-quote {
+    font-size: 1.4rem;
+  }
+
+  .form-container {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .form-title {
+    font-size: 1.4rem;
+  }
+
+  .form-options-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility: Reduced Motion Preference
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .cinematic-bg,
+  .hero-bg-image {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   HOMEPAGE SPECIFIC RESPONSIVE RULES
+   ========================================================================== */
+
+/* Tablet (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .welcome-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .aside-image-card img {
+    height: 380px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-ordered-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .productions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-preview-card {
+    grid-template-columns: 1fr;
+    padding: 2.5rem;
+    gap: 2.5rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Mobile Devices (768px and below) */
+@media screen and (max-width: 768px) {
+  /* Navigation Mobile Menu */
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    z-index: 999;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .nav-actions {
+    gap: 0.6rem;
+  }
+
+  .notification-panel {
+    width: calc(100vw - 2rem);
+    right: -10px;
+  }
+
+  /* Hero Mobile */
+  .hero-section {
+    padding: 4rem 0 3rem;
+    min-height: calc(100vh - var(--nav-height));
+  }
+
+  .hero-tagline {
+    font-size: 2.4rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  /* Marquee Mobile */
+  .marquee-badge {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.68rem;
+  }
+
+  .studio-marquee {
+    font-size: 0.8rem;
+    padding-left: 0.75rem;
+  }
+
+  /* Welcome Mobile */
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aside-image-card img {
+    height: 300px;
+  }
+
+  /* Grids to Single Column */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .services-ordered-list {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .productions-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .production-card {
+    height: 420px;
+  }
+
+  /* CTA Banner Mobile */
+  .cta-banner-section {
+    padding: 5rem 0;
+  }
+
+  .cta-heading {
+    font-size: 2rem;
+  }
+
+  .cta-btn-group {
+    flex-direction: column;
+  }
+
+  .cta-btn-group .btn {
+    width: 100%;
+  }
+
+  /* Footer Mobile */
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .scroll-top-btn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 42px;
+    height: 42px;
+  }
+}
+

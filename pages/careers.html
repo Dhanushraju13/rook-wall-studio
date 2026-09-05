@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Careers &amp; Creative Opportunities | ROOK WALL STUDIO</title>
+  <meta name="description" content="Join the creative ensemble at Rook Wall Studio. Explore open positions in directing, screenwriting, cinematography, post-production, and acting. Apply online today.">
+
+  <!-- Google Fonts: Cinzel (Cinematic Serif) & Plus Jakarta Sans (Modern Clean UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 for High Fidelity Vector Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core & Page Specific Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/careers.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       1. NAVIGATION BAR (STICKY)
+       ==================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      
+      <!-- LEFT: Logo & Brand Lockup -->
+      <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+        <div class="brand-icon" aria-hidden="true">
+          <i class="fa-solid fa-chess-rook"></i>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-text-main">ROOK WALL</span>
+          <span class="brand-text-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <!-- CENTER: Main Navigation Links -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul id="navMenu" class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="productions.html" class="nav-link">PRODUCTIONS</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT: Notification, Theme Toggle & Login/Logout Action -->
+      <div class="nav-actions">
+        <!-- 🔔 Notification Toggle Button -->
+        <button type="button" id="notifBtn" class="icon-btn" aria-label="Toggle notifications" aria-expanded="false">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+          <span class="notif-badge" aria-hidden="true"></span>
+        </button>
+
+        <!-- Notification Flyout Panel -->
+        <div id="notificationPanel" class="notification-panel" role="region" aria-label="Studio Announcements">
+          <div class="notif-header">
+            <h4 class="notif-title">
+              <i class="fa-solid fa-bullhorn" style="color:var(--accent-bright);"></i>
+              NOTIFICATIONS
+            </h4>
+            <span style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase;">Live Feed</span>
+          </div>
+          <ul class="notif-list">
+            <li class="notif-item">
+              <i class="fa-solid fa-masks-theater notif-item-icon" aria-hidden="true"></i>
+              <span>🎭 Talent callout: Casting open for 2026 feature slate</span>
+            </li>
+            <li class="notif-item">
+              <i class="fa-solid fa-clapperboard notif-item-icon" aria-hidden="true"></i>
+              <span>🎬 Directing &amp; writing fellowships now accepting portfolios</span>
+            </li>
+            <li class="notif-item">
+              <i class="fa-solid fa-sliders notif-item-icon" aria-hidden="true"></i>
+              <span>🎞️ Post-production suite hiring colorists and sound designers</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 🌙 Theme Toggle Button -->
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Switch Theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+
+        <!-- Dynamic Auth Button (LOGIN / LOGOUT) -->
+        <a href="../login.html" id="navAuthBtn" class="nav-auth-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+          <span>LOGIN</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         2. HERO SECTION
+         ==================================================================== -->
+    <section class="careers-hero-section">
+      <div class="careers-hero-bg-wrap">
+        <div class="careers-hero-bg-img" role="img" aria-label="Film studio set background with dramatic lighting"></div>
+        <div class="careers-hero-overlay"></div>
+        <div class="careers-hero-grain"></div>
+      </div>
+
+      <div class="container careers-hero-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-wrap" aria-label="Breadcrumbs">
+          <a href="../index.html" class="breadcrumb-link">HOME</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">CAREERS &amp; JOIN OUR TEAM</span>
+        </nav>
+
+        <span class="careers-hero-label">ROOK WALL STUDIO CAREERS</span>
+        <h1 class="careers-hero-title">JOIN THE ENSEMBLE</h1>
+        <p class="careers-hero-subtitle">&ldquo;We create stories. Step onto the stage with us.&rdquo;</p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. SEMANTIC INTRO SECTION (section, article, aside)
+         ==================================================================== -->
+    <section class="careers-intro-section">
+      <div class="container careers-intro-grid">
+        <article class="careers-intro-article">
+          <span class="section-label">STUDIO CULTURE &amp; ETHOS</span>
+          <h2 class="section-title">BUILT BY CREATORS, FOR THE SCREEN</h2>
+          <p class="careers-intro-lead">
+            At Rook Wall Studio, cinema is not merely an industry; it is a sacred discipline of light, shadow, dialogue, and resonance. We champion fearless storytellers who push artistic boundaries and craft indelible narratives.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.75; font-size: 0.95rem;">
+            Whether you wield a camera on remote location shoots, craft poetic screenplays in silence, sculpt soundscapes in 7.1 Atmos, or bring complex characters to life before the lens, our studio provides the canvas, freedom, and world-class infrastructure for your greatest work.
+          </p>
+        </article>
+
+        <aside class="careers-intro-aside">
+          <ul class="culture-perk-list">
+            <li class="culture-perk-item">
+              <div class="perk-icon-circle">
+                <i class="fa-solid fa-award" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="perk-text-title">Authorial Freedom</div>
+                <div class="perk-text-desc">Directorial voice and genuine artistic autonomy on all original studio productions.</div>
+              </div>
+            </li>
+            <li class="culture-perk-item">
+              <div class="perk-icon-circle">
+                <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="perk-text-title">State-of-the-Art Gear</div>
+                <div class="perk-text-desc">Access to ARRI Alexa LF, Cooke anamorphic glass, and DaVinci Resolve color suites.</div>
+              </div>
+            </li>
+            <li class="culture-perk-item">
+              <div class="perk-icon-circle">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="perk-text-title">Global Distribution</div>
+                <div class="perk-text-desc">Theatrical distribution pipelines and premier international festival submissions.</div>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. CREATIVE OPPORTUNITIES / ROLES SECTION
+         ==================================================================== -->
+    <section class="opportunities-section">
+      <div class="container">
+        <div class="section-header-center" style="text-align: center; margin-bottom: 3.5rem;">
+          <span class="section-label">ROLES &amp; DISCIPLINES</span>
+          <h2 class="section-title">CURRENT PRODUCTION OPENINGS</h2>
+          <p class="section-subtitle">Select your discipline and submit your candidate credentials below.</p>
+        </div>
+
+        <div class="opportunities-grid">
+          <!-- Role 1: Director -->
+          <div class="opportunity-card">
+            <div class="opportunity-icon-box">
+              <i class="fa-solid fa-video" aria-hidden="true"></i>
+            </div>
+            <h3 class="opportunity-title">Director</h3>
+            <p class="opportunity-desc">
+              Lead creative vision from table read to final cut. Direct actors, collaborate with cinematographers, and command the emotional cadence of feature narratives.
+            </p>
+          </div>
+
+          <!-- Role 2: Screenwriter -->
+          <div class="opportunity-card">
+            <div class="opportunity-icon-box">
+              <i class="fa-solid fa-feather-pointed" aria-hidden="true"></i>
+            </div>
+            <h3 class="opportunity-title">Screenwriter</h3>
+            <p class="opportunity-desc">
+              Craft compelling narrative screenplays, multi-layered character arcs, and razor-sharp dialogue for our upcoming cinematic slate and episodic anthologies.
+            </p>
+          </div>
+
+          <!-- Role 3: Cinematographer -->
+          <div class="opportunity-card">
+            <div class="opportunity-icon-box">
+              <i class="fa-solid fa-camera-retro" aria-hidden="true"></i>
+            </div>
+            <h3 class="opportunity-title">Cinematographer</h3>
+            <p class="opportunity-desc">
+              Define the visual architecture of the image. Master anamorphic optics, lighting moods, camera choreography, and sensory composition.
+            </p>
+          </div>
+
+          <!-- Role 4: Editor & Colorist -->
+          <div class="opportunity-card">
+            <div class="opportunity-icon-box">
+              <i class="fa-solid fa-scissors" aria-hidden="true"></i>
+            </div>
+            <h3 class="opportunity-title">Editor / Colorist</h3>
+            <p class="opportunity-desc">
+              Sculpt pace, rhythm, and montage. Grade high-dynamic range master plates and craft breathtaking cinematic timing in our post-production suites.
+            </p>
+          </div>
+
+          <!-- Role 5: Production Designer -->
+          <div class="opportunity-card">
+            <div class="opportunity-icon-box">
+              <i class="fa-solid fa-palette" aria-hidden="true"></i>
+            </div>
+            <h3 class="opportunity-title">Production Designer</h3>
+            <p class="opportunity-desc">
+              Architect the visual environments of our films. Oversee physical sets, period accuracy, worldbuilding textures, and visual aesthetics.
+            </p>
+          </div>
+
+          <!-- Role 6: Actor / Performer -->
+          <div class="opportunity-card">
+            <div class="opportunity-icon-box">
+              <i class="fa-solid fa-masks-theater" aria-hidden="true"></i>
+            </div>
+            <h3 class="opportunity-title">Actor / Performer</h3>
+            <p class="opportunity-desc">
+              Breathe authentic life, psychological depth, and visceral truth into characters across psychological thrillers, period dramas, and high-concept noir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. ADVANCED HTML5 APPLICATION FORM SECTION (Two-Column Layout)
+         ==================================================================== -->
+    <section class="application-section" id="applicationFormSection">
+      <div class="container">
+        
+        <div class="section-header-center" style="text-align: center; margin-bottom: 3.5rem;">
+          <span class="section-label">TALENT ACQUISITION</span>
+          <h2 class="section-title">ARTISTIC DOSSIER APPLICATION</h2>
+          <p class="section-subtitle">Complete all required fields below to submit your credentials to our creative board.</p>
+        </div>
+
+        <div class="application-layout">
+          
+          <!-- LEFT COLUMN: Advanced HTML5 Form -->
+          <div class="form-card-wrapper">
+            <form id="careerApplicationForm">
+              
+              <!-- FIELDSET 1: Personal & Contact Information -->
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">
+                  <i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+                  1. Candidate Details
+                </legend>
+
+                <!-- Full Name (type="text", required) -->
+                <div class="form-group">
+                  <label for="fullName" class="form-label">
+                    Full Name <span class="required-star">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    class="form-input-control"
+                    placeholder="e.g. Christopher Nolan"
+                    required
+                    minlength="2"
+                    autocomplete="name"
+                    aria-describedby="fullNameError"
+                  >
+                  <div class="field-error-msg" id="fullNameError" role="alert"></div>
+                </div>
+
+                <!-- 2-Column: Email & Phone -->
+                <div class="form-row-2col">
+                  <!-- Email (type="email", required) -->
+                  <div class="form-group">
+                    <label for="email" class="form-label">
+                      Email Address <span class="required-star">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-input-control"
+                      placeholder="e.g. nolan@syncopy.com"
+                      required
+                      autocomplete="email"
+                      aria-describedby="emailError"
+                    >
+                    <div class="field-error-msg" id="emailError" role="alert"></div>
+                  </div>
+
+                  <!-- Phone (type="tel", pattern="[6-9][0-9]{9}", required) -->
+                  <div class="form-group">
+                    <label for="phone" class="form-label">
+                      Phone Number <span class="required-star">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="form-input-control"
+                      placeholder="10-digit number (e.g. 9876543210)"
+                      pattern="[6-9][0-9]{9}"
+                      maxlength="10"
+                      required
+                      autocomplete="tel"
+                      aria-describedby="phoneError"
+                    >
+                    <div class="field-error-msg" id="phoneError" role="alert"></div>
+                  </div>
+                </div>
+
+                <!-- 3-Column: Date of Birth, Preferred Interview Time, Age -->
+                <div class="form-row-3col">
+                  <!-- Date of Birth (type="date", required) -->
+                  <div class="form-group">
+                    <label for="dob" class="form-label">
+                      Date of Birth <span class="required-star">*</span>
+                    </label>
+                    <input
+                      type="date"
+                      id="dob"
+                      name="dob"
+                      class="form-input-control"
+                      required
+                      aria-describedby="dobError"
+                    >
+                    <div class="field-error-msg" id="dobError" role="alert"></div>
+                  </div>
+
+                  <!-- Preferred Interview Time (type="time") -->
+                  <div class="form-group">
+                    <label for="preferredTime" class="form-label">
+                      Preferred Interview Time
+                    </label>
+                    <input
+                      type="time"
+                      id="preferredTime"
+                      name="preferredTime"
+                      class="form-input-control"
+                    >
+                  </div>
+
+                  <!-- Age (type="number", min="18", max="60", required) -->
+                  <div class="form-group">
+                    <label for="age" class="form-label">
+                      Age (18-60) <span class="required-star">*</span>
+                    </label>
+                    <input
+                      type="number"
+                      id="age"
+                      name="age"
+                      class="form-input-control"
+                      min="18"
+                      max="60"
+                      placeholder="18 - 60"
+                      required
+                      aria-describedby="ageError"
+                    >
+                    <div class="field-error-msg" id="ageError" role="alert"></div>
+                  </div>
+                </div>
+
+                <!-- Gender (Radio buttons, Male, Female, Other, required) -->
+                <div class="form-group">
+                  <label class="form-label">
+                    Gender Identity <span class="required-star">*</span>
+                  </label>
+                  <div class="radio-options-row" role="radiogroup" aria-label="Gender Identity">
+                    <label class="radio-label" for="genderMale">
+                      <input type="radio" id="genderMale" name="gender" value="Male" class="custom-radio" required>
+                      <span>Male</span>
+                    </label>
+                    <label class="radio-label" for="genderFemale">
+                      <input type="radio" id="genderFemale" name="gender" value="Female" class="custom-radio">
+                      <span>Female</span>
+                    </label>
+                    <label class="radio-label" for="genderOther">
+                      <input type="radio" id="genderOther" name="gender" value="Other" class="custom-radio">
+                      <span>Other</span>
+                    </label>
+                  </div>
+                  <div class="field-error-msg" id="genderError" role="alert"></div>
+                </div>
+              </fieldset>
+
+              <!-- FIELDSET 2: Discipline & Creative Background -->
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">
+                  <i class="fa-solid fa-clapperboard" aria-hidden="true"></i>
+                  2. Creative Disciplines &amp; Address
+                </legend>
+
+                <!-- Skills / Interests (8 Checkboxes: Direction, Screenwriting, Editing, Cinematography, Acting, Production Design, Sound Design, VFX) -->
+                <div class="form-group">
+                  <label class="form-label">
+                    Areas of Expertise &amp; Creative Interest <span class="required-star">*</span>
+                  </label>
+                  <div class="checkbox-grid-3col">
+                    <label class="checkbox-label" for="skillDirection">
+                      <input type="checkbox" id="skillDirection" name="skills" value="Direction">
+                      <span>Direction</span>
+                    </label>
+                    <label class="checkbox-label" for="skillScreenwriting">
+                      <input type="checkbox" id="skillScreenwriting" name="skills" value="Screenwriting">
+                      <span>Screenwriting</span>
+                    </label>
+                    <label class="checkbox-label" for="skillEditing">
+                      <input type="checkbox" id="skillEditing" name="skills" value="Editing">
+                      <span>Editing</span>
+                    </label>
+                    <label class="checkbox-label" for="skillCinematography">
+                      <input type="checkbox" id="skillCinematography" name="skills" value="Cinematography">
+                      <span>Cinematography</span>
+                    </label>
+                    <label class="checkbox-label" for="skillActing">
+                      <input type="checkbox" id="skillActing" name="skills" value="Acting">
+                      <span>Acting</span>
+                    </label>
+                    <label class="checkbox-label" for="skillProductionDesign">
+                      <input type="checkbox" id="skillProductionDesign" name="skills" value="Production Design">
+                      <span>Production Design</span>
+                    </label>
+                    <label class="checkbox-label" for="skillSoundDesign">
+                      <input type="checkbox" id="skillSoundDesign" name="skills" value="Sound Design">
+                      <span>Sound Design</span>
+                    </label>
+                    <label class="checkbox-label" for="skillVFX">
+                      <input type="checkbox" id="skillVFX" name="skills" value="VFX">
+                      <span>VFX</span>
+                    </label>
+                  </div>
+                  <div class="field-error-msg" id="skillsError" role="alert"></div>
+                </div>
+
+                <!-- Address (textarea, required) -->
+                <div class="form-group">
+                  <label for="address" class="form-label">
+                    Studio / Residential Address <span class="required-star">*</span>
+                  </label>
+                  <textarea
+                    id="address"
+                    name="address"
+                    class="form-textarea-control"
+                    placeholder="Enter street address, city, state, and postal code..."
+                    required
+                    aria-describedby="addressError"
+                  ></textarea>
+                  <div class="field-error-msg" id="addressError" role="alert"></div>
+                </div>
+
+                <!-- Preferred Studio Location (datalist — HTML5 requirement) -->
+                <div class="form-group">
+                  <label for="studioLocation" class="form-label">
+                    Preferred Studio Location
+                  </label>
+                  <input
+                    type="text"
+                    id="studioLocation"
+                    name="studioLocation"
+                    class="form-input-control"
+                    placeholder="e.g. Mumbai, Bangalore, Chennai…"
+                    list="studioLocationList"
+                    autocomplete="off"
+                  >
+                  <datalist id="studioLocationList">
+                    <option value="Mumbai — Andheri West">
+                    <option value="Mumbai — Bandra">
+                    <option value="Bangalore — Whitefield">
+                    <option value="Bangalore — Electronic City">
+                    <option value="Chennai — Anna Nagar">
+                    <option value="Delhi — Connaught Place">
+                    <option value="Hyderabad — Filmcity">
+                    <option value="Pune — Viman Nagar">
+                    <option value="Kochi — Kakkanad">
+                    <option value="Remote / Online">
+                  </datalist>
+                </div>
+
+                <!-- Portfolio URL (input[type=url] — HTML5 requirement) -->
+                <div class="form-group">
+                  <label for="portfolioUrl" class="form-label">
+                    Portfolio / Showreel URL
+                  </label>
+                  <input
+                    type="url"
+                    id="portfolioUrl"
+                    name="portfolioUrl"
+                    class="form-input-control"
+                    placeholder="https://yourportfolio.com"
+                    autocomplete="url"
+                  >
+                  <div class="field-error-msg" id="portfolioUrlError" role="alert"></div>
+                </div>
+
+                <!-- Resume Upload (input[type=file] — HTML5 requirement) -->
+                <div class="form-group">
+                  <label for="resumeFile" class="form-label">
+                    Upload Resume / CV
+                    <span style="font-size:0.75rem; font-weight:400; color:var(--text-muted);"> (PDF, DOC — max 5 MB)</span>
+                  </label>
+                  <input
+                    type="file"
+                    id="resumeFile"
+                    name="resumeFile"
+                    class="form-input-control"
+                    accept=".pdf,.doc,.docx"
+                  >
+                </div>
+
+                <!-- Additional Info: TELL US ABOUT YOURSELF with contenteditable="true" and spellcheck="true" -->
+                <div class="form-group">
+                  <label for="additional-info" class="form-label">
+                    <span>TELL US ABOUT YOURSELF <span class="required-star">*</span></span>
+                    <span class="char-counter-text" style="font-size: 0.76rem; color: var(--text-muted); font-weight: 400;">
+                      <i class="fa-solid fa-spell-check" title="Spellcheck enabled" aria-hidden="true"></i>
+                      <span id="charCount">0</span> characters
+                    </span>
+                  </label>
+                  <div class="contenteditable-wrapper">
+                    <div
+                      id="additional-info"
+                      class="contenteditable-area"
+                      contenteditable="true"
+                      spellcheck="true"
+                      role="textbox"
+                      aria-multiline="true"
+                      data-placeholder="Tell us about yourself, your artistic philosophy, past film credits, showreels, or creative background..."
+                    ></div>
+                  </div>
+                  <div class="field-error-msg" id="additionalInfoError" role="alert"></div>
+                </div>
+              </fieldset>
+
+
+              <!-- Action Buttons Bar (Submit, Reset, Cancel) -->
+              <div class="form-actions-bar">
+                <div class="form-actions-left">
+                  <button type="submit" id="submitBtn" class="btn btn-primary btn-submit">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                    <span>SUBMIT APPLICATION</span>
+                  </button>
+                  <button type="reset" id="resetBtn" class="btn-reset">
+                    <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+                    <span>RESET</span>
+                  </button>
+                </div>
+                <a href="../index.html" id="cancelBtn" class="btn-cancel">
+                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                  <span>CANCEL</span>
+                </a>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- RIGHT COLUMN: Dynamic Preview Aside & Draft Manager -->
+          <aside class="application-aside-column" aria-label="Application summary and tools">
+            
+            <!-- Live Preview Dossier Card -->
+            <div class="preview-card">
+              <div class="preview-card-header">
+                <h3 class="preview-title">
+                  <i class="fa-solid fa-id-card-clip" style="color:var(--accent-bright);" aria-hidden="true"></i>
+                  APPLICATION PREVIEW
+                </h3>
+                <span class="preview-badge-pulse">
+                  <i class="fa-solid fa-circle" style="font-size: 0.5rem;" aria-hidden="true"></i>
+                  LIVE SYNC
+                </span>
+              </div>
+
+              <div class="preview-details-list">
+                <!-- Name -->
+                <div class="preview-row">
+                  <span class="preview-label">Name</span>
+                  <div id="previewName" class="preview-val empty">Applicant Name</div>
+                </div>
+
+                <!-- Email -->
+                <div class="preview-row">
+                  <span class="preview-label">Email</span>
+                  <div id="previewEmail" class="preview-val empty">email@example.com</div>
+                </div>
+
+                <!-- Preferred Role / Skill -->
+                <div class="preview-row">
+                  <span class="preview-label">Preferred Role / Skill</span>
+                  <div id="previewSkills" class="preview-skills-chips">
+                    <span class="preview-val empty">No skills selected</span>
+                  </div>
+                </div>
+
+                <!-- Age -->
+                <div class="preview-row">
+                  <span class="preview-label">Age</span>
+                  <div id="previewAge" class="preview-val empty">--</div>
+                </div>
+
+                <!-- Phone (Optional dossier profile info) -->
+                <div class="preview-row">
+                  <span class="preview-label">Phone</span>
+                  <div id="previewPhone" class="preview-val empty">+91 ----------</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Draft Manager Card -->
+            <div class="draft-manager-card">
+              <div>
+                <div style="font-weight: 600; font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.2rem;">
+                  <i class="fa-solid fa-cloud-arrow-up" style="color:var(--accent-bright); margin-right: 0.35rem;" aria-hidden="true"></i>
+                  Draft Persistence
+                </div>
+                <div id="draftStatus" class="draft-status-text">Draft auto-saves as you type.</div>
+              </div>
+              <button type="button" id="clearDraftBtn" class="btn-clear-draft" aria-label="Clear saved draft">
+                <i class="fa-solid fa-trash-can" aria-hidden="true"></i> CLEAR SAVED DRAFT
+              </button>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       6. SUCCESS MODAL / RECEIPT
+       ==================================================================== -->
+  <div id="successModal" class="success-modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalSuccessTitle">
+    <div class="success-modal-card">
+      <div class="success-icon-wrap" aria-hidden="true">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="success-title" id="modalSuccessTitle">APPLICATION RECEIVED</h3>
+      <p class="success-message">
+        Thank you for applying to Rook Wall Studio. Our creative team will review your application.
+      </p>
+      <div class="success-actions">
+        <button type="button" id="closeModalBtn" class="btn btn-primary">
+          <i class="fa-solid fa-check" aria-hidden="true"></i> DISMISS &amp; CONTINUE
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       7. GLOBAL FOOTER (Matching Index & Productions)
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Column 1: Brand Info & Live Studio Status Clock -->
+        <div class="footer-col">
+          <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+            <div class="brand-icon" aria-hidden="true">
+              <i class="fa-solid fa-chess-rook"></i>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-text-main">ROOK WALL</span>
+              <span class="brand-text-sub">STUDIO</span>
+            </div>
+          </a>
+
+          <p class="footer-brand-bio">
+            &ldquo;WE CREATE STORIES.&rdquo;<br>
+            Stories That Stay Forever.
+          </p>
+
+          <!-- Studio Status Area: Live Date and Time updating every second -->
+          <div class="footer-clock-box">
+            <i class="fa-solid fa-broadcast-tower footer-clock-icon" aria-hidden="true"></i>
+            <div class="clock-text-wrap">
+              <span class="clock-label">STUDIO STATUS &bull; LIVE</span>
+              <div class="clock-display">
+                <span id="liveDate">05 SEP 2026</span> &bull; <span id="liveTime">00:00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="../index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="productions.html" class="footer-nav-link">Productions</a></li>
+            <li><a href="services.html" class="footer-nav-link">Services</a></li>
+            <li><a href="about.html" class="footer-nav-link">About</a></li>
+            <li><a href="careers.html" class="footer-nav-link" style="color:var(--accent-bright);">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Follow Us Social Media -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-instagram" style="width: 20px;" aria-hidden="true"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-youtube" style="width: 20px;" aria-hidden="true"></i> YouTube
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-linkedin-in" style="width: 20px;" aria-hidden="true"></i> LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Student Information -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Student Information</h4>
+          <div class="student-info-card">
+            <div>
+              <span class="student-label">Designed &amp; Developed by:</span>
+              <div class="student-val">[STUDENT NAME]</div>
+            </div>
+            <div style="margin-top: 0.5rem;">
+              <span class="student-label">Register Number:</span>
+              <div class="student-val">[REGISTER NUMBER]</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 ROOK WALL STUDIO. All Rights Reserved.</div>
+        <div>Cinema In Motion &bull; Coimbatore, Tamil Nadu</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       8. FLOATING SCROLL-TO-TOP BUTTON
+       ==================================================================== -->
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Vanilla JavaScript -->
+  <script src="../js/careers.js"></script>
+</body>
+</html>

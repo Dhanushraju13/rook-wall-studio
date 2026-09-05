@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Studio Archive &amp; Gallery | ROOK WALL STUDIO</title>
+  <meta name="description" content="Explore behind-the-scenes photography, production frames, key artwork, and interactive studio workspace board from Rook Wall Studio.">
+
+  <!-- Google Fonts: Cinzel (Cinematic Serif) & Plus Jakarta Sans (Modern Clean UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 for High Fidelity Vector Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core & Page Specific Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/gallery.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       1. NAVIGATION BAR (STICKY)
+       ==================================================================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      
+      <!-- LEFT: Logo & Brand Lockup -->
+      <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+        <div class="brand-icon" aria-hidden="true">
+          <i class="fa-solid fa-chess-rook"></i>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-text-main">ROOK WALL</span>
+          <span class="brand-text-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <!-- CENTER: Main Navigation Links -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul id="navMenu" class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="productions.html" class="nav-link">PRODUCTIONS</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT: Notification, Theme Toggle & Login/Logout Action -->
+      <div class="nav-actions">
+        <!-- 🔔 Notification Toggle Button -->
+        <button type="button" id="notifBtn" class="icon-btn" aria-label="Toggle notifications" aria-expanded="false">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+          <span class="notif-badge" aria-hidden="true"></span>
+        </button>
+
+        <!-- Notification Flyout Panel -->
+        <div id="notificationPanel" class="notification-panel" role="region" aria-label="Studio Announcements">
+          <div class="notif-header">
+            <h4 class="notif-title">
+              <i class="fa-solid fa-bullhorn" style="color:var(--accent-bright);"></i>
+              NOTIFICATIONS
+            </h4>
+            <span style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase;">Live Feed</span>
+          </div>
+          <ul class="notif-list">
+            <li class="notif-item">
+              <i class="fa-solid fa-camera-retro notif-item-icon" aria-hidden="true"></i>
+              <span>📸 40 new 35mm behind-the-scenes stills added to the archive</span>
+            </li>
+            <li class="notif-item">
+              <i class="fa-solid fa-film notif-item-icon" aria-hidden="true"></i>
+              <span>🎞️ Key art released for <strong>Project Phoenix</strong> festival premiere</span>
+            </li>
+            <li class="notif-item">
+              <i class="fa-solid fa-layer-group notif-item-icon" aria-hidden="true"></i>
+              <span>🎬 Interactive production board workspace enabled in the archive</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 🌙 Theme Toggle Button -->
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Switch Theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+
+        <!-- Dynamic Auth Button (LOGIN / LOGOUT) -->
+        <a href="../login.html" id="navAuthBtn" class="nav-auth-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+          <span>LOGIN</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         2. HERO SECTION
+         ==================================================================== -->
+    <section class="gallery-hero-section">
+      <div class="gallery-hero-bg-wrap">
+        <div class="gallery-hero-bg-img" role="img" aria-label="Behind the scenes camera rig on film set"></div>
+        <div class="gallery-hero-overlay"></div>
+        <div class="gallery-hero-grain"></div>
+      </div>
+
+      <div class="container gallery-hero-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-wrap" aria-label="Breadcrumb">
+          <a href="../index.html" class="breadcrumb-link">HOME</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">GALLERY</span>
+        </nav>
+
+        <span class="gallery-hero-label">ROOK WALL STUDIO</span>
+        <h1 class="gallery-hero-title">THE STUDIO ARCHIVE</h1>
+        <p class="gallery-hero-subtitle">&ldquo;Behind every frame is a moment worth remembering.&rdquo;</p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. GALLERY INTRODUCTION (section, article, aside)
+         ==================================================================== -->
+    <section class="gallery-intro-section">
+      <div class="container gallery-intro-grid">
+        <article class="gallery-intro-article">
+          <span class="section-label">BEHIND THE FRAMES</span>
+          <h2 class="section-title">CHRONICLING CINEMATIC PROCESS</h2>
+          <p class="gallery-intro-lead">
+            &ldquo;Explore the moments, people and places that shape our productions.&rdquo;
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.75; font-size: 0.95rem;">
+            From location scouts in mist-shrouded valleys to soundstages lit with incandescent fury, our studio archive preserves the unscripted intensity of filmmaking. Here you will discover intimate behind-the-scenes glimpses, official production stills, key theatrical one-sheets, and the artisans whose craft manifests dreams on celluloid.
+          </p>
+        </article>
+
+        <aside class="gallery-intro-aside" aria-label="Archive Highlights">
+          <ul class="archive-stats-list">
+            <li class="archive-stat-item">
+              <div class="stat-icon-circle" aria-hidden="true">
+                <i class="fa-solid fa-camera"></i>
+              </div>
+              <div>
+                <div class="stat-val">120+</div>
+                <div class="stat-label">Production Rolls Archived</div>
+              </div>
+            </li>
+            <li class="archive-stat-item">
+              <div class="stat-icon-circle" aria-hidden="true">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <div>
+                <div class="stat-val">6</div>
+                <div class="stat-label">Original Feature Films</div>
+              </div>
+            </li>
+            <li class="archive-stat-item">
+              <div class="stat-icon-circle" aria-hidden="true">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div>
+                <div class="stat-val">48</div>
+                <div class="stat-label">Heads of Department</div>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. MAIN GALLERY WITH CATEGORY FILTERING
+         ==================================================================== -->
+    <section class="main-gallery-section" id="gallerySection">
+      <div class="container">
+        
+        <div class="section-header-center" style="text-align: center; margin-bottom: 2.5rem;">
+          <span class="section-label">CURATED COLLECTION</span>
+          <h2 class="section-title">THE ARCHIVE VAULT</h2>
+          <p class="section-subtitle">Filter through our collection of behind-the-scenes photography, key posters, and production stills.</p>
+        </div>
+
+        <!-- Filter Navigation Buttons -->
+        <div class="gallery-filter-bar" role="tablist" aria-label="Gallery Categories">
+          <button type="button" class="filter-btn active" role="tab" aria-selected="true" data-filter="all">ALL</button>
+          <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="bts">BEHIND THE SCENES</button>
+          <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="production">PRODUCTION</button>
+          <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="team">TEAM</button>
+          <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="posters">POSTERS</button>
+        </div>
+
+        <!-- Gallery Grid (10 Items) -->
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <!-- Item 1: BTS - Camera Setup -->
+          <div class="gallery-item" data-category="bts" tabindex="0" role="button" aria-label="View Behind the Scenes: Camera Setup">
+            <img src="../assets/images/gallery/bts-1.jpg" alt="Cinematographer configuring camera setup" class="gallery-item-img" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Behind the Scenes</span>
+              <h3 class="gallery-item-title">Camera Setup</h3>
+              <p class="gallery-item-desc">ARRI Alexa 65 camera configured with Cooke anamorphic glass for twilight exterior filming.</p>
+            </div>
+            <div class="gallery-item-action-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+
+          <!-- Item 2: Production - Project Phoenix -->
+          <div class="gallery-item" data-category="production" tabindex="0" role="button" aria-label="View Production: Project Phoenix">
+            <img src="../assets/images/prod-phoenix.jpg" alt="Cinematic production still from Project Phoenix" class="gallery-item-img" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Production</span>
+              <h3 class="gallery-item-title">Project Phoenix</h3>
+              <p class="gallery-item-desc">High-contrast dystopian drama set within an abandoned underground neural archive.</p>
+            </div>
+            <div class="gallery-item-action-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+
+          <!-- Item 3: Team - Creative Meeting -->
+          <div class="gallery-item" data-category="team" tabindex="0" role="button" aria-label="View Team: Creative Meeting">
+            <img src="../assets/images/gallery/bts-2.jpg" alt="Production crew and director in creative meeting" class="gallery-item-img" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Team</span>
+              <h3 class="gallery-item-title">Creative Meeting</h3>
+              <p class="gallery-item-desc">Director and heads of department reviewing storyboard sequences during pre-production.</p>
+            </div>
+            <div class="gallery-item-action-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+
+          <!-- Item 4: Poster - The Horizon -->
+          <div class="gallery-item" data-category="posters" tabindex="0" role="button" aria-label="View Poster: The Horizon">
+            <img src="../assets/images/prod-horizon.jpg" alt="Theatrical film poster for The Horizon" class="gallery-item-img" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Posters</span>
+              <h3 class="gallery-item-title">The Horizon</h3>
+              <p class="gallery-item-desc">Official international teaser one-sheet for the visionary neo-noir space exploration saga.</p>
+            </div>
+            <div class="gallery-item-action-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+
+          <!-- Item 5: BTS - Directing The Frame -->
+          <div class="gallery-item" data-category="bts" tabindex="0" role="button" aria-label="View Behind the Scenes: Directing The Frame">
+            <img src="../assets/images/gallery/bts-3.jpg" alt="Director commanding a set scene" class="gallery-item-img" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Behind the Scenes</span>
+              <h3 class="gallery-item-title">Directing The Frame</h3>
+              <p class="gallery-item-desc">Choreographing multi-actor emotional sequences on soundstage four under haze lighting.</p>
+            </div>
+            <div class="gallery-item-action-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+
+          <!-- Item 6: Production - Echoes of Valor -->
+          <div class="gallery-item" data-category="production" tabindex="0" role="button" aria-label="View Production: Echoes of Valor">
+            <img src="../assets/images/prod-echoes.jpg" alt="Dramatic war cinema scene from Echoes of Valor" class="gallery-item-img" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Production</span>
+              <h3 class="gallery-item-title">Echoes of Valor</h3>
+              <p class="gallery-item-desc">Visceral wide-angle lens capture from our period trench warfare historical masterpiece.</p>
+            </div>
+            <div class="gallery-item-action-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+
+          <!-- Item 7: Team - Soundstage Rigging -->
+          <div class="gallery-item" data-category="team" tabindex="0" role="button" aria-label="View Team: Soundstage Rigging">
+            <img src="../assets/images/gallery/bts-4.jpg" alt="Lighting technicians and gaffers working on the studio grid" class="gallery-item-img" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Team</span>
+              <h3 class="gallery-item-title">Soundstage Rigging</h3>
+              <p class="gallery-item-desc">Studio electrics team calibrating motorized overhead trusses and softboxes for night interiors.</p>
+            </div>
+            <div class="gallery-item-action-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+
+          <!-- Item 8: Poster - Midnight Chronicles -->
+          <div class="gallery-item" data-category="posters" tabindex="0" role="button" aria-label="View Poster: Midnight Chronicles">
+            <img src="../assets/images/prod-midnight.jpg" alt="Official movie poster for Midnight Chronicles" class="gallery-item-img" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Posters</span>
+              <h3 class="gallery-item-title">Midnight Chronicles</h3>
+              <p class="gallery-item-desc">Award-winning theatrical artwork illustrating rain-drenched urban crime noir corridors.</p>
+            </div>
+            <div class="gallery-item-action-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+
+          <!-- Item 9: BTS - Color Grading Suite -->
+          <div class="gallery-item" data-category="bts" tabindex="0" role="button" aria-label="View Behind the Scenes: Color Grading Suite">
+            <img src="../assets/images/gallery/bts-5.jpg" alt="Color grading suite with reference monitors" class="gallery-item-img" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Behind the Scenes</span>
+              <h3 class="gallery-item-title">Color Grading Suite</h3>
+              <p class="gallery-item-desc">Final 4K HDR master color pass in our calibrated DaVinci Resolve post-production suite.</p>
+            </div>
+            <div class="gallery-item-action-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+
+          <!-- Item 10: Production - Beyond Silence -->
+          <div class="gallery-item" data-category="production" tabindex="0" role="button" aria-label="View Production: Beyond Silence">
+            <img src="../assets/images/prod-beyondsilence.jpg" alt="Intimate cinematic frame from Beyond Silence" class="gallery-item-img" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Production</span>
+              <h3 class="gallery-item-title">Beyond Silence</h3>
+              <p class="gallery-item-desc">Poetic psychological drama capturing the acoustic sanctuary of an orchestra conductor.</p>
+            </div>
+            <div class="gallery-item-action-icon" aria-hidden="true">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. HTML5 DRAG & DROP SECTION: BUILD YOUR PRODUCTION BOARD
+         ==================================================================== -->
+    <section class="drag-drop-section" id="productionBoardSection">
+      <div class="container">
+        
+        <div class="section-header-center" style="text-align: center; margin-bottom: 3.5rem;">
+          <span class="section-label">INTERACTIVE WORKSPACE</span>
+          <h2 class="section-title">BUILD YOUR PRODUCTION BOARD</h2>
+          <p class="section-subtitle">&ldquo;Drag production elements into the studio board to create your own production workspace.&rdquo;</p>
+        </div>
+
+        <!-- Draggable Creative Elements Tray -->
+        <div class="draggable-elements-container">
+          <h3 class="elements-tray-title">
+            <i class="fa-solid fa-grip-vertical" aria-hidden="true"></i>
+            AVAILABLE PRODUCTION ELEMENTS (DRAG ITEMS BELOW)
+          </h3>
+
+          <div class="draggable-cards-grid" role="list" aria-label="Available draggable production cards">
+            
+            <!-- Element 1: 🎬 CAMERA -->
+            <div class="draggable-card" draggable="true" tabindex="0" role="button" aria-label="Camera: Press Enter or Space to add to production board, or drag and drop" data-id="camera" data-title="Camera" data-icon="fa-video" data-desc="ARRI Alexa 65 &amp; Anamorphic Lenses">
+              <div class="draggable-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-video"></i>
+              </div>
+              <div class="draggable-card-info">
+                <span class="draggable-card-name">🎬 CAMERA</span>
+                <span class="draggable-card-desc">ARRI Alexa 65 Large Format</span>
+              </div>
+            </div>
+
+            <!-- Element 2: 🎥 CAMERA OPERATOR -->
+            <div class="draggable-card" draggable="true" tabindex="0" role="button" aria-label="Camera Operator: Press Enter or Space to add to production board, or drag and drop" data-id="operator" data-title="Camera Operator" data-icon="fa-camera" data-desc="Steadicam &amp; Technocrane Rigs">
+              <div class="draggable-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-camera"></i>
+              </div>
+              <div class="draggable-card-info">
+                <span class="draggable-card-name">🎥 CAMERA OPERATOR</span>
+                <span class="draggable-card-desc">Steadicam &amp; Dynamic Tracking</span>
+              </div>
+            </div>
+
+            <!-- Element 3: 💡 LIGHTING -->
+            <div class="draggable-card" draggable="true" tabindex="0" role="button" aria-label="Lighting: Press Enter or Space to add to production board, or drag and drop" data-id="lighting" data-title="Lighting" data-icon="fa-lightbulb" data-desc="18K HMI &amp; Skypanel Array">
+              <div class="draggable-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <div class="draggable-card-info">
+                <span class="draggable-card-name">💡 LIGHTING</span>
+                <span class="draggable-card-desc">18K HMI Fresnels &amp; Softboxes</span>
+              </div>
+            </div>
+
+            <!-- Element 4: 🎞 FILM REEL -->
+            <div class="draggable-card" draggable="true" tabindex="0" role="button" aria-label="Film Reel: Press Enter or Space to add to production board, or drag and drop" data-id="filmreel" data-title="Film Reel" data-icon="fa-film" data-desc="35mm Kodak Vision3 Stock">
+              <div class="draggable-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <div class="draggable-card-info">
+                <span class="draggable-card-name">🎞 FILM REEL</span>
+                <span class="draggable-card-desc">35mm Kodak Celluloid Stock</span>
+              </div>
+            </div>
+
+            <!-- Element 5: 🎭 ACTOR -->
+            <div class="draggable-card" draggable="true" tabindex="0" role="button" aria-label="Actor: Press Enter or Space to add to production board, or drag and drop" data-id="actor" data-title="Actor" data-icon="fa-masks-theater" data-desc="Principal Cast &amp; Ensemble">
+              <div class="draggable-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-masks-theater"></i>
+              </div>
+              <div class="draggable-card-info">
+                <span class="draggable-card-name">🎭 ACTOR</span>
+                <span class="draggable-card-desc">Principal Cast &amp; Dialogue</span>
+              </div>
+            </div>
+
+            <!-- Element 6: 🎧 SOUND -->
+            <div class="draggable-card" draggable="true" tabindex="0" role="button" aria-label="Sound: Press Enter or Space to add to production board, or drag and drop" data-id="sound" data-title="Sound" data-icon="fa-headphones" data-desc="Boom Mics &amp; 32-bit Recorders">
+              <div class="draggable-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-headphones"></i>
+              </div>
+              <div class="draggable-card-info">
+                <span class="draggable-card-name">🎧 SOUND</span>
+                <span class="draggable-card-desc">7.1 Atmos Spatial Audio Rig</span>
+              </div>
+            </div>
+
+            <!-- Element 7: ✂ EDITING -->
+            <div class="draggable-card" draggable="true" tabindex="0" role="button" aria-label="Editing: Press Enter or Space to add to production board, or drag and drop" data-id="editing" data-title="Editing" data-icon="fa-scissors" data-desc="Non-linear Assembly &amp; Montage">
+              <div class="draggable-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-scissors"></i>
+              </div>
+              <div class="draggable-card-info">
+                <span class="draggable-card-name">✂ EDITING</span>
+                <span class="draggable-card-desc">Montage Cadence &amp; Pace</span>
+              </div>
+            </div>
+
+            <!-- Element 8: 🎨 PRODUCTION DESIGN -->
+            <div class="draggable-card" draggable="true" tabindex="0" role="button" aria-label="Production Design: Press Enter or Space to add to production board, or drag and drop" data-id="design" data-title="Production Design" data-icon="fa-palette" data-desc="Soundstage Sets &amp; Props">
+              <div class="draggable-card-icon" aria-hidden="true">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <div class="draggable-card-info">
+                <span class="draggable-card-name">🎨 PRODUCTION DESIGN</span>
+                <span class="draggable-card-desc">Architectural Sets &amp; Worlds</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- The Production Board Drop Zone Area -->
+        <div class="production-board-container" id="productionBoardDropZone" role="region" aria-label="Your Production Board Drop Zone and Canvas" aria-live="polite">
+          
+          <div class="board-header-bar">
+            <div class="board-title-group">
+              <i class="fa-solid fa-clapperboard board-title-icon" aria-hidden="true"></i>
+              <h3 class="board-title">YOUR PRODUCTION BOARD</h3>
+              <span id="boardCounter" class="board-counter-badge" aria-live="polite">0 ITEMS</span>
+            </div>
+
+            <div class="board-actions">
+              <button type="button" id="saveBoardBtn" class="btn btn-primary btn-board-save">
+                <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i>
+                <span>SAVE BOARD</span>
+              </button>
+              <button type="button" id="clearBoardBtn" class="btn-board-clear">
+                <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
+                <span>CLEAR BOARD</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Empty State Indicator -->
+          <div class="dropzone-empty-state" id="dropzonePlaceholder">
+            <div class="dropzone-icon" aria-hidden="true">
+              <i class="fa-solid fa-hand-holding-hand"></i>
+            </div>
+            <h4 class="dropzone-heading" id="dropzoneHeading">YOUR PRODUCTION BOARD</h4>
+            <p class="dropzone-desc" style="font-weight: 700; letter-spacing: 0.12em; color: var(--accent-bright);">
+              DROP ELEMENTS HERE
+            </p>
+            <p class="dropzone-instruction">
+              Drag and drop any of the 8 production cards from above into this canvas (or press Enter/Space on a card) to construct your production slate.
+            </p>
+          </div>
+
+          <!-- Board Dropped Items Grid -->
+          <div class="board-items-grid" id="boardItemsContainer" role="list" aria-label="Dropped production board elements"></div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. WEB STORAGE DEMONSTRATION SECTION (localStorage & sessionStorage)
+         ==================================================================== -->
+    <section class="storage-demo-section" id="storageDemoSection">
+      <div class="container">
+        
+        <div class="section-header-center" style="text-align: center; margin-bottom: 3.5rem;">
+          <span class="section-label">WEB STORAGE ENGINE</span>
+          <h2 class="section-title">STUDIO STORAGE DEMONSTRATION</h2>
+          <p class="section-subtitle">Real-time persistent browser storage complying with HTML5 LocalStorage and SessionStorage specifications.</p>
+        </div>
+
+        <div class="storage-grid-2col">
+          
+          <!-- Storage Card 1: LocalStorage (Production Board) -->
+          <div class="storage-card">
+            <div>
+              <div class="storage-card-header">
+                <h3 class="storage-card-title">
+                  <i class="fa-solid fa-hard-drive" style="color: #10b981;" aria-hidden="true"></i>
+                  LOCAL STORAGE
+                </h3>
+                <span class="storage-type-pill pill-local">Permanent Client Storage</span>
+              </div>
+
+              <p class="storage-desc">
+                Permanently preserves the <strong>Production Board</strong> state on the client side. Data remains safely intact across tab closures, page reloads, and browser restarts.
+              </p>
+
+              <div class="storage-status-box">
+                <span class="status-key">Key: rookWallProductionBoard</span>
+                <span class="status-val" id="localStorageStatus" aria-live="polite">Empty</span>
+              </div>
+            </div>
+
+            <div class="storage-btn-row">
+              <button type="button" id="storageSaveBoardBtn" class="btn-storage btn-storage-primary">
+                <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> SAVE BOARD
+              </button>
+              <button type="button" id="storageRetrieveBoardBtn" class="btn-storage btn-storage-secondary">
+                <i class="fa-solid fa-eye" aria-hidden="true"></i> RETRIEVE BOARD
+              </button>
+              <button type="button" id="storageClearBoardBtn" class="btn-storage btn-storage-danger">
+                <i class="fa-solid fa-trash-can" aria-hidden="true"></i> CLEAR BOARD
+              </button>
+            </div>
+          </div>
+
+          <!-- Storage Card 2: SessionStorage (Current Production) -->
+          <div class="storage-card">
+            <div>
+              <div class="storage-card-header">
+                <h3 class="storage-card-title">
+                  <i class="fa-solid fa-clock-rotate-left" style="color: #3b82f6;" aria-hidden="true"></i>
+                  SESSION STORAGE
+                </h3>
+                <span class="storage-type-pill pill-session">Tab Session Only</span>
+              </div>
+
+              <p class="storage-desc">
+                Temporary information stored only for this browser session. Automatically destroyed as soon as the browser tab is closed.
+              </p>
+
+              <!-- Session Input Field -->
+              <div class="storage-field-group">
+                <label for="sessionProductionInput" class="storage-field-label">Current Production</label>
+                <input
+                  type="text"
+                  id="sessionProductionInput"
+                  class="storage-input-control"
+                  placeholder="e.g. PROJECT PHOENIX"
+                  value="PROJECT PHOENIX"
+                >
+              </div>
+
+              <div class="storage-status-box">
+                <span class="status-key">Key: rookWallCurrentProduction</span>
+                <span class="status-val" id="sessionStorageStatus" aria-live="polite">Empty</span>
+              </div>
+            </div>
+
+            <div class="storage-btn-row">
+              <button type="button" id="saveSessionBtn" class="btn-storage btn-storage-primary">
+                <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> SAVE SESSION
+              </button>
+              <button type="button" id="retrieveSessionBtn" class="btn-storage btn-storage-secondary">
+                <i class="fa-solid fa-eye" aria-hidden="true"></i> RETRIEVE SESSION
+              </button>
+              <button type="button" id="clearSessionBtn" class="btn-storage btn-storage-danger">
+                <i class="fa-solid fa-trash-can" aria-hidden="true"></i> CLEAR SESSION
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Visible Data Inspector Console Area (Requirement 12) -->
+        <div class="stored-data-console-card">
+          <div class="console-header">
+            <h3 class="console-title" id="storedDataTitle">
+              <i class="fa-solid fa-terminal" style="color:var(--accent-bright);" aria-hidden="true"></i>
+              STORED DATA // INSPECTOR CONSOLE
+            </h3>
+            <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+              Click Retrieve Board or Retrieve Session to Inspect
+            </span>
+          </div>
+          <div id="storedDataDisplay" class="console-display-box empty" role="region" aria-live="polite">
+            No saved data found.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. CINEMATIC QUOTE SECTION
+         ==================================================================== -->
+    <section class="gallery-quote-section">
+      <div class="gallery-quote-overlay"></div>
+      <div class="container gallery-quote-content">
+        <div class="quote-symbol" aria-hidden="true">&ldquo;</div>
+        <blockquote class="gallery-quote-text">
+          THE CAMERA REMEMBERS WHAT TIME FORGETS.
+        </blockquote>
+        <cite class="gallery-quote-author">&mdash; ROOK WALL STUDIO ARCHIVE &mdash;</cite>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. CALL TO ACTION (CTA) SECTION
+         ==================================================================== -->
+    <section class="gallery-cta-section">
+      <div class="gallery-cta-overlay"></div>
+      <div class="container gallery-cta-content">
+        <h2 class="gallery-cta-title">READY TO CREATE YOUR STORY?</h2>
+        <p class="gallery-cta-desc">Every production begins with an idea.</p>
+        <div class="gallery-cta-actions">
+          <a href="productions.html" class="btn btn-primary">
+            <i class="fa-solid fa-film" aria-hidden="true"></i>
+            <span>EXPLORE PRODUCTIONS</span>
+          </a>
+          <a href="careers.html" class="btn btn-secondary">
+            <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+            <span>JOIN OUR TEAM</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       9. CINEMATIC IMAGE LIGHTBOX MODAL
+       ==================================================================== -->
+  <div id="galleryLightbox" class="lightbox-modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightboxTitle">
+    <div class="lightbox-content-card">
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImage" src="" alt="Gallery preview detail">
+      </div>
+      <div class="lightbox-info-bar">
+        <div class="lightbox-details">
+          <span id="lightboxCategory" class="lightbox-category-tag">Category</span>
+          <h3 id="lightboxTitle" class="lightbox-title-text">Image Title</h3>
+          <p id="lightboxDesc" class="lightbox-description-text">Production image description.</p>
+        </div>
+        <button type="button" id="closeLightboxBtn" class="btn-close-lightbox" aria-label="Close Lightbox">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       10. CONFIRMATION MODAL FOR CLEAR BOARD
+       ==================================================================== -->
+  <div id="confirmClearModal" class="confirm-modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="confirmClearTitle">
+    <div class="confirm-modal-card">
+      <div class="confirm-modal-icon" aria-hidden="true">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <h3 id="confirmClearTitle" class="confirm-modal-title">CLEAR PRODUCTION BOARD?</h3>
+      <p class="confirm-modal-desc">
+        Are you sure you want to permanently clear all elements from your studio production board? This will remove all saved slots from LocalStorage.
+      </p>
+      <div class="confirm-modal-actions">
+        <button type="button" id="cancelClearBtn" class="btn btn-secondary">CANCEL</button>
+        <button type="button" id="confirmClearBtn" class="btn btn-primary btn-danger-action">CLEAR BOARD</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       11. FLOATING TOAST NOTIFICATION
+       ==================================================================== -->
+  <div id="galleryToast" class="gallery-toast" role="status" aria-live="polite">
+    <i id="galleryToastIcon" class="gallery-toast-icon fa-solid fa-circle-check" aria-hidden="true"></i>
+    <span id="galleryToastText">Action completed successfully.</span>
+  </div>
+
+  <!-- ====================================================================
+       11. GLOBAL FOOTER (Matching Existing Studio Pages)
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Column 1: Brand Info & Live Studio Status Clock -->
+        <div class="footer-col">
+          <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+            <div class="brand-icon" aria-hidden="true">
+              <i class="fa-solid fa-chess-rook"></i>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-text-main">ROOK WALL</span>
+              <span class="brand-text-sub">STUDIO</span>
+            </div>
+          </a>
+
+          <p class="footer-brand-bio">
+            &ldquo;WE CREATE STORIES.&rdquo;<br>
+            Stories That Stay Forever.
+          </p>
+
+          <!-- Studio Status Area: Live Date and Time updating every second -->
+          <div class="footer-clock-box">
+            <i class="fa-solid fa-broadcast-tower footer-clock-icon" aria-hidden="true"></i>
+            <div class="clock-text-wrap">
+              <span class="clock-label">STUDIO STATUS &bull; LIVE</span>
+              <div class="clock-display">
+                <span id="liveDate">05 SEP 2026</span> &bull; <span id="liveTime">00:00:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="../index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="productions.html" class="footer-nav-link">Productions</a></li>
+            <li><a href="services.html" class="footer-nav-link">Services</a></li>
+            <li><a href="about.html" class="footer-nav-link">About</a></li>
+            <li><a href="careers.html" class="footer-nav-link">Careers</a></li>
+            <li><a href="gallery.html" class="footer-nav-link" style="color:var(--accent-bright);">Gallery</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Follow Us Social Media -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-instagram" style="width: 20px;" aria-hidden="true"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-youtube" style="width: 20px;" aria-hidden="true"></i> YouTube
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                <i class="fa-brands fa-linkedin-in" style="width: 20px;" aria-hidden="true"></i> LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Student Information -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Student Information</h4>
+          <div class="student-info-card">
+            <div>
+              <span class="student-label">Designed &amp; Developed by:</span>
+              <div class="student-val">[STUDENT NAME]</div>
+            </div>
+            <div style="margin-top: 0.5rem;">
+              <span class="student-label">Register Number:</span>
+              <div class="student-val">[REGISTER NUMBER]</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 ROOK WALL STUDIO. All Rights Reserved.</div>
+        <div>Cinema In Motion &bull; Coimbatore, Tamil Nadu</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       12. FLOATING SCROLL-TO-TOP BUTTON
+       ==================================================================== -->
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Vanilla JavaScript -->
+  <script src="../js/gallery.js"></script>
+</body>
+</html>

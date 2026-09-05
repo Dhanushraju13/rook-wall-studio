@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | ROOK WALL STUDIO</title>
+  <meta name="description" content="About Rook Wall Studio — an independent cinematic production house.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container navbar">
+      <a href="../index.html" class="nav-brand" aria-label="ROOK WALL STUDIO Home">
+        <div class="brand-icon" aria-hidden="true"><i class="fa-solid fa-chess-rook"></i></div>
+        <div class="brand-text-block">
+          <span class="brand-text-main">ROOK WALL</span>
+          <span class="brand-text-sub">STUDIO</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul id="navMenu" class="nav-menu">
+          <li class="nav-item"><a href="../index.html" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="productions.html" class="nav-link">PRODUCTIONS</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link nav-link--active" aria-current="page">ABOUT</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" id="notifBtn" class="icon-btn" aria-label="Toggle notifications" aria-expanded="false">
+          <i class="fa-regular fa-bell" aria-hidden="true"></i>
+          <span class="notif-badge" id="notifCount">3</span>
+        </button>
+        <div id="notificationPanel" class="notification-panel" role="region" aria-label="Notifications">
+          <div class="notif-header">
+            <h4 class="notif-title"><i class="fa-solid fa-bell" style="color:var(--accent-bright);"></i> NOTIFICATIONS</h4>
+          </div>
+          <ul class="notif-list">
+            <li class="notif-item notif-unread">
+              <i class="fa-solid fa-clapperboard notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">New production added</span>
+                <span class="notif-item-desc">Project Phoenix is now live.</span>
+              </div>
+            </li>
+            <li class="notif-item notif-unread">
+              <i class="fa-solid fa-star notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">Award received</span>
+                <span class="notif-item-desc">Best Independent Production 2026.</span>
+              </div>
+            </li>
+            <li class="notif-item notif-unread">
+              <i class="fa-solid fa-users notif-item-icon" aria-hidden="true"></i>
+              <div class="notif-item-body">
+                <span class="notif-item-title">Team expanded</span>
+                <span class="notif-item-desc">14 new creative members joined.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Switch theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <a href="../login.html" id="navAuthBtn" class="nav-auth-btn">
+          <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+          <span>LOGIN</span>
+        </a>
+        <button type="button" id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="about-hero" aria-label="About page hero">
+    <div class="about-hero-bg" role="img" aria-label="Cinematic studio background"></div>
+    <div class="about-hero-overlay" aria-hidden="true"></div>
+    <div class="about-hero-grain" aria-hidden="true"></div>
+    <div class="container about-hero-content">
+      <nav class="about-breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="../index.html">HOME</a></li>
+          <li class="breadcrumb-sep" aria-hidden="true">/</li>
+          <li class="breadcrumb-item breadcrumb-current" aria-current="page">ABOUT</li>
+        </ol>
+      </nav>
+      <div class="about-hero-text">
+        <div class="about-hero-label"><i class="fa-solid fa-chess-rook" aria-hidden="true"></i> ROOK WALL STUDIO</div>
+        <h1 class="about-hero-heading">WE CREATE<br>STORIES.</h1>
+        <p class="about-hero-subtitle">"An independent production studio built around powerful stories and unforgettable frames."</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content">
+
+  <!-- WHO WE ARE -->
+  <section class="about-who-section" id="who-we-are" aria-labelledby="who-heading">
+    <div class="container">
+      <div class="about-section-header reveal-about">
+        <span class="section-pill">Our Story</span>
+        <h2 class="section-title" id="who-heading">WHO WE ARE</h2>
+      </div>
+      <div class="about-who-grid">
+        <figure class="about-who-img-wrap reveal-about">
+          <img src="../assets/images/welcome-studio.jpg" alt="Rook Wall Studio — filmmakers at work" class="about-who-img" loading="lazy">
+          <div class="about-who-img-overlay" aria-hidden="true"></div>
+          <figcaption class="about-who-caption"><i class="fa-solid fa-chess-rook" aria-hidden="true"></i> The Studio — Coimbatore, Tamil Nadu</figcaption>
+        </figure>
+        <article class="about-who-text reveal-about" aria-label="Studio introduction">
+          <p class="about-who-intro">Rook Wall Studio is a creative production house focused on developing, producing and delivering original stories for audiences across screens.</p>
+          <p class="about-who-body">Founded on the belief that every story deserves to be told with honesty and craft, we bring together talented writers, directors, cinematographers and crew to build productions that resonate.</p>
+          <aside class="about-disciplines" aria-label="Studio disciplines">
+            <ul class="disciplines-list">
+              <li class="discipline-item"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i><span>Creative Development</span></li>
+              <li class="discipline-item"><i class="fa-solid fa-film" aria-hidden="true"></i><span>Film Production</span></li>
+              <li class="discipline-item"><i class="fa-solid fa-sliders" aria-hidden="true"></i><span>Post-Production</span></li>
+              <li class="discipline-item"><i class="fa-solid fa-tv" aria-hidden="true"></i><span>Digital Storytelling</span></li>
+            </ul>
+          </aside>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR VISION -->
+  <section class="about-vision-section" id="vision" aria-labelledby="vision-heading">
+    <div class="about-vision-bg" aria-hidden="true"></div>
+    <div class="about-vision-overlay" aria-hidden="true"></div>
+    <div class="container about-vision-content">
+      <div class="about-section-header reveal-about">
+        <span class="section-pill">What Drives Us</span>
+        <h2 class="section-title" id="vision-heading">OUR VISION</h2>
+      </div>
+      <blockquote class="vision-quote reveal-about" cite="#vision">
+        <i class="fa-solid fa-quote-left vision-quote-icon" aria-hidden="true"></i>
+        <p class="vision-quote-text">"To create meaningful stories that connect people, inspire imagination and remain memorable long after the final frame."</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- OUR MISSION -->
+  <section class="about-mission-section" id="mission" aria-labelledby="mission-heading">
+    <div class="container">
+      <div class="about-section-header reveal-about">
+        <span class="section-pill">What We Do</span>
+        <h2 class="section-title" id="mission-heading">OUR MISSION</h2>
+        <p class="section-subtitle">Four principles that guide every production we make.</p>
+      </div>
+      <div class="mission-cards-grid">
+        <article class="mission-card reveal-about" tabindex="0" aria-label="Mission: Story">
+          <div class="mission-card-num" aria-hidden="true">01</div>
+          <div class="mission-card-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></div>
+          <h3 class="mission-card-title">STORY</h3>
+          <p class="mission-card-desc">Develop original and meaningful stories that connect with audiences across every screen.</p>
+        </article>
+        <article class="mission-card reveal-about" tabindex="0" aria-label="Mission: Creativity">
+          <div class="mission-card-num" aria-hidden="true">02</div>
+          <div class="mission-card-icon" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3 class="mission-card-title">CREATIVITY</h3>
+          <p class="mission-card-desc">Encourage bold and innovative creative ideas that push the boundaries of visual storytelling.</p>
+        </article>
+        <article class="mission-card reveal-about" tabindex="0" aria-label="Mission: Collaboration">
+          <div class="mission-card-num" aria-hidden="true">03</div>
+          <div class="mission-card-icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
+          <h3 class="mission-card-title">COLLABORATION</h3>
+          <p class="mission-card-desc">Bring talented people together to create stronger, more authentic productions.</p>
+        </article>
+        <article class="mission-card reveal-about" tabindex="0" aria-label="Mission: Quality">
+          <div class="mission-card-num" aria-hidden="true">04</div>
+          <div class="mission-card-icon" aria-hidden="true"><i class="fa-solid fa-gem"></i></div>
+          <h3 class="mission-card-title">QUALITY</h3>
+          <p class="mission-card-desc">Maintain uncompromising quality from the first concept to the final frame.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY TIMELINE -->
+  <section class="about-journey-section" id="journey" aria-labelledby="journey-heading">
+    <div class="container">
+      <div class="about-section-header reveal-about">
+        <span class="section-pill">Our History</span>
+        <h2 class="section-title" id="journey-heading">OUR JOURNEY</h2>
+        <p class="section-subtitle">From a creative idea to a growing production studio.</p>
+      </div>
+      <div class="journey-timeline" role="list" aria-label="Studio timeline">
+        <div class="timeline-item reveal-about" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-connector" aria-hidden="true"></div>
+          <article class="timeline-card">
+            <time class="timeline-year" datetime="2024">2024</time>
+            <h3 class="timeline-title">THE BEGINNING</h3>
+            <p class="timeline-desc">Rook Wall Studio begins its creative journey with a shared belief in the power of original storytelling.</p>
+          </article>
+        </div>
+        <div class="timeline-item reveal-about" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-connector" aria-hidden="true"></div>
+          <article class="timeline-card">
+            <time class="timeline-year" datetime="2025">2025</time>
+            <h3 class="timeline-title">FIRST PRODUCTIONS</h3>
+            <p class="timeline-desc">The studio expands its production portfolio and builds its creative team with passion and ambition.</p>
+          </article>
+        </div>
+        <div class="timeline-item reveal-about" role="listitem">
+          <div class="timeline-dot timeline-dot--active" aria-hidden="true"></div>
+          <article class="timeline-card timeline-card--active">
+            <time class="timeline-year" datetime="2026">2026</time>
+            <h3 class="timeline-title">A NEW CHAPTER</h3>
+            <p class="timeline-desc">New productions, creative collaborations and digital projects as the studio steps into a bigger stage.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO STATISTICS -->
+  <section class="about-stats-section" id="statistics" aria-labelledby="stats-heading">
+    <div class="about-stats-bg" aria-hidden="true"></div>
+    <div class="about-stats-overlay" aria-hidden="true"></div>
+    <div class="container about-stats-content">
+      <div class="about-section-header reveal-about">
+        <span class="section-pill">By The Numbers</span>
+        <h2 class="section-title" id="stats-heading">STUDIO AT A GLANCE</h2>
+      </div>
+      <div class="about-stats-grid">
+        <div class="about-stat-item reveal-about" role="img" aria-label="50 plus productions">
+          <div class="about-stat-num"><span class="js-about-counter" data-target="50" data-suffix="+">0</span></div>
+          <div class="about-stat-label">PRODUCTIONS</div>
+        </div>
+        <div class="about-stat-item reveal-about" role="img" aria-label="10 plus awards">
+          <div class="about-stat-num"><span class="js-about-counter" data-target="10" data-suffix="+">0</span></div>
+          <div class="about-stat-label">AWARDS</div>
+        </div>
+        <div class="about-stat-item reveal-about" role="img" aria-label="100 plus creative minds">
+          <div class="about-stat-num"><span class="js-about-counter" data-target="100" data-suffix="+">0</span></div>
+          <div class="about-stat-label">CREATIVE MINDS</div>
+        </div>
+        <div class="about-stat-item reveal-about" role="img" aria-label="1 million plus global audience">
+          <div class="about-stat-num"><span class="js-about-counter" data-target="1" data-suffix="M+">0</span></div>
+          <div class="about-stat-label">GLOBAL AUDIENCE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATIVE TEAM -->
+  <section class="about-team-section" id="team" aria-labelledby="team-heading">
+    <div class="container">
+      <div class="about-section-header reveal-about">
+        <span class="section-pill">The Crew</span>
+        <h2 class="section-title" id="team-heading">THE PEOPLE BEHIND THE FRAME</h2>
+        <p class="section-subtitle">The creative minds that bring every production to life.</p>
+      </div>
+      <div class="team-cards-grid">
+        <article class="team-card reveal-about" aria-label="Arjun Krishnaswamy — Director">
+          <div class="team-card-img-wrap">
+            <div class="team-card-img team-img-1" role="img" aria-label="Portrait of Arjun Krishnaswamy, Director"></div>
+            <div class="team-card-overlay" aria-hidden="true">
+              <p class="team-card-bio">A visionary storyteller with an eye for dramatic composition and emotional depth.</p>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h3 class="team-card-name">Arjun Krishnaswamy</h3>
+            <div class="team-card-role">Director</div>
+            <p class="team-card-desc">Creative Vision</p>
+          </div>
+        </article>
+        <article class="team-card reveal-about" aria-label="Meera Selvam — Producer">
+          <div class="team-card-img-wrap">
+            <div class="team-card-img team-img-2" role="img" aria-label="Portrait of Meera Selvam, Producer"></div>
+            <div class="team-card-overlay" aria-hidden="true">
+              <p class="team-card-bio">A strategic producer who shapes the framework for every ambitious production.</p>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h3 class="team-card-name">Meera Selvam</h3>
+            <div class="team-card-role">Producer</div>
+            <p class="team-card-desc">Production Strategy</p>
+          </div>
+        </article>
+        <article class="team-card reveal-about" aria-label="Karthik Venkat — Cinematographer">
+          <div class="team-card-img-wrap">
+            <div class="team-card-img team-img-3" role="img" aria-label="Portrait of Karthik Venkat, Cinematographer"></div>
+            <div class="team-card-overlay" aria-hidden="true">
+              <p class="team-card-bio">A master of light who transforms every frame into a visual language.</p>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h3 class="team-card-name">Karthik Venkat</h3>
+            <div class="team-card-role">Cinematographer</div>
+            <p class="team-card-desc">Visual Storytelling</p>
+          </div>
+        </article>
+        <article class="team-card reveal-about" aria-label="Divya Rajan — Editor">
+          <div class="team-card-img-wrap">
+            <div class="team-card-img team-img-4" role="img" aria-label="Portrait of Divya Rajan, Editor"></div>
+            <div class="team-card-overlay" aria-hidden="true">
+              <p class="team-card-bio">She shapes raw footage into rhythmic, emotionally powerful narratives.</p>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h3 class="team-card-name">Divya Rajan</h3>
+            <div class="team-card-role">Editor</div>
+            <p class="team-card-desc">Final Cut &amp; Story Rhythm</p>
+          </div>
+        </article>
+        <article class="team-card reveal-about" aria-label="Suresh Natarajan — Production Designer">
+          <div class="team-card-img-wrap">
+            <div class="team-card-img team-img-5" role="img" aria-label="Portrait of Suresh Natarajan, Production Designer"></div>
+            <div class="team-card-overlay" aria-hidden="true">
+              <p class="team-card-bio">He builds the worlds that make stories feel lived-in and real.</p>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h3 class="team-card-name">Suresh Natarajan</h3>
+            <div class="team-card-role">Production Designer</div>
+            <p class="team-card-desc">World Building</p>
+          </div>
+        </article>
+        <article class="team-card reveal-about" aria-label="Ananya Pillai — Sound Designer">
+          <div class="team-card-img-wrap">
+            <div class="team-card-img team-img-6" role="img" aria-label="Portrait of Ananya Pillai, Sound Designer"></div>
+            <div class="team-card-overlay" aria-hidden="true">
+              <p class="team-card-bio">She crafts the sonic landscapes that make every scene unforgettable.</p>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h3 class="team-card-name">Ananya Pillai</h3>
+            <div class="team-card-role">Sound Designer</div>
+            <p class="team-card-desc">Audio &amp; Atmosphere</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO VALUES -->
+  <section class="about-values-section" id="values" aria-labelledby="values-heading">
+    <div class="container">
+      <div class="about-section-header reveal-about">
+        <span class="section-pill">Our Core Beliefs</span>
+        <h2 class="section-title" id="values-heading">WHAT WE VALUE</h2>
+        <p class="section-subtitle">The creative principles that define our culture and work.</p>
+      </div>
+      <ul class="values-list" role="list">
+        <li class="value-card reveal-about">
+          <div class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-film"></i></div>
+          <h3 class="value-card-title">Story First</h3>
+          <p class="value-card-desc">Every decision on set and in the edit room serves the story being told.</p>
+        </li>
+        <li class="value-card reveal-about">
+          <div class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3 class="value-card-title">Creative Freedom</h3>
+          <p class="value-card-desc">We champion bold vision and give storytellers the room to experiment.</p>
+        </li>
+        <li class="value-card reveal-about">
+          <div class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></div>
+          <h3 class="value-card-title">Teamwork</h3>
+          <p class="value-card-desc">Cinema is a collective craft; our strength lies in cross-disciplinary trust.</p>
+        </li>
+        <li class="value-card reveal-about">
+          <div class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-fire"></i></div>
+          <h3 class="value-card-title">Authenticity</h3>
+          <p class="value-card-desc">Honest characters, raw emotion, and genuine voices in every production.</p>
+        </li>
+        <li class="value-card reveal-about">
+          <div class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-compass-drafting"></i></div>
+          <h3 class="value-card-title">Craftsmanship</h3>
+          <p class="value-card-desc">Precision lighting, deliberate framing, and meticulous post-production.</p>
+        </li>
+        <li class="value-card reveal-about">
+          <div class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+          <h3 class="value-card-title">Audience Connection</h3>
+          <p class="value-card-desc">Creating moments that linger and spark deep conversation long after the credits.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PRODUCTION PROCESS -->
+  <section class="about-process-section" id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="about-section-header reveal-about">
+        <span class="section-pill">How We Work</span>
+        <h2 class="section-title" id="process-heading">THE PRODUCTION PROCESS</h2>
+        <p class="section-subtitle">From the first spark of inspiration to the final cinema screen.</p>
+      </div>
+      <div class="process-steps" role="list">
+        <div class="process-step reveal-about" role="listitem">
+          <div class="process-step-num">01</div>
+          <div class="process-step-icon" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3 class="process-step-title">IDEA</h3>
+          <p class="process-step-desc">Concept ideation, theme exploration, and character outlines.</p>
+          <div class="process-connector" aria-hidden="true"></div>
+        </div>
+        <div class="process-step reveal-about" role="listitem">
+          <div class="process-step-num">02</div>
+          <div class="process-step-icon" aria-hidden="true"><i class="fa-solid fa-feather-pointed"></i></div>
+          <h3 class="process-step-title">DEVELOPMENT</h3>
+          <p class="process-step-desc">Screenplay drafting, visual storyboarding, and table reads.</p>
+          <div class="process-connector" aria-hidden="true"></div>
+        </div>
+        <div class="process-step reveal-about" role="listitem">
+          <div class="process-step-num">03</div>
+          <div class="process-step-icon" aria-hidden="true"><i class="fa-solid fa-video"></i></div>
+          <h3 class="process-step-title">PRODUCTION</h3>
+          <p class="process-step-desc">Principal photography, lighting design, and live performance direction.</p>
+          <div class="process-connector" aria-hidden="true"></div>
+        </div>
+        <div class="process-step reveal-about" role="listitem">
+          <div class="process-step-num">04</div>
+          <div class="process-step-icon" aria-hidden="true"><i class="fa-solid fa-headphones"></i></div>
+          <h3 class="process-step-title">POST-PRODUCTION</h3>
+          <p class="process-step-desc">Picture editorial, color grading, sound design, and original scoring.</p>
+          <div class="process-connector" aria-hidden="true"></div>
+        </div>
+        <div class="process-step reveal-about" role="listitem">
+          <div class="process-step-num">05</div>
+          <div class="process-step-icon" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3 class="process-step-title">RELEASE</h3>
+          <p class="process-step-desc">Film festival premieres, theatrical screenings, and digital streaming release.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS & RECOGNITION -->
+  <section class="about-awards-section" id="awards" aria-labelledby="awards-heading">
+    <div class="container">
+      <div class="about-section-header reveal-about">
+        <span class="section-pill">Honors</span>
+        <h2 class="section-title" id="awards-heading">AWARDS &amp; RECOGNITION</h2>
+        <p class="section-subtitle">Milestones that celebrate our dedication to cinematic excellence.</p>
+      </div>
+      <div class="awards-grid">
+        <article class="award-card reveal-about">
+          <div class="award-badge" aria-hidden="true"><i class="fa-solid fa-trophy"></i></div>
+          <time class="award-year" datetime="2026">2026</time>
+          <h3 class="award-title">Best Independent Production</h3>
+          <p class="award-event">Indie Cinema Guild Awards</p>
+        </article>
+        <article class="award-card reveal-about">
+          <div class="award-badge" aria-hidden="true"><i class="fa-solid fa-award"></i></div>
+          <time class="award-year" datetime="2025">2025</time>
+          <h3 class="award-title">Best Cinematography</h3>
+          <p class="award-event">Regional Film Excellence Showcase</p>
+        </article>
+        <article class="award-card reveal-about">
+          <div class="award-badge" aria-hidden="true"><i class="fa-solid fa-medal"></i></div>
+          <time class="award-year" datetime="2025">2025</time>
+          <h3 class="award-title">Audience Choice Award</h3>
+          <p class="award-event">International Short Fest</p>
+        </article>
+        <article class="award-card reveal-about">
+          <div class="award-badge" aria-hidden="true"><i class="fa-solid fa-star"></i></div>
+          <time class="award-year" datetime="2024">2024</time>
+          <h3 class="award-title">Creative Excellence in Story</h3>
+          <p class="award-event">National Visual Arts Forum</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO PHILOSOPHY -->
+  <section class="about-philosophy-section" id="philosophy" aria-labelledby="philosophy-heading">
+    <div class="about-philosophy-bg" aria-hidden="true"></div>
+    <div class="about-philosophy-overlay" aria-hidden="true"></div>
+    <div class="container about-philosophy-content">
+      <blockquote class="philosophy-quote reveal-about">
+        <p class="philosophy-quote-text">"A camera captures an image.<br>A storyteller gives it meaning."</p>
+        <footer class="philosophy-footer">
+          <cite class="philosophy-brand">ROOK WALL STUDIO</cite>
+          <span class="philosophy-motto">WE CREATE STORIES.</span>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- STUDIO FAQ SECTION — HTML5 <details>/<summary>/<mark> demonstration -->
+  <section class="about-faq-section" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="about-section-header reveal-about">
+        <span class="section-pill">Studio FAQ</span>
+        <h2 class="section-title" id="faq-heading">FREQUENTLY ASKED QUESTIONS</h2>
+        <p class="section-subtitle">Quick answers about working with <mark>Rook Wall Studio</mark>.</p>
+      </div>
+      <div class="faq-list" role="list">
+
+        <details class="faq-item reveal-about" role="listitem">
+          <summary class="faq-question">What types of productions does Rook Wall Studio undertake?</summary>
+          <div class="faq-answer">
+            <p>We produce <mark>feature films</mark>, short films, documentaries, and branded content. Our slate spans dramatic narratives, genre cinema, and experimental visual work that pushes the boundaries of storytelling.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal-about" role="listitem">
+          <summary class="faq-question">How can I submit a script or project proposal?</summary>
+          <div class="faq-answer">
+            <p>Send your one-page synopsis, logline, and contact details via our <a href="contact.html" class="faq-link">Contact Studio</a> page. We review all submissions within <mark>4–6 weeks</mark> and respond to projects that align with our creative vision.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal-about" role="listitem">
+          <summary class="faq-question">Are there internship or crew opportunities available?</summary>
+          <div class="faq-answer">
+            <p>Yes. We regularly welcome emerging filmmakers, editors, sound designers, and production assistants. Visit our <a href="careers.html" class="faq-link">Careers page</a> for <mark>open positions and internship programmes</mark>.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal-about" role="listitem">
+          <summary class="faq-question">Does the studio offer commercial or branded content services?</summary>
+          <div class="faq-answer">
+            <p>Absolutely. Our services team creates <mark>high-impact branded films</mark>, corporate documentaries, and advertising campaigns. Explore our full capabilities on the <a href="services.html" class="faq-link">Services page</a>.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="about-cta-section" id="cta" aria-labelledby="cta-heading">
+    <div class="container about-cta-container">
+      <div class="about-cta-card reveal-about">
+        <span class="section-pill">Join The Journey</span>
+        <h2 class="section-title" id="cta-heading">BE PART OF OUR NEXT STORY</h2>
+        <p class="section-subtitle">Whether you are an audience member, filmmaker, or creative collaborator, explore how to connect with Rook Wall Studio.</p>
+        <div class="about-cta-btn-group">
+          <a href="productions.html" class="btn btn-primary btn-hover-sweep">
+            <span>EXPLORE PRODUCTIONS</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="careers.html" class="btn btn-outline btn-hover-sweep">
+            <span>JOIN OUR TEAM</span>
+            <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+          </a>
+          <a href="contact.html" class="btn btn-outline btn-hover-sweep">
+            <span>CONTACT US</span>
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-top-grid">
+      <div class="footer-col footer-col--brand">
+        <a href="../index.html" class="footer-brand" aria-label="ROOK WALL STUDIO Home">
+          <div class="brand-icon" aria-hidden="true"><i class="fa-solid fa-chess-rook"></i></div>
+          <div class="brand-text-block">
+            <span class="brand-text-main">ROOK WALL</span>
+            <span class="brand-text-sub">STUDIO</span>
+          </div>
+        </a>
+        <p class="footer-brand-bio">An independent cinematic production house dedicated to compelling visual narratives, unyielding artistry, and the craft of moving pictures.</p>
+        <div class="footer-social-links" aria-label="Social media links">
+          <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://vimeo.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Vimeo"><i class="fa-brands fa-vimeo-v"></i></a>
+          <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">NAVIGATION</h4>
+        <ul class="footer-nav-list">
+          <li><a href="../index.html" class="footer-nav-link">Home</a></li>
+          <li><a href="productions.html" class="footer-nav-link">Productions</a></li>
+          <li><a href="services.html" class="footer-nav-link">Services</a></li>
+          <li><a href="about.html" class="footer-nav-link">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">STUDIO ARCHIVE</h4>
+        <ul class="footer-nav-list">
+          <li><a href="gallery.html" class="footer-nav-link">Studio Archive &amp; Gallery</a></li>
+          <li><a href="careers.html" class="footer-nav-link">Careers &amp; Opportunities</a></li>
+          <li><a href="dashboard.html" class="footer-nav-link">Studio Dashboard</a></li>
+          <li><a href="contact.html" class="footer-nav-link">Contact Studio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col--student">
+        <h4 class="footer-col-title">STUDENT INFO</h4>
+        <div class="student-info-card">
+          <div class="student-field"><span class="student-label">Name:</span> <span class="student-val">[STUDENT NAME]</span></div>
+          <div class="student-field"><span class="student-label">Reg No:</span> <span class="student-val">[REGISTER NUMBER]</span></div>
+          <div class="student-field"><span class="student-label">Subject:</span> <span class="student-val">Web Development Project</span></div>
+          <div class="footer-clock-box" aria-live="polite">
+            <span class="clock-label"><i class="fa-regular fa-clock" aria-hidden="true"></i> LIVE TIME</span>
+            <div id="liveDate" class="live-date">--</div>
+            <div id="liveTime" class="live-time">--:--:--</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright-text">&copy; 2026 ROOK WALL STUDIO. All rights reserved. Cinematic Production House.</p>
+        <p class="designer-text">Designed with precision for college web technology demonstration.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="../js/about.js"></script>
+</body>
+</html>
